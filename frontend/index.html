@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trader Frost - Your premier destination for forex, crypto, and stock trading">
+    <title>Trader Frost | Advanced Trading Platform</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/png" href="assets/images/logos/Logo.png">
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div id="pageLoader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="assets/images/logos/Logo.png" alt="Trader Frost Logo">
+            </div>
+            <div class="loader-text">
+                <span style="color: #fff; font-size: 1.5rem; font-weight: bold;">
+                    Trader<span style="color: #FF9933;">Frost</span>
+                </span>
+            </div>
+            <div class="loader-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trading Risk Disclaimer Modal -->
+    <div id="disclaimerModal" class="disclaimer-modal">
+        <div class="disclaimer-overlay"></div>
+        <div class="disclaimer-content">
+            <button class="disclaimer-close" id="disclaimerClose" aria-label="Close disclaimer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="disclaimer-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF9933" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+            </div>
+            <h2 class="disclaimer-title">Important Disclaimer</h2>
+            <div class="disclaimer-body">
+                <p>Trading involves risk. Past performance does not guarantee future results. Only invest what you can afford to lose. This platform is for educational purposes only. Always consult with a financial advisor before making investment decisions.</p>
+            </div>
+            <button class="disclaimer-btn" id="disclaimerAccept">Got It</button>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="assets/images/logos/Logo.png" alt="Trader Frost Logo">
+                <div style="display: flex; flex-direction: column; gap: 0;">
+                    <span style="font-size: 1.8rem; font-weight: bold; color: #fff; line-height: 1.2;">
+                        Trader<span style="color: #FF9933;">Frost</span>
+                    </span>
+                    <span
+                        style="font-size: 0.65rem; color: #FF9933; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-top: -2px;">
+                        Trade smart, Earn smartly
+                    </span>
+                </div>
+            </a>
+
+            <!-- Hamburger Menu for Mobile -->
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="pages/about.html">About Me</a></li>
+                <li><a href="pages/courses.html">Courses</a></li>
+                <li class="dropdown">
+                    <a href="#" onclick="return false;">Learn</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/forex-guide.html">Forex Market: Complete Beginner to Pro Guide</a></li>
+                        <li><a href="pages/smart-money-concept.html">Smart Money Concept</a></li>
+                        <li><a href="pages/psychology.html">Trading Psychology</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" onclick="return false;">Tools</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/lot-size.html">Lot Size Calculator</a></li>
+                        <li><a href="pages/profit-loss.html">Profit &amp; Loss Calculator</a></li>
+                        <li><a href="pages/pips.html">Pips Calculator</a></li>
+                        <li><a href="pages/risk-management.html">Risk Management Advisor</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/contact.html">Contact Us</a></li>
+                <li class="nav-login-item">
+                    <a href="pages/login.html" class="login-btn"
+                        style="display: inline-block; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,153,51,0.25);"
+                        onmouseover="this.style.boxShadow='0 5px 20px rgba(255,153,51,0.4)'; this.style.transform='translateY(-2px)';"
+                        onmouseout="this.style.boxShadow='0 3px 12px rgba(255,153,51,0.25)'; this.style.transform='translateY(0)';">
+                        Login
+                    </a>
+                </li>
+                <li class="nav-signup-item">
+                    <a href="pages/register.html" class="signup-btn"
+                        style="display: inline-block; background: linear-gradient(135deg, #ffffff 0%, #e6e6e6 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,255,255,0.12);"
+                        onmouseover="this.style.boxShadow='0 5px 20px rgba(255,255,255,0.25)'; this.style.transform='translateY(-2px)';"
+                        onmouseout="this.style.boxShadow='0 3px 12px rgba(255,255,255,0.12)'; this.style.transform='translateY(0)';">
+                        Sign Up
+                    </a>
+                </li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <div class="search-nav-container" style="position: relative; display: flex; align-items: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF9933" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; left: 14px; pointer-events: none;">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Search..." 
+                        style="padding: 0.65rem 2.6rem 0.65rem 2.6rem; border-radius: 22px; border: 1px solid transparent; background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)); color: #fff; font-size: 0.85rem; width: 240px; outline: none; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(255,153,51,0.08);"
+                        onfocus="this.style.borderColor='#FF9933'; this.style.background='linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.08))'; this.style.boxShadow='0 4px 15px rgba(255,153,51,0.15)';" 
+                        onblur="this.style.borderColor='transparent'; this.style.background='linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04))'; this.style.boxShadow='0 2px 10px rgba(255,153,51,0.08)';">
+                    <button id="searchBtn" title="Search" 
+                        style="position: absolute; right: 6px; top: 50%; transform: translateY(-50%); background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); border: none; color: #000; padding: 0.45rem 0.75rem; border-radius: 18px; cursor: pointer; transition: all 0.3s ease; font-weight: 600; display: flex; align-items: center; font-size: 0.75rem;"
+                        onmouseover="this.style.boxShadow='0 4px 12px rgba(255,153,51,0.4)'; this.style.transform='translateY(-50%) scale(1.08)';" 
+                        onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(-50%) scale(1)';">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop Auth Buttons (only visible on desktop) -->
+                <div class="header-auth-buttons" style="display: none; gap: 0.75rem; align-items: center;">
+                    <a href="pages/login.html" class="header-login-btn"
+                        style="display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,153,51,0.25); min-height: 40px;"
+                        onmouseover="this.style.boxShadow='0 5px 20px rgba(255,153,51,0.4)'; this.style.transform='translateY(-2px)';"
+                        onmouseout="this.style.boxShadow='0 3px 12px rgba(255,153,51,0.25)'; this.style.transform='translateY(0)';">
+                        Login
+                    </a>
+                    <a href="pages/register.html" class="header-signup-btn"
+                        style="display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #ffffff 0%, #e6e6e6 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,255,255,0.12); min-height: 40px;"
+                        onmouseover="this.style.boxShadow='0 5px 20px rgba(255,255,255,0.25)'; this.style.transform='translateY(-2px)';"
+                        onmouseout="this.style.boxShadow='0 3px 12px rgba(255,255,255,0.12)'; this.style.transform='translateY(0)';">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Live Market Ticker -->
+    <section class="live-market-ticker"
+        style="position: sticky; top: 82px; z-index: 998; background: #0a0a0a; padding: 0; margin: 0; border-bottom: 2px solid #FF9933; box-shadow: 0 4px 15px rgba(255,153,51,0.3); min-height: 60px; overflow: hidden;">
+        <div class="tradingview-widget-container" style="height: 60px; width: 100%; overflow: hidden;">
+            <div class="tradingview-widget-container__widget" style="height: 100%; width: 100%;"></div>
+            <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                    {
+                        "symbols":[
+                            {
+                                "proName": "FX_IDC:EURUSD",
+                                "title": "EUR/USD"
+                            },
+                            {
+                                "proName": "FX_IDC:GBPUSD",
+                                "title": "GBP/USD"
+                            },
+                            {
+                                "proName": "FX_IDC:USDJPY",
+                                "title": "USD/JPY"
+                            },
+                            {
+                                "proName": "COINBASE:BTCUSD",
+                                "title": "BTC/USD"
+                            },
+                            {
+                                "proName": "OANDA:XAUUSD",
+                                "title": "GOLD"
+                            },
+                            {
+                                "proName": "CAPITALCOM:US500",
+                                "title": "S&P 500"
+                            }
+                        ],
+                        "showSymbolLogo": true,
+                        "colorTheme": "dark",
+                        "isTransparent": false,
+                        "displayMode": "adaptive",
+                        "locale": "en"
+                    }
+                </script>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" style="position: relative; overflow: hidden; background: #000;">
+        <!-- Realistic Trading Background -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
+            <!-- Dark Professional Base -->
+            <div
+                style="position: absolute; width: 100%; height: 100%; background: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);">
+            </div>
+
+            <!-- Realistic Chart Grid -->
+            <div class="hero-grid-animate"
+                style="position: absolute; width: 100%; height: 100%; opacity: 0.2; background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(255,153,51,0.2) 49px, rgba(255,153,51,0.2) 50px),
+                repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(255,153,51,0.2) 79px, rgba(255,153,51,0.2) 80px);">
+            </div>
+
+            <!-- Price Chart Simulation -->
+            <svg class="hero-bg-animate" style="position: absolute; width: 100%; height: 100%; opacity: 0.35;"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 600" preserveAspectRatio="none">
+                <!-- Moving Average Lines -->
+                <path
+                    d="M 0,400 L 100,380 L 200,360 L 300,340 L 400,330 L 500,310 L 600,295 L 700,285 L 800,280 L 900,275 L 1000,270 L 1100,265 L 1200,268 L 1300,275 L 1400,280 L 1500,290 L 1600,300 L 1700,310 L 1800,320 L 1920,330"
+                    stroke="#FF9933" stroke-width="1.5" fill="none" opacity="0.6" stroke-dasharray="5,3" />
+
+                <path
+                    d="M 0,420 L 100,410 L 200,395 L 300,380 L 400,365 L 500,355 L 600,340 L 700,330 L 800,320 L 900,315 L 1000,312 L 1100,310 L 1200,315 L 1300,325 L 1400,335 L 1500,345 L 1600,360 L 1700,375 L 1800,385 L 1920,395"
+                    stroke="#8B0000" stroke-width="1" fill="none" opacity="0.5" stroke-dasharray="3,2" />
+
+                <!-- Main Price Action Line -->
+                <path
+                    d="M 0,380 L 80,390 L 160,375 L 240,385 L 320,365 L 400,370 L 480,350 L 560,355 L 640,340 L 720,335 L 800,325 L 880,320 L 960,318 L 1040,315 L 1120,320 L 1200,328 L 1280,340 L 1360,355 L 1440,368 L 1520,380 L 1600,390 L 1680,395 L 1760,388 L 1840,392 L 1920,385"
+                    stroke="#51cf66" stroke-width="2" fill="none" opacity="0.8">
+                    <animate attributeName="d"
+                        values="M 0,380 L 80,390 L 160,375 L 240,385 L 320,365 L 400,370 L 480,350 L 560,355 L 640,340 L 720,335 L 800,325 L 880,320 L 960,318 L 1040,315 L 1120,320 L 1200,328 L 1280,340 L 1360,355 L 1440,368 L 1520,380 L 1600,390 L 1680,395 L 1760,388 L 1840,392 L 1920,385;
+                                M 0,385 L 80,395 L 160,380 L 240,388 L 320,368 L 400,365 L 480,345 L 560,350 L 640,335 L 720,330 L 800,320 L 880,315 L 960,313 L 1040,310 L 1120,315 L 1200,323 L 1280,335 L 1360,350 L 1440,365 L 1520,378 L 1600,388 L 1680,393 L 1760,390 L 1840,395 L 1920,388;
+                                M 0,380 L 80,390 L 160,375 L 240,385 L 320,365 L 400,370 L 480,350 L 560,355 L 640,340 L 720,335 L 800,325 L 880,320 L 960,318 L 1040,315 L 1120,320 L 1200,328 L 1280,340 L 1360,355 L 1440,368 L 1520,380 L 1600,390 L 1680,395 L 1760,388 L 1840,392 L 1920,385"
+                        dur="12s" repeatCount="indefinite" />
+                </path>
+
+                <!-- Volume Bars at Bottom -->
+                <g opacity="0.25">
+                    <rect x="0" y="550" width="15" height="40" fill="#51cf66" />
+                    <rect x="80" y="540" width="15" height="50" fill="#ff6b6b" />
+                    <rect x="160" y="555" width="15" height="35" fill="#51cf66" />
+                    <rect x="240" y="545" width="15" height="45" fill="#51cf66" />
+                    <rect x="320" y="560" width="15" height="30" fill="#ff6b6b" />
+                    <rect x="400" y="550" width="15" height="40" fill="#51cf66" />
+                    <rect x="480" y="535" width="15" height="55" fill="#51cf66" />
+                    <rect x="560" y="548" width="15" height="42" fill="#ff6b6b" />
+                    <rect x="640" y="558" width="15" height="32" fill="#51cf66" />
+                    <rect x="720" y="543" width="15" height="47" fill="#51cf66" />
+                    <rect x="800" y="538" width="15" height="52" fill="#51cf66" />
+                    <rect x="880" y="545" width="15" height="45" fill="#ff6b6b" />
+                    <rect x="960" y="552" width="15" height="38" fill="#51cf66" />
+                    <rect x="1040" y="548" width="15" height="42" fill="#51cf66" />
+                    <rect x="1120" y="540" width="15" height="50" fill="#51cf66" />
+                    <rect x="1200" y="545" width="15" height="45" fill="#ff6b6b" />
+                    <rect x="1280" y="542" width="15" height="48" fill="#51cf66" />
+                    <rect x="1360" y="538" width="15" height="52" fill="#51cf66" />
+                    <rect x="1440" y="535" width="15" height="55" fill="#51cf66" />
+                    <rect x="1520" y="543" width="15" height="47" fill="#ff6b6b" />
+                    <rect x="1600" y="540" width="15" height="50" fill="#51cf66" />
+                    <rect x="1680" y="545" width="15" height="45" fill="#51cf66" />
+                    <rect x="1760" y="548" width="15" height="42" fill="#ff6b6b" />
+                    <rect x="1840" y="542" width="15" height="48" fill="#51cf66" />
+                </g>
+            </svg>
+
+
+            <!-- Market Depth Effect -->
+            <div
+                style="position: absolute; right: 3%; top: 25%; opacity: 0.18; font-family: 'Courier New', monospace; font-size: 10px; color: #ccc; line-height: 1.6;">
+                <div style="color: #51cf66;">BUY 1.0875 2.5M</div>
+                <div style="color: #51cf66;">BUY 1.0874 1.8M</div>
+                <div style="color: #51cf66;">BUY 1.0873 3.2M</div>
+                <div style="color: #ff6b6b;">SELL 1.0876 1.9M</div>
+                <div style="color: #ff6b6b;">SELL 1.0877 2.1M</div>
+                <div style="color: #ff6b6b;">SELL 1.0878 1.5M</div>
+            </div>
+
+            <!-- Ambient Lighting Overlay -->
+            <div
+                style="position: absolute; width: 100%; height: 100%; background: radial-gradient(ellipse at 50% 30%, rgba(255,153,51,0.12) 0%, transparent 60%);">
+            </div>
+            <div
+                style="position: absolute; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 100%);">
+            </div>
+        </div>
+
+        <div class="hero-content" style="position: relative; z-index: 2;">
+            <h1>Master Trading Psychology & Strategy</h1>
+            <p>Transform your trading journey with proven strategies and psychological insights. Join our exclusive
+                batches and learn from real trading experience.</p>
+            <div class="cta-buttons">
+                <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                <a href="#about" class="btn btn-secondary">My Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Stats -->
+    <section class="market-stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>2000+</h3>
+                <p>Students Trained</p>
+            </div>
+            <div class="stat-card">
+                <h3>8+ Years</h3>
+                <p>Trading Experience</p>
+            </div>
+            <div class="stat-card">
+                <h3>50+</h3>
+                <p>Batches Completed</p>
+            </div>
+            <div class="stat-card">
+                <h3>95%</h3>
+                <p>Success Rate</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Trader Frost Section - Redesigned -->
+    <section id="about" class="features about-section" style="background: #1a1a1a; padding: 5rem 2rem; margin: 4rem 0; position: relative; overflow: visible; opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; width: 100vw; margin-left: calc(-50vw + 50%);">
+        <!-- Subtle animated background -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 30% 50%, rgba(255,153,51,0.03) 0%, transparent 50%); pointer-events: none;"></div>
+        
+        <div style="max-width: 100%; width: 100%; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1;">
+            <div class="about-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: stretch; width: 100%; max-width: 100%;">
+                
+                <!-- LEFT: Image Gallery/Carousel -->
+                <div class="image-gallery-container" style="position: relative; height: 100%;">
+                    <div id="aboutCarousel" style="position: relative; background: rgba(0,0,0,0.4); border-radius: 12px; overflow: hidden; box-shadow: 0 15px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,153,51,0.1); height: 100%; min-height: 100%;">
+                        <div class="about-carousel-images" style="position: relative; width: 100%; height: 100%;">
+                            <div class="about-carousel-slide active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 1; transition: opacity 2s ease-in-out;">
+                                <img src="assets/images/Slides/Slide1.png" 
+                                     alt="Trader Frost Slide 1" 
+                                     style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; user-select: none;">
+                            </div>
+                            <div class="about-carousel-slide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 2s ease-in-out;">
+                                <img src="assets/images/Slides/Slide 2.jpg" 
+                                     alt="Trader Frost Slide 2" 
+                                     style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; user-select: none;">
+                            </div>
+                            <div class="about-carousel-slide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 2s ease-in-out;">
+                                <img src="assets/images/Slides/Slide 3.png" 
+                                     alt="Trader Frost Slide 3" 
+                                     style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; user-select: none;">
+                            </div>
+                            <div class="about-carousel-slide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 2s ease-in-out;">
+                                <img src="assets/images/Slides/Slide 4.png" 
+                                     alt="Trader Frost Slide 4" 
+                                     style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; user-select: none;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Text Content -->
+                <div class="about-text-content" style="display: flex; flex-direction: column; justify-content: center; padding: 2rem 0;">
+                    <h2 style="text-align: left; font-size: 2.5rem; color: #fff; margin-bottom: 1.5rem; font-weight: 700; letter-spacing: -0.5px;">
+                        About <span style="color: #FF9933;">Trader Frost</span>
+                    </h2>
+                    <h3 style="font-size: 1.8rem; color: #FF9933; margin-bottom: 1.5rem; font-weight: 600; letter-spacing: -0.3px;">
+                        Empowering Traders Worldwide
+                    </h3>
+                    
+                    <div style="space-y: 1.5rem;">
+                        <p style="font-size: 1.1rem; line-height: 1.9; color: #b8b8b8; margin-bottom: 1.5rem; font-weight: 300;">
+                            <strong style="color: #fff; font-weight: 500;">Trader Frost</strong> is a premier institutional-grade trading platform dedicated to transforming aspiring traders into seasoned professionals. With years of proven expertise across forex, cryptocurrency, and equity markets, we deliver cutting-edge strategies, psychological mastery, and comprehensive market intelligence.
+                        </p>
+                        
+                        <p style="font-size: 1.1rem; line-height: 1.9; color: #b8b8b8; margin-bottom: 2.5rem; font-weight: 300;">
+                            Our methodology combines rigorous technical analysis with behavioral finance principles. We believe successful trading transcends chart patterns—it demands deep understanding of market psychology, disciplined risk management, and the mental fortitude to execute with precision under pressure.
+                        </p>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <div>
+                        <a href="pages/about.html" class="about-cta-btn" 
+                           style="display: inline-flex; align-items: center; gap: 0.8rem; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 4px 20px rgba(255,153,51,0.3); position: relative; overflow: hidden;"
+                           onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 30px rgba(255,153,51,0.5)';"
+                           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(255,153,51,0.3)';">
+                            <span>Read More About Us</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn Section -->
+    <section class="features">
+        <h2 class="section-title" style="margin-top: 3rem;">What You'll Learn</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3>Trading Psychology</h3>
+                <p>Master the mental game of trading. Learn to control emotions, develop discipline, and build the
+                    mindset of a successful trader.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Technical Analysis</h3>
+                <p>Deep dive into chart patterns, indicators, price action, and market structure. Learn to read the
+                    market like a professional.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3>Risk Management</h3>
+                <p>Protect your capital with proven risk management strategies. Learn position sizing, stop-loss
+                    placement, and portfolio management.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Trading Strategies</h3>
+                <p>Get access to my proven trading strategies for different market conditions. Scalping, day trading,
+                    and swing trading techniques.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Live Trading Sessions</h3>
+                <p>Watch me trade live, understand my thought process, and learn how to make decisions in real-time
+                    market conditions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Community Support</h3>
+                <p>Join a community of like-minded traders. Share ideas, get feedback, and grow together in a supportive
+                    environment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission -->
+    <section id="mission" style="background: linear-gradient(135deg, #1a0000 0%, #0a0000 50%, #050000 100%); padding: 7rem 2rem; position: relative; overflow: hidden;">
+        
+        <!-- Trading Chart Grid Pattern Overlay -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(255,153,51,0.1) 30px, rgba(255,153,51,0.1) 31px), repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(255,153,51,0.1) 30px, rgba(255,153,51,0.1) 31px);"></div>
+        
+        <!-- Center Orange Glow -->
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(255,153,51,0.15) 0%, transparent 60%); border-radius: 50%; filter: blur(80px);"></div>
+
+        <div style="max-width: 1400px; margin: 0 auto; position: relative; z-index: 1; text-align: center;">
+            
+            <!-- Top Label -->
+            <div style="font-size: 0.85rem; text-transform: uppercase; color: #FF9933; letter-spacing: 4px; font-weight: 600; margin-bottom: 2rem;">
+                Our Mission
+            </div>
+            
+            <!-- Large Bold Headline -->
+            <h2 style="font-size: 3.5rem; font-weight: 800; color: #fff; margin: 0 0 1.5rem 0; line-height: 1.2; letter-spacing: -1.5px; max-width: 1100px; margin-left: auto; margin-right: auto;">
+                Build Disciplined Traders, Not Lucky Gamblers.
+            </h2>
+            
+            <!-- Sub Line -->
+            <p style="font-size: 1.35rem; color: #bbb; margin: 0 0 5rem 0; font-weight: 400; letter-spacing: 0.5px;">
+                Real psychology. Real strategy. Real market experience.
+            </p>
+
+            <!-- Three Feature Blocks -->
+            <div class="mission-blocks" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; max-width: 1200px; margin: 0 auto;">
+                
+                <!-- Block 1: Discipline -->
+                <div class="mission-block" style="background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%); border: 1px solid rgba(255, 153, 51, 0.25); border-radius: 16px; padding: 3rem 2rem; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transition: all 0.4s ease; position: relative; overflow: hidden;">
+                    <div style="width: 60px; height: 3px; background: linear-gradient(90deg, #FF9933 0%, #ff7700 100%); margin: 0 auto 2rem auto; border-radius: 2px;"></div>
+                    <h3 style="color: #fff; font-size: 1.8rem; margin: 0 0 1.2rem 0; font-weight: 700; letter-spacing: -0.5px;">Discipline</h3>
+                    <p style="color: #999; font-size: 1.05rem; margin: 0; line-height: 1.7;">Risk control, patience and rule-based execution.</p>
+                </div>
+
+                <!-- Block 2: Psychology -->
+                <div class="mission-block" style="background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%); border: 1px solid rgba(255, 153, 51, 0.25); border-radius: 16px; padding: 3rem 2rem; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transition: all 0.4s ease; position: relative; overflow: hidden;">
+                    <div style="width: 60px; height: 3px; background: linear-gradient(90deg, #FF9933 0%, #ff7700 100%); margin: 0 auto 2rem auto; border-radius: 2px;"></div>
+                    <h3 style="color: #fff; font-size: 1.8rem; margin: 0 0 1.2rem 0; font-weight: 700; letter-spacing: -0.5px;">Psychology</h3>
+                    <p style="color: #999; font-size: 1.05rem; margin: 0; line-height: 1.7;">Emotion management and trader mindset mastery.</p>
+                </div>
+
+                <!-- Block 3: Strategy -->
+                <div class="mission-block" style="background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%); border: 1px solid rgba(255, 153, 51, 0.25); border-radius: 16px; padding: 3rem 2rem; box-shadow: 0 10px 40px rgba(0,0,0,0.5); transition: all 0.4s ease; position: relative; overflow: hidden;">
+                    <div style="width: 60px; height: 3px; background: linear-gradient(90deg, #FF9933 0%, #ff7700 100%); margin: 0 auto 2rem auto; border-radius: 2px;"></div>
+                    <h3 style="color: #fff; font-size: 1.8rem; margin: 0 0 1.2rem 0; font-weight: 700; letter-spacing: -0.5px;">Strategy</h3>
+                    <p style="color: #999; font-size: 1.05rem; margin: 0; line-height: 1.7;">Structured systems for consistent long-term profits.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Hover Effects & Responsive Styles -->
+    </section>
+
+    <!-- Psychology & Knowledge -->
+    <section id="psychology" class="market-overview"
+        style="background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 100%); position: relative; overflow: hidden;">
+        <!-- Decorative Background Elements -->
+        <div
+            style="position: absolute; top: -50%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,153,51,0.1) 0%, transparent 70%); border-radius: 50%;">
+        </div>
+        <div
+            style="position: absolute; bottom: -40%; left: -5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(139,0,0,0.1) 0%, transparent 70%); border-radius: 50%;">
+        </div>
+
+        <div style="position: relative; z-index: 1;">
+            <h2 class="section-title" style="color: #FF9933; margin-bottom: 1rem;">Trading Psychology Insights</h2>
+            <p style="text-align: center; color: #ccc; font-size: 1.1rem; max-width: 700px; margin: 0 auto 3rem;">
+                Master the mental game that separates profitable traders from the rest
+            </p>
+
+            <!-- Psychology Cards Grid -->
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+
+                <!-- Card 1: Emotional Mastery -->
+                <div
+                    style="background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); padding: 2.5rem; border-radius: 15px; border: 2px solid #FF9933; box-shadow: 0 10px 30px rgba(255,153,51,0.2); transition: transform 0.3s ease;">
+                    <div
+                        style="width: 60px; height: 60px; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 2rem;">
+                        🧠</div>
+                    <h3 style="color: #FF9933; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Emotional
+                        Mastery</h3>
+                    <p style="color: #ccc; line-height: 1.8; margin-bottom: 1.5rem;">
+                        95% of traders fail due to emotional decisions. Learn to eliminate fear, greed, and revenge
+                        trading through proven psychological frameworks.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: #aaa; line-height: 2;">
+                        <li style="padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #FF9933;">▸</span>
+                            Fear & Greed Management
+                        </li>
+                        <li style="padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #FF9933;">▸</span>
+                            Emotional Detachment Techniques
+                        </li>
+                        <li style="padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #FF9933;">▸</span>
+                            Building Mental Resilience
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Discipline & Consistency -->
+                <div
+                    style="background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); padding: 2.5rem; border-radius: 15px; border: 2px solid #8B0000; box-shadow: 0 10px 30px rgba(139,0,0,0.2); transition: transform 0.3s ease;">
+                    <div
+                        style="width: 60px; height: 60px; background: linear-gradient(135deg, #8B0000 0%, #ff0000 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 2rem;">
+                        ⚡</div>
+                    <h3 style="color: #8B0000; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Discipline &
+                        Consistency</h3>
+                    <p style="color: #ccc; line-height: 1.8; margin-bottom: 1.5rem;">
+                        Trading success comes from following your plan religiously. Develop the discipline that
+                        transforms sporadic wins into consistent profits.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: #aaa; line-height: 2;">
+                        <li style="padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #8B0000;">▸</span>
+                            Rule-Based Trading Systems
+                        </li>
+                        <li style="padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #8B0000;">▸</span>
+                            Breaking Bad Trading Habits
+                        </li>
+                        <li style="padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #8B0000;">▸</span>
+                            Daily Routine Optimization
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Risk Psychology -->
+                <div
+                    style="background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); padding: 2.5rem; border-radius: 15px; border: 2px solid #FF9933; box-shadow: 0 10px 30px rgba(255,153,51,0.2); transition: transform 0.3s ease;">
+                    <div
+                        style="width: 60px; height: 60px; background: linear-gradient(135deg, #FFD700 0%, #FF9933 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 2rem;">
+                        🛡️</div>
+                    <h3 style="color: #FF9933; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Risk
+                        Psychology</h3>
+                    <p style="color: #ccc; line-height: 1.8; margin-bottom: 1.5rem;">
+                        Understanding risk perception and position sizing psychology. Learn to accept losses as business
+                        costs, not personal failures.
+                    </p>
+                    <ul style="list-style: none; padding: 0; color: #aaa; line-height: 2;">
+                        <li style="padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #FF9933;">▸</span>
+                            Loss Acceptance & Recovery
+                        </li>
+                        <li style="padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #FF9933;">▸</span>
+                            Position Sizing Psychology
+                        </li>
+                        <li style="padding-left: 1.5rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: #FF9933;">▸</span>
+                            Drawdown Management
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Core Principles Section -->
+            <div style="max-width: 1000px; margin: 4rem auto 0; padding: 0 2rem;">
+                <div
+                    style="background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); padding: 3rem; border-radius: 20px; border: 2px solid #8B0000; box-shadow: 0 15px 40px rgba(139,0,0,0.3);">
+                    <h3 style="color: #FF9933; font-size: 2rem; margin-bottom: 0.5rem; text-align: center;">The 5
+                        Pillars of Trading Excellence</h3>
+                    <p style="color: #aaa; text-align: center; margin-bottom: 2.5rem; font-style: italic;">
+                        "Trading is 20% strategy, 80% psychology"
+                    </p>
+
+                    <div style="display: grid; gap: 1.5rem;">
+                        <!-- Pillar 1 -->
+                        <div
+                            style="background: rgba(255,153,51,0.05); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #FF9933;">
+                            <h4 style="color: #FF9933; font-size: 1.3rem; margin-bottom: 0.5rem;">
+                                <span
+                                    style="background: #FF9933; color: #000; padding: 0.2rem 0.6rem; border-radius: 50%; margin-right: 0.5rem; font-weight: bold;">1</span>
+                                Master One Strategy First
+                            </h4>
+                            <p style="color: #ccc; line-height: 1.8; padding-left: 2.5rem;">
+                                Stop jumping between systems. Find one strategy that aligns with your personality and
+                                market view. Master it completely before exploring others. Consistency comes from
+                                specialization.
+                            </p>
+                        </div>
+
+                        <!-- Pillar 2 -->
+                        <div
+                            style="background: rgba(139,0,0,0.05); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #8B0000;">
+                            <h4 style="color: #8B0000; font-size: 1.3rem; margin-bottom: 0.5rem;">
+                                <span
+                                    style="background: #8B0000; color: #fff; padding: 0.2rem 0.6rem; border-radius: 50%; margin-right: 0.5rem; font-weight: bold;">2</span>
+                                Journal Every Single Trade
+                            </h4>
+                            <p style="color: #ccc; line-height: 1.8; padding-left: 2.5rem;">
+                                Document trades, emotions, market conditions, and mistakes. Your trading journal is your
+                                most valuable teacher. Review it weekly to identify patterns in your behavior and
+                                performance.
+                            </p>
+                        </div>
+
+                        <!-- Pillar 3 -->
+                        <div
+                            style="background: rgba(255,153,51,0.05); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #FF9933;">
+                            <h4 style="color: #FF9933; font-size: 1.3rem; margin-bottom: 0.5rem;">
+                                <span
+                                    style="background: #FF9933; color: #000; padding: 0.2rem 0.6rem; border-radius: 50%; margin-right: 0.5rem; font-weight: bold;">3</span>
+                                Risk Management is Supreme
+                            </h4>
+                            <p style="color: #ccc; line-height: 1.8; padding-left: 2.5rem;">
+                                Never risk more than 1-2% of your capital per trade. Protect your account like your life
+                                depends on it. You can't recover from a blown account, but you can always make back
+                                small losses.
+                            </p>
+                        </div>
+
+                        <!-- Pillar 4 -->
+                        <div
+                            style="background: rgba(139,0,0,0.05); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #8B0000;">
+                            <h4 style="color: #8B0000; font-size: 1.3rem; margin-bottom: 0.5rem;">
+                                <span
+                                    style="background: #8B0000; color: #fff; padding: 0.2rem 0.6rem; border-radius: 50%; margin-right: 0.5rem; font-weight: bold;">4</span>
+                                Quality Over Quantity
+                            </h4>
+                            <p style="color: #ccc; line-height: 1.8; padding-left: 2.5rem;">
+                                One high-probability setup is worth ten mediocre trades. Be patient. Wait for your edge.
+                                The market rewards those who wait for the perfect pitch, not those who swing at
+                                everything.
+                            </p>
+                        </div>
+
+                        <!-- Pillar 5 -->
+                        <div
+                            style="background: rgba(255,153,51,0.05); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #FF9933;">
+                            <h4 style="color: #FF9933; font-size: 1.3rem; margin-bottom: 0.5rem;">
+                                <span
+                                    style="background: #FF9933; color: #000; padding: 0.2rem 0.6rem; border-radius: 50%; margin-right: 0.5rem; font-weight: bold;">5</span>
+                                Never Stop Evolving
+                            </h4>
+                            <p style="color: #ccc; line-height: 1.8; padding-left: 2.5rem;">
+                                Markets evolve constantly. What worked yesterday may not work tomorrow. Commit to
+                                continuous learning, adaptation, and improvement. Stagnation is the enemy of success.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div
+                        style="text-align: center; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid rgba(255,153,51,0.3);">
+                        <p style="color: #FF9933; font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">
+                            Ready to Master Your Trading Psychology?
+                        </p>
+                        <a href="#enroll"
+                            style="display: inline-block; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                            Join Our Batches Today
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories / Testimonials -->
+    <section id="testimonials"
+        style="background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 100%); padding: 5rem 2rem; position: relative; overflow: hidden;">
+        <!-- Decorative Background -->
+        <div
+            style="position: absolute; top: -30%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,153,51,0.15) 0%, transparent 70%); border-radius: 50%; animation: float1 6s ease-in-out infinite;">
+        </div>
+        <div
+            style="position: absolute; bottom: -20%; right: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(139,0,0,0.15) 0%, transparent 70%); border-radius: 50%; animation: float2 8s ease-in-out infinite;">
+        </div>
+
+        <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 class="section-title" style="color: #FF9933; margin-bottom: 1rem;">Success Stories from My Students
+                </h2>
+                <p style="color: #ccc; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">
+                    Real traders. Real results. Real transformations.
+                </p>
+                <div
+                    style="width: 80px; height: 4px; background: linear-gradient(90deg, #FF9933, #8B0000); margin: 1.5rem auto; border-radius: 2px;">
+                </div>
+            </div>
+
+            <!-- Testimonials Carousel Wrapper -->
+            <div style="overflow: hidden; position: relative; margin: 0 -2rem;">
+                <!-- Auto-scrolling Container -->
+                <div class="testimonials-carousel"
+                    style="display: flex; gap: 1.5rem; animation: scrollTestimonials 40s linear infinite; padding: 0 2rem;">
+
+                    <!-- Testimonial 1 -->
+                    <div
+                        style="background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); padding: 1.5rem; border-radius: 15px; border: 2px solid transparent; background-clip: padding-box; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; min-width: 300px; max-width: 300px; flex-shrink: 0;">
+                        <div
+                            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 15px; padding: 2px; background: linear-gradient(135deg, #FF9933, #ff6600); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;">
+                        </div>
+
+                        <!-- Quote Icon -->
+                        <div
+                            style="color: #FF9933; font-size: 2rem; line-height: 1; margin-bottom: 0.8rem; opacity: 0.5;">
+                            "</div>
+
+                        <!-- Testimonial Text -->
+                        <p
+                            style="color: #ccc; line-height: 1.6; font-size: 0.95rem; margin-bottom: 1.2rem; font-style: italic;">
+                            I was losing money consistently for 2 years. After joining the Advanced Batch, I finally
+                            understood trading psychology. Now I'm profitable for 6 months straight!
+                        </p>
+
+                        <!-- Results Badge -->
+                        <div
+                            style="display: inline-block; background: rgba(255,153,51,0.1); border: 1px solid #FF9933; padding: 0.4rem 0.8rem; border-radius: 50px; margin-bottom: 1rem;">
+                            <span style="color: #FF9933; font-size: 0.8rem; font-weight: 600;">📈 6 Months
+                                Profitable</span>
+                        </div>
+
+                        <!-- Author Info -->
+                        <div
+                            style="display: flex; align-items: center; gap: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(255,153,51,0.2);">
+                            <div
+                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #FF9933, #ff6600); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold; color: #000; box-shadow: 0 4px 15px rgba(255,153,51,0.4);">
+                                RK
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin: 0 0 0.2rem 0; font-size: 1rem;">Rahul Kumar</h4>
+                                <p style="color: #aaa; margin: 0; font-size: 0.85rem;">Advanced Batch</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div
+                        style="background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); padding: 1.5rem; border-radius: 15px; border: 2px solid transparent; background-clip: padding-box; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; min-width: 300px; max-width: 300px; flex-shrink: 0;">
+                        <div
+                            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 15px; padding: 2px; background: linear-gradient(135deg, #8B0000, #ff0000); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;">
+                        </div>
+
+                        <!-- Quote Icon -->
+                        <div
+                            style="color: #8B0000; font-size: 2rem; line-height: 1; margin-bottom: 0.8rem; opacity: 0.5;">
+                            "</div>
+
+                        <!-- Testimonial Text -->
+                        <p
+                            style="color: #ccc; line-height: 1.6; font-size: 0.95rem; margin-bottom: 1.2rem; font-style: italic;">
+                            As a complete beginner, I was overwhelmed by trading. The Beginner Batch broke everything
+                            down so clearly. The community support is amazing, and I made my first profitable trade in
+                            week 3!
+                        </p>
+
+                        <!-- Results Badge -->
+                        <div
+                            style="display: inline-block; background: rgba(139,0,0,0.1); border: 1px solid #8B0000; padding: 0.4rem 0.8rem; border-radius: 50px; margin-bottom: 1rem;">
+                            <span style="color: #ff6666; font-size: 0.8rem; font-weight: 600;">🎯 First Profit Week
+                                3</span>
+                        </div>
+
+                        <!-- Author Info -->
+                        <div
+                            style="display: flex; align-items: center; gap: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(139,0,0,0.2);">
+                            <div
+                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #8B0000, #ff0000); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold; color: #fff; box-shadow: 0 4px 15px rgba(139,0,0,0.4);">
+                                PS
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin: 0 0 0.2rem 0; font-size: 1rem;">Priya Sharma</h4>
+                                <p style="color: #aaa; margin: 0; font-size: 0.85rem;">Beginner Batch</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div
+                        style="background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); padding: 1.5rem; border-radius: 15px; border: 2px solid transparent; background-clip: padding-box; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; min-width: 300px; max-width: 300px; flex-shrink: 0;">
+                        <div
+                            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 15px; padding: 2px; background: linear-gradient(135deg, #FF9933, #ff6600); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;">
+                        </div>
+
+                        <!-- Quote Icon -->
+                        <div
+                            style="color: #FF9933; font-size: 2rem; line-height: 1; margin-bottom: 0.8rem; opacity: 0.5;">
+                            "</div>
+
+                        <!-- Testimonial Text -->
+                        <p
+                            style="color: #ccc; line-height: 1.6; font-size: 0.95rem; margin-bottom: 1.2rem; font-style: italic;">
+                            The Pro Trader Batch is worth every penny. Live trading sessions taught me more than 100
+                            YouTube videos. The personalized feedback helped me eliminate my biggest mistakes!
+                        </p>
+
+                        <!-- Results Badge -->
+                        <div
+                            style="display: inline-block; background: rgba(255,153,51,0.1); border: 1px solid #FF9933; padding: 0.4rem 0.8rem; border-radius: 50px; margin-bottom: 1rem;">
+                            <span style="color: #FF9933; font-size: 0.8rem; font-weight: 600;">💎 Pro Trader
+                                Level</span>
+                        </div>
+
+                        <!-- Author Info -->
+                        <div
+                            style="display: flex; align-items: center; gap: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(255,153,51,0.2);">
+                            <div
+                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #FF9933, #ff6600); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold; color: #000; box-shadow: 0 4px 15px rgba(255,153,51,0.4);">
+                                AM
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin: 0 0 0.2rem 0; font-size: 1rem;">Aditya Mehta</h4>
+                                <p style="color: #aaa; margin: 0; font-size: 0.85rem;">Pro Trader Batch</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div
+                        style="background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); padding: 1.5rem; border-radius: 15px; border: 2px solid transparent; background-clip: padding-box; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; min-width: 300px; max-width: 300px; flex-shrink: 0;">
+                        <div
+                            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 15px; padding: 2px; background: linear-gradient(135deg, #8B0000, #ff0000); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;">
+                        </div>
+
+                        <div
+                            style="color: #8B0000; font-size: 2rem; line-height: 1; margin-bottom: 0.8rem; opacity: 0.5;">
+                            "</div>
+
+                        <p
+                            style="color: #ccc; line-height: 1.6; font-size: 0.95rem; margin-bottom: 1.2rem; font-style: italic;">
+                            Lost ₹3 lakhs before finding this course. The risk management module alone saved my trading
+                            career. Now I'm consistently profitable with proper position sizing. Best investment ever!
+                        </p>
+
+                        <div
+                            style="display: inline-block; background: rgba(139,0,0,0.1); border: 1px solid #8B0000; padding: 0.4rem 0.8rem; border-radius: 50px; margin-bottom: 1rem;">
+                            <span style="color: #ff6666; font-size: 0.8rem; font-weight: 600;">💰 Account
+                                Recovered</span>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; gap: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(139,0,0,0.2);">
+                            <div
+                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #8B0000, #ff0000); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold; color: #fff; box-shadow: 0 4px 15px rgba(139,0,0,0.4);">
+                                VG
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin: 0 0 0.2rem 0; font-size: 1rem;">Vikram Gupta</h4>
+                                <p style="color: #aaa; margin: 0; font-size: 0.85rem;">Pro Trader Batch</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div
+                        style="background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); padding: 1.5rem; border-radius: 15px; border: 2px solid transparent; background-clip: padding-box; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; min-width: 300px; max-width: 300px; flex-shrink: 0;">
+                        <div
+                            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 15px; padding: 2px; background: linear-gradient(135deg, #FF9933, #ff6600); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;">
+                        </div>
+
+                        <div
+                            style="color: #FF9933; font-size: 2rem; line-height: 1; margin-bottom: 0.8rem; opacity: 0.5;">
+                            "</div>
+
+                        <p
+                            style="color: #ccc; line-height: 1.6; font-size: 0.95rem; margin-bottom: 1.2rem; font-style: italic;">
+                            The psychology lessons changed everything. I used to revenge trade after losses. Now I
+                            follow my rules strictly and my win rate improved from 35% to 68%. Thank you for teaching
+                            discipline!
+                        </p>
+
+                        <div
+                            style="display: inline-block; background: rgba(255,153,51,0.1); border: 1px solid #FF9933; padding: 0.4rem 0.8rem; border-radius: 50px; margin-bottom: 1rem;">
+                            <span style="color: #FF9933; font-size: 0.8rem; font-weight: 600;">📊 68% Win Rate</span>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; gap: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(255,153,51,0.2);">
+                            <div
+                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #FF9933, #ff6600); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold; color: #000; box-shadow: 0 4px 15px rgba(255,153,51,0.4);">
+                                SK
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin: 0 0 0.2rem 0; font-size: 1rem;">Sneha Kapoor</h4>
+                                <p style="color: #aaa; margin: 0; font-size: 0.85rem;">Advanced Batch</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div
+                        style="background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); padding: 1.5rem; border-radius: 15px; border: 2px solid transparent; background-clip: padding-box; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; min-width: 300px; max-width: 300px; flex-shrink: 0;">
+                        <div
+                            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 15px; padding: 2px; background: linear-gradient(135deg, #8B0000, #ff0000); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;">
+                        </div>
+
+                        <div
+                            style="color: #8B0000; font-size: 2rem; line-height: 1; margin-bottom: 0.8rem; opacity: 0.5;">
+                            "</div>
+
+                        <p
+                            style="color: #ccc; line-height: 1.6; font-size: 0.95rem; margin-bottom: 1.2rem; font-style: italic;">
+                            Started with zero knowledge about technical analysis. The structured curriculum and hands-on
+                            practice made me confident. Now I trade full-time and make consistent monthly income!
+                        </p>
+
+                        <div
+                            style="display: inline-block; background: rgba(139,0,0,0.1); border: 1px solid #8B0000; padding: 0.4rem 0.8rem; border-radius: 50px; margin-bottom: 1rem;">
+                            <span style="color: #ff6666; font-size: 0.8rem; font-weight: 600;">🚀 Full-Time
+                                Trader</span>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; gap: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(139,0,0,0.2);">
+                            <div
+                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #8B0000, #ff0000); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold; color: #fff; box-shadow: 0 4px 15px rgba(139,0,0,0.4);">
+                                NJ
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin: 0 0 0.2rem 0; font-size: 1rem;">Nikhil Jain</h4>
+                                <p style="color: #aaa; margin: 0; font-size: 0.85rem;">Beginner Batch</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate testimonials for seamless loop -->
+                    <!-- Testimonial 1 (Duplicate) -->
+                    <div
+                        style="background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); padding: 1.5rem; border-radius: 15px; border: 2px solid transparent; background-clip: padding-box; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; min-width: 300px; max-width: 300px; flex-shrink: 0;">
+                        <div
+                            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 15px; padding: 2px; background: linear-gradient(135deg, #FF9933, #ff6600); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;">
+                        </div>
+
+                        <div
+                            style="color: #FF9933; font-size: 2rem; line-height: 1; margin-bottom: 0.8rem; opacity: 0.5;">
+                            "</div>
+
+                        <p
+                            style="color: #ccc; line-height: 1.6; font-size: 0.95rem; margin-bottom: 1.2rem; font-style: italic;">
+                            I was losing money consistently for 2 years. After joining the Advanced Batch, I finally
+                            understood trading psychology. Now I'm profitable for 6 months straight!
+                        </p>
+
+                        <div
+                            style="display: inline-block; background: rgba(255,153,51,0.1); border: 1px solid #FF9933; padding: 0.4rem 0.8rem; border-radius: 50px; margin-bottom: 1rem;">
+                            <span style="color: #FF9933; font-size: 0.8rem; font-weight: 600;">📈 6 Months
+                                Profitable</span>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; gap: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(255,153,51,0.2);">
+                            <div
+                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #FF9933, #ff6600); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold; color: #000; box-shadow: 0 4px 15px rgba(255,153,51,0.4);">
+                                RK
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin: 0 0 0.2rem 0; font-size: 1rem;">Rahul Kumar</h4>
+                                <p style="color: #aaa; margin: 0; font-size: 0.85rem;">Advanced Batch</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 (Duplicate) -->
+                    <div
+                        style="background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); padding: 1.5rem; border-radius: 15px; border: 2px solid transparent; background-clip: padding-box; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; min-width: 300px; max-width: 300px; flex-shrink: 0;">
+                        <div
+                            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 15px; padding: 2px; background: linear-gradient(135deg, #8B0000, #ff0000); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;">
+                        </div>
+
+                        <div
+                            style="color: #8B0000; font-size: 2rem; line-height: 1; margin-bottom: 0.8rem; opacity: 0.5;">
+                            "</div>
+
+                        <p
+                            style="color: #ccc; line-height: 1.6; font-size: 0.95rem; margin-bottom: 1.2rem; font-style: italic;">
+                            As a complete beginner, I was overwhelmed by trading. The Beginner Batch broke everything
+                            down so clearly. The community support is amazing, and I made my first profitable trade in
+                            week 3!
+                        </p>
+
+                        <div
+                            style="display: inline-block; background: rgba(139,0,0,0.1); border: 1px solid #8B0000; padding: 0.4rem 0.8rem; border-radius: 50px; margin-bottom: 1rem;">
+                            <span style="color: #ff6666; font-size: 0.8rem; font-weight: 600;">🎯 First Profit Week
+                                3</span>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; gap: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(139,0,0,0.2);">
+                            <div
+                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #8B0000, #ff0000); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold; color: #fff; box-shadow: 0 4px 15px rgba(139,0,0,0.4);">
+                                PS
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin: 0 0 0.2rem 0; font-size: 1rem;">Priya Sharma</h4>
+                                <p style="color: #aaa; margin: 0; font-size: 0.85rem;">Beginner Batch</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 (Duplicate) -->
+                    <div
+                        style="background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); padding: 1.5rem; border-radius: 15px; border: 2px solid transparent; background-clip: padding-box; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.5); transition: transform 0.3s ease, box-shadow 0.3s ease; min-width: 300px; max-width: 300px; flex-shrink: 0;">
+                        <div
+                            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 15px; padding: 2px; background: linear-gradient(135deg, #FF9933, #ff6600); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;">
+                        </div>
+
+                        <div
+                            style="color: #FF9933; font-size: 2rem; line-height: 1; margin-bottom: 0.8rem; opacity: 0.5;">
+                            "</div>
+
+                        <p
+                            style="color: #ccc; line-height: 1.6; font-size: 0.95rem; margin-bottom: 1.2rem; font-style: italic;">
+                            The Pro Trader Batch is worth every penny. Live trading sessions taught me more than 100
+                            YouTube videos. The personalized feedback helped me eliminate my biggest mistakes!
+                        </p>
+
+                        <div
+                            style="display: inline-block; background: rgba(255,153,51,0.1); border: 1px solid #FF9933; padding: 0.4rem 0.8rem; border-radius: 50px; margin-bottom: 1rem;">
+                            <span style="color: #FF9933; font-size: 0.8rem; font-weight: 600;">💎 Pro Trader
+                                Level</span>
+                        </div>
+
+                        <div
+                            style="display: flex; align-items: center; gap: 0.8rem; padding-top: 1rem; border-top: 1px solid rgba(255,153,51,0.2);">
+                            <div
+                                style="width: 45px; height: 45px; background: linear-gradient(135deg, #FF9933, #ff6600); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold; color: #000; box-shadow: 0 4px 15px rgba(255,153,51,0.4);">
+                                AM
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin: 0 0 0.2rem 0; font-size: 1rem;">Aditya Mehta</h4>
+                                <p style="color: #aaa; margin: 0; font-size: 0.85rem;">Pro Trader Batch</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Stats Summary -->
+                <div style="margin-top: 4rem; text-align: center;">
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
+                        <div
+                            style="background: rgba(255,153,51,0.05); border: 1px solid rgba(255,153,51,0.3); padding: 2rem; border-radius: 15px;">
+                            <div style="color: #FF9933; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
+                                95%</div>
+                            <div style="color: #ccc; font-size: 1rem;">Student Success Rate</div>
+                        </div>
+                        <div
+                            style="background: rgba(139,0,0,0.05); border: 1px solid rgba(139,0,0,0.3); padding: 2rem; border-radius: 15px;">
+                            <div style="color: #ff6666; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
+                                2000+</div>
+                            <div style="color: #ccc; font-size: 1rem;">Happy Students</div>
+                        </div>
+                        <div
+                            style="background: rgba(255,153,51,0.05); border: 1px solid rgba(255,153,51,0.3); padding: 2rem; border-radius: 15px;">
+                            <div style="color: #FF9933; font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
+                                4.9⭐</div>
+                            <div style="color: #ccc; font-size: 1rem;">Average Rating</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        style="background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 50%, #0a0a0a 100%); color: #fff; padding: 2.5rem 2rem 1.5rem; position: relative; overflow: hidden; border-top: 2px solid rgba(255,153,51,0.3);">
+        <!-- Decorative Background Elements -->
+        <div
+            style="position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,153,51,0.05) 0%, transparent 70%); border-radius: 50%; animation: float1 8s ease-in-out infinite;">
+        </div>
+        <div
+            style="position: absolute; bottom: -30%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,153,51,0.03) 0%, transparent 70%); border-radius: 50%; animation: float2 10s ease-in-out infinite;">
+        </div>
+
+        <!-- Footer Content -->
+        <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+            <!-- Top Section with Logo and Tagline -->
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,153,51,0.2);">
+                <!-- Brand Section -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem;">
+                        <img src="assets/images/logos/Logo.png" alt="Trader Frost Logo"
+                            style="width: 28px; height: 28px; object-fit: contain;">
+                        <h2 style="color: #FF9933; font-size: 1.4rem; margin: 0; font-weight: 700;">
+                            Trader<span style="color: #fff;">Frost</span>
+                        </h2>
+                    </div>
+                    <p style="color: #aaa; font-size: 0.85rem; line-height: 1.5; margin: 0;">
+                        Empowering traders with psychology-driven education and proven strategies. Transform your
+                        trading mindset and achieve consistent profitability.
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; margin-top: 1rem;">
+                        <a href="https://www.instagram.com/tradexfrost?utm_source=qr&igsh=MW01aDk5MWd1MjdteQ%3D%3D"
+                            target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                                    fill="#FF9933" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@traderfrost-p" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                                    fill="#FF9933" />
+                            </svg>
+                        </a>
+                        <a href="https://t.me/+pi-o2Ij9qQ5kY2M9" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                                    fill="#FF9933" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Main Pages -->
+                <div>
+                    <h3
+                        style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+                        Main Pages</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.6rem;"><a href="#home"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Home</a>
+                        </li>
+                        <li style="margin-bottom: 0.6rem;"><a href="#about"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">About Me</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="pages/courses.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Courses</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="#psychology"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Trading Psychology</a></li>
+                    </ul>
+                </div>
+
+                <!-- Trading Tools -->
+                <div>
+                    <h3
+                        style="color: #FF9933; font-size: 1.1rem; margin: 0 0 1.5rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+                        Trading Tools</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.6rem;"><a href="pages/lot-size.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Lot Size Calculator</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="pages/profit-loss.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Profit &amp; Loss</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="pages/pips.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Pips Calculator</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="pages/risk-management.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Risk Management Advisor</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support & Legal -->
+                <div>
+                    <h3
+                        style="color: #FF9933; font-size: 1.1rem; margin: 0 0 1.5rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+                        Support &amp; Legal</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.6rem;"><a href="pages/contact.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Contact Us</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="#"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Terms &amp; Conditions</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="#"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Privacy Policy</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="#"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Risk Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div
+                style="background: rgba(255,153,51,0.05); padding: 1rem 1.2rem; border-radius: 12px; border-left: 3px solid #FF9933; margin-bottom: 1.5rem;">
+                <p style="color: #FF9933; font-size: 0.8rem; margin: 0 0 0.4rem 0; font-weight: 600;">Important
+                    Disclaimer</p>
+                <p style="color: #aaa; font-size: 0.8rem; margin: 0; line-height: 1.5;">
+                    Trading involves risk. Past performance does not guarantee future results. Only invest what you can
+                    afford to lose. This platform is for educational purposes only. Always consult with a financial
+                    advisor before making investment decisions.
+                </p>
+            </div>
+
+            <!-- Copyright -->
+            <div style="text-align: center; padding-top: 0.8rem; border-top: 1px solid rgba(255,153,51,0.1);">
+                <p style="color: #888; font-size: 0.8rem; margin: 0;">
+                    &copy; 2026 Trader Frost. All rights reserved. | Dedicated to traders worldwide
+                </p>
+                <p style="color: #666; font-size: 0.8rem; margin: 0.5rem 0 0 0;">
+                    Trader Frost | Trading Education & Mentorship Services
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Market Prices Script -->
+
+    <script src="js/main.js"></script>
+    
+    <!-- Trading Carousel Script -->
+    
+    <!-- CSS Animations -->
+
+    <!-- Disclaimer Modal Styles -->
+    <style>
+        .disclaimer-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .disclaimer-modal.show {
+            display: flex;
+        }
+
+        .disclaimer-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(6px);
+        }
+
+        .disclaimer-content {
+            position: relative;
+            background: linear-gradient(145deg, #1f1f1f 0%, #151515 100%);
+            border: 1px solid rgba(255, 153, 51, 0.25);
+            border-radius: 16px;
+            max-width: 520px;
+            width: 90%;
+            padding: 2.5rem 2rem 2rem;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5), 0 0 80px rgba(255, 153, 51, 0.15);
+            animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-align: center;
+        }
+
+        .disclaimer-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: transparent;
+            border: none;
+            color: #999;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .disclaimer-close:hover {
+            background: rgba(255, 153, 51, 0.1);
+            color: #FF9933;
+            transform: scale(1.1);
+        }
+
+        .disclaimer-icon {
+            margin-bottom: 1.2rem;
+            display: inline-flex;
+            padding: 1rem;
+            background: rgba(255, 153, 51, 0.1);
+            border-radius: 50%;
+            animation: iconPulse 2.5s ease-in-out infinite;
+        }
+
+        .disclaimer-title {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 1.5rem 0;
+            letter-spacing: -0.5px;
+        }
+
+        .disclaimer-body {
+            color: #b8b8b8;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .disclaimer-body p {
+            margin: 0;
+        }
+
+        .disclaimer-btn {
+            background: linear-gradient(135deg, #FF9933 0%, #ff7700 100%);
+            color: #000;
+            border: none;
+            padding: 0.85rem 2.5rem;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .disclaimer-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4);
+            background: linear-gradient(135deg, #ff7700 0%, #FF9933 100%);
+        }
+
+        .disclaimer-btn:active {
+            transform: translateY(0);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes iconPulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 0 rgba(255, 153, 51, 0.4);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(255, 153, 51, 0.3);
+            }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .disclaimer-content {
+                width: 92%;
+                padding: 2.5rem 1.5rem 1.8rem;
+            }
+
+            .disclaimer-title {
+                font-size: 1.3rem;
+            }
+
+            .disclaimer-body {
+                font-size: 0.9rem;
+                margin-bottom: 1.8rem;
+            }
+
+            .disclaimer-btn {
+                max-width: 100%;
+            }
+        }
+    </style>
+
+    <!-- Disclaimer Modal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const disclaimerModal = document.getElementById('disclaimerModal');
+            const disclaimerClose = document.getElementById('disclaimerClose');
+            const disclaimerAccept = document.getElementById('disclaimerAccept');
+            const disclaimerOverlay = disclaimerModal.querySelector('.disclaimer-overlay');
+            
+            // Check if user has already seen the disclaimer
+            const hasSeenDisclaimer = localStorage.getItem('traderFrostDisclaimerSeen');
+            
+            // Show modal if not seen
+            if (!hasSeenDisclaimer) {
+                setTimeout(() => {
+                    disclaimerModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                }, 500); // Show after page loader
+            }
+            
+            // Close modal function
+            function closeModal() {
+                localStorage.setItem('traderFrostDisclaimerSeen', 'true');
+                disclaimerModal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+            
+            // Handle accept button click
+            disclaimerAccept.addEventListener('click', closeModal);
+            
+            // Handle close button click
+            disclaimerClose.addEventListener('click', closeModal);
+            
+            // Close modal when clicking overlay
+            disclaimerOverlay.addEventListener('click', closeModal);
+            
+            // Close on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && disclaimerModal.classList.contains('show')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

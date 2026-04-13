@@ -1,0 +1,458 @@
+/* Forex Guide Page 2 Styles */
+:root {
+	--color-primary: #FF9933;
+	--color-dark: #0a0a0a;
+	--color-dark-2: #141414;
+	--color-dark-3: #1d1d1d;
+	--color-text: #ffffff;
+}
+
+/* Calculator Dropdown */
+.nav-links .dropdown {
+	position: relative;
+}
+
+.nav-links .dropdown > a {
+	cursor: pointer;
+}
+
+.nav-links .dropdown-menu {
+	position: absolute;
+	top: calc(100% + 12px);
+	left: 0;
+	min-width: 240px;
+	background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+	border: 1px solid rgba(255, 153, 51, 0.3);
+	border-radius: 12px;
+	padding: 0.8rem 0;
+	box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 153, 51, 0.12);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(8px);
+	transition: all 0.25s ease;
+	z-index: 1000;
+	list-style: none;
+}
+
+.nav-links .dropdown:hover .dropdown-menu,
+.nav-links .dropdown:focus-within .dropdown-menu {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.nav-links .dropdown-menu li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-links .dropdown-menu a {
+	display: block;
+	padding: 0.75rem 1.2rem;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 0.9rem;
+	transition: all 0.2s ease;
+	border-left: 3px solid transparent;
+}
+
+.nav-links .dropdown-menu a:hover {
+	color: #FF9933;
+	background: rgba(255, 153, 51, 0.1);
+	border-left-color: #FF9933;
+	padding-left: 1.5rem;
+}
+
+body {
+	background: #050505;
+}
+
+/* ============ HERO SECTION WITH ANIMATED PATTERN ============ */
+.guide-hero {
+	position: relative;
+	padding: 5.5rem 1rem 5rem;
+	background: linear-gradient(180deg, #050505 0%, #0b0b0b 50%, #050505 100%);
+	overflow: hidden;
+}
+
+/* Animated Candlestick Grid Pattern */
+.guide-hero::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background:
+		repeating-linear-gradient(90deg, rgba(255, 153, 51, 0.06) 0px, transparent 2px, transparent 48px),
+		repeating-linear-gradient(0deg, rgba(255, 153, 51, 0.04) 0px, transparent 1px, transparent 32px);
+	opacity: 0.35;
+	pointer-events: none;
+	animation: gridShift 8s linear infinite;
+}
+
+@keyframes gridShift {
+	0% { transform: translateY(0px); }
+	100% { transform: translateY(32px); }
+}
+
+/* Radial Glow Effect */
+.guide-hero::after {
+	content: '';
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	background: radial-gradient(circle, rgba(255, 153, 51, 0.2) 0%, transparent 70%);
+	top: -300px;
+	left: 50%;
+	transform: translateX(-50%);
+	filter: blur(12px);
+	pointer-events: none;
+	animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+	0%, 100% { opacity: 0.2; }
+	50% { opacity: 0.35; }
+}
+
+.guide-hero-content {
+	position: relative;
+	z-index: 1;
+	max-width: 920px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.guide-hero-title {
+	font-size: 3rem;
+	color: #ffffff;
+	margin: 0 0 0.8rem;
+	font-weight: 900;
+	letter-spacing: -1px;
+	text-shadow: 0 8px 32px rgba(255, 153, 51, 0.2), 0 2px 8px rgba(0, 0, 0, 0.3);
+	background: linear-gradient(135deg, #ffffff 0%, #d0d0d0 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.guide-hero-subtitle {
+	color: #d0d0d0;
+	font-size: 1.2rem;
+	line-height: 1.85;
+	margin: 0 auto 2.2rem;
+	max-width: 760px;
+	font-weight: 400;
+	letter-spacing: 0.3px;
+}
+
+.guide-hero-underline {
+	width: 240px;
+	height: 2px;
+	margin: 0 auto;
+	border-radius: 999px;
+	background: linear-gradient(90deg, transparent, #FF9933, transparent);
+	box-shadow: 0 0 24px rgba(255, 153, 51, 0.7), 0 0 48px rgba(255, 153, 51, 0.4);
+}
+
+/* ============ STICKY SIDEBAR NAVIGATION (DESKTOP) ============ */
+.guide-wrapper {
+	display: grid;
+	grid-template-columns: 240px 1fr;
+	gap: 3rem;
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 1rem;
+	background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 100%);
+	padding: 4.5rem 1rem;
+}
+
+.guide-sidebar {
+	position: sticky;
+	top: 120px;
+	height: fit-content;
+	max-height: calc(100vh - 140px);
+}
+
+.guide-sidebar-nav {
+	background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+	border: 1px solid rgba(255, 153, 51, 0.25);
+	border-radius: 18px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	max-height: calc(100vh - 140px);
+	box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4),
+				0 0 40px rgba(255, 153, 51, 0.1),
+				inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Custom Scrollbar for Sidebar */
+.guide-sidebar-nav::-webkit-scrollbar {
+	width: 6px;
+}
+
+.guide-sidebar-nav::-webkit-scrollbar-track {
+	background: rgba(255, 153, 51, 0.05);
+	border-radius: 10px;
+	margin: 1rem 0;
+}
+
+.guide-sidebar-nav::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, #FF9933 0%, #ff6600 100%);
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(255, 153, 51, 0.5);
+}
+
+.guide-sidebar-nav::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(180deg, #ffb366 0%, #FF9933 100%);
+	box-shadow: 0 0 15px rgba(255, 153, 51, 0.8);
+}
+
+/* Firefox scrollbar */
+.guide-sidebar-nav {
+	scrollbar-width: thin;
+	scrollbar-color: #FF9933 rgba(255, 153, 51, 0.05);
+}
+
+.guide-sidebar-title {
+	font-size: 1rem;
+	font-weight: 900;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	padding: 1rem 1.4rem 1.2rem 1.4rem;
+	margin: 0 0 0.8rem 0;
+	text-align: center;
+	position: relative;
+	color: #FF9933;
+	text-shadow: 0 8px 32px rgba(255, 153, 51, 0.3), 0 2px 8px rgba(255, 153, 51, 0.2), 0 0 20px rgba(255, 153, 51, 0.15);
+}
+
+.guide-sidebar-title::after {
+	content: '';
+	position: absolute;
+	bottom: -0.8rem;
+	left: 1.4rem;
+	right: 1.4rem;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #FF9933, transparent);
+	box-shadow: 0 0 15px rgba(255, 153, 51, 0.5);
+}
+
+.guide-sidebar-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.guide-sidebar-item {
+	margin: 0;
+}
+
+.guide-sidebar-link {
+	display: flex;
+	align-items: center;
+	padding: 1rem 1.4rem;
+	color: #c8c8c8;
+	text-decoration: none;
+	font-size: 0.95rem;
+	transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+	cursor: pointer;
+	border-left: 3px solid rgba(255, 153, 51, 0);
+	position: relative;
+	background: transparent;
+}
+
+.guide-sidebar-link::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 3px;
+	height: 0;
+	background: linear-gradient(135deg, #FF9933, #ffb366);
+	transition: height 0.35s ease;
+}
+
+.guide-sidebar-link:hover {
+	color: #fff;
+	background: rgba(255, 153, 51, 0.1);
+	border-left-color: rgba(255, 153, 51, 0.3);
+}
+
+.guide-sidebar-link:hover::before {
+	height: 100%;
+}
+
+.guide-sidebar-link.active {
+	color: #FF9933;
+	background: rgba(255, 153, 51, 0.15);
+	border-left-color: #FF9933;
+	font-weight: 700;
+	box-shadow: 0 0 20px rgba(255, 153, 51, 0.2);
+}
+
+.guide-sidebar-link.active::before {
+	height: 100%;
+}
+
+/* Chapter Link Styling */
+.guide-sidebar-link.chapter-link {
+	font-weight: 700;
+	font-size: 1rem;
+	color: #FF9933;
+	padding: 1.1rem 1.4rem;
+	cursor: pointer;
+}
+
+/* Topic container styling - target direct ul children */
+.guide-sidebar-list > ul {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+	opacity: 0;
+}
+
+.guide-sidebar-list > ul.expanded {
+	max-height: 2000px;
+	opacity: 1;
+	transition: max-height 0.5s ease-in, opacity 0.4s ease-in 0.1s;
+}
+
+/* Topic Link Styling (nested under chapters) */
+.guide-sidebar-link.topic-link {
+	padding-left: 2.5rem;
+	font-size: 0.9rem;
+	color: #b8b8b8;
+	border-left: 3px solid rgba(255, 153, 51, 0.1);
+}
+
+.guide-sidebar-link.topic-link::before {
+	left: 1.8rem;
+	width: 2px;
+}
+
+.guide-sidebar-link.topic-link:hover {
+	padding-left: 2.7rem;
+}
+
+/* ============ MAIN CONTENT SECTIONS ============ */
+.guide-content {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.chapter-section {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.chapter-heading {
+	font-size: 2rem;
+	color: #ffffff;
+	margin: 0 0 1rem 0;
+	font-weight: 800;
+	letter-spacing: -0.5px;
+}
+
+.chapter-content {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.chapter-topic {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.chapter-topic h3 {
+	font-size: 1.4rem;
+	color: #FF9933;
+	margin: 0;
+	font-weight: 700;
+}
+
+.chapter-topic p {
+	color: #d0d0d0;
+	font-size: 1rem;
+	line-height: 1.8;
+	margin: 0;
+}
+
+/* Pagination */
+.pagination-section {
+	background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 100%);
+	padding: 2.5rem 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
+
+.pagination-nav {
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	gap: 2rem;
+}
+
+.pagination-link {
+	display: inline-block;
+	padding: 0.8rem 1.8rem;
+	background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%);
+	color: #fff;
+	text-decoration: none;
+	border-radius: 8px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+}
+
+.pagination-link:hover {
+	box-shadow: 0 6px 20px rgba(255, 153, 51, 0.5);
+	transform: translateY(-2px);
+}
+
+.pagination-info {
+	color: #FF9933;
+	font-weight: 600;
+	font-size: 1rem;
+	flex: 1;
+	text-align: center;
+}
+
+@media (max-width: 1024px) {
+	.guide-wrapper {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.guide-sidebar {
+		position: static;
+		top: auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.guide-hero-title {
+		font-size: 2.2rem;
+	}
+
+	.chapter-heading {
+		font-size: 1.5rem;
+	}
+
+	.pagination-nav {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.pagination-link {
+		width: 100%;
+		text-align: center;
+	}
+}

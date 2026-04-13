@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Analysis - Trader Frost">
+    <title>Analysis | Trader Frost</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="icon" type="image/png" href="../../assets/images/logos/Logo.png">
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div id="pageLoader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="../../assets/images/logos/Logo.png" alt="Trader Frost Logo">
+            </div>
+            <div class="loader-text">
+                <span style="color: #fff; font-size: 1.5rem; font-weight: bold;">
+                    Trader<span style="color: #FF9933;">Frost</span>
+                </span>
+            </div>
+            <div class="loader-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Wrapper -->
+    <div class="page-wrapper">
+        <!-- Sidebar Overlay (Mobile) -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Dashboard Section -->
+        <div class="dashboard">
+            <!-- Sidebar -->
+            <aside class="dashboard__sidebar" id="dashboardSidebar">
+                <div class="sidebar-brand">
+                    <img src="../../assets/images/logos/Logo.png" alt="Trader Frost Logo">
+                    <div class="sidebar-brand-text">
+                        <span class="sidebar-brand-title">Trader<span>Frost</span></span>
+                        <span class="sidebar-brand-tagline">Trade smart, Earn smartly</span>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="sidebar-menu">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="trades.html">Trades</a></li>
+                        <li><a href="journal.html">Journal</a></li>
+                        <li><a href="analysis.html" class="active">Analysis</a></li>
+                        <li><a href="market.html">Market</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="dashboard__main">
+                <!-- Dashboard Toolbar -->
+                <header class="dashboard__toolbar">
+                    <!-- Left: Hamburger + Title -->
+                    <div class="toolbar-left">
+                        <button class="hamburger-menu" id="hamburgerMenu" title="Menu" aria-label="Toggle menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <h2 class="toolbar-title">Analysis</h2>
+                    </div>
+
+                    <!-- Center: Search Bar -->
+                    <div class="toolbar-center">
+                        <div class="search-bar">
+                            <span class="search-icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.35-4.35"></path>
+                                </svg>
+                            </span>
+                            <input type="text" class="search-input" placeholder="Search…">
+                        </div>
+                    </div>
+
+                    <!-- Right: Action Buttons -->
+                    <div class="toolbar-right">
+                        <button class="toolbar-btn toolbar-btn-action" title="Add">+</button>
+                        <div class="toolbar-time" id="toolbarDateTime">--</div>
+                        <div class="toolbar-avatar">U</div>
+                    </div>
+                </header>
+
+                <!-- Analysis Content -->
+                <section class="dashboard__content"></section>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../js/dashboard.js"></script>
+    <script src="../../js/sidebar-toggle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard - Trader Frost">
+    <title>Dashboard | Trader Frost</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="icon" type="image/png" href="../../assets/images/logos/Logo.png">
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div id="pageLoader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="../../assets/images/logos/Logo.png" alt="Trader Frost Logo">
+            </div>
+            <div class="loader-text">
+                <span style="color: #fff; font-size: 1.5rem; font-weight: bold;">
+                    Trader<span style="color: #FF9933;">Frost</span>
+                </span>
+            </div>
+            <div class="loader-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Wrapper -->
+    <div class="page-wrapper">
+        <!-- Sidebar Overlay (Mobile) -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Dashboard Section -->
+        <div class="dashboard">
+            <!-- Sidebar -->
+            <aside class="dashboard__sidebar" id="dashboardSidebar">
+                <div class="sidebar-brand">
+                    <img src="../../assets/images/logos/Logo.png" alt="Trader Frost Logo">
+                    <div class="sidebar-brand-text">
+                        <span class="sidebar-brand-title">Trader<span>Frost</span></span>
+                        <span class="sidebar-brand-tagline">Trade smart, Earn smartly</span>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="sidebar-menu">
+                        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                        <li><a href="trades.html">Trades</a></li>
+                        <li><a href="journal.html">Journal</a></li>
+                        <li><a href="analysis.html">Analysis</a></li>
+                        <li><a href="market.html">Market</a></li>
+                        <li><a href="tools.html">Tools</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="dashboard__main">
+                <!-- Dashboard Toolbar -->
+                <header class="dashboard__toolbar">
+                    <!-- Left: Hamburger + Title -->
+                    <div class="toolbar-left">
+                        <button class="hamburger-menu" id="hamburgerMenu" title="Menu" aria-label="Toggle menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <h2 class="toolbar-title">Dashboard</h2>
+                    </div>
+
+                    <!-- Center: Search Bar -->
+                    <div class="toolbar-center">
+                        <div class="search-bar">
+                            <span class="search-icon" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.35-4.35"></path>
+                                </svg>
+                            </span>
+                            <input type="text" class="search-input" placeholder="Search…">
+                        </div>
+                    </div>
+
+                    <!-- Right: Action Buttons -->
+                    <div class="toolbar-right">
+                        <button class="toolbar-btn toolbar-btn-action" title="Add">+</button>
+                        <div class="toolbar-time" id="toolbarDateTime">--</div>
+                        <div class="toolbar-avatar">U</div>
+                    </div>
+                </header>
+
+                <!-- Dashboard Content -->
+                <section class="dashboard__content">
+                    <div class="dashboard-stack">
+                        <!-- Stats Grid -->
+                        <div class="dashboard-grid-4">
+                            <!-- Card 1: Total P&L -->
+                            <div class="stat-card dashboard-card">
+                                <div class="stat-icon icon-pl">$</div>
+                                <div class="stat-label">Total P&L</div>
+                                <div class="stat-value">+$0.00</div>
+                                <div class="stat-subtext">0 trades</div>
+                            </div>
+
+                        <!-- Card 2: Unrealized -->
+                        <div class="stat-card dashboard-card">
+                            <div class="stat-icon icon-unrealized">◇</div>
+                            <div class="stat-label">Unrealized</div>
+                            <div class="stat-value">+$0.00</div>
+                            <div class="stat-subtext">0 open positions</div>
+                        </div>
+
+                        <!-- Card 3: Realized -->
+                        <div class="stat-card dashboard-card">
+                            <div class="stat-icon icon-realized">✔</div>
+                            <div class="stat-label">Realized</div>
+                            <div class="stat-value">+$0.00</div>
+                            <div class="stat-subtext">0 closed trades</div>
+                        </div>
+
+                        <!-- Card 4: Win Rate -->
+                        <div class="stat-card dashboard-card">
+                            <div class="stat-icon icon-winrate">%</div>
+                            <div class="stat-label">Win Rate</div>
+                            <div class="stat-value">0%</div>
+                            <div class="stat-progress">
+                                <div class="stat-progress-fill" style="width: 0%;"></div>
+                            </div>
+                            <div class="stat-subtext">performance</div>
+                        </div>
+                    </div>
+
+                    <!-- Trades Grid -->
+                    <div class="dashboard-grid-2 dashboard-grid-single">
+                        <!-- Left Panel: Recent Trades -->
+                        <div class="trades-panel dashboard-card">
+                            <div class="panel-header">
+                                <h3 class="panel-title">Recent Trades</h3>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <a class="view-all-btn" href="trades.html">View All</a>
+                                </div>
+                            </div>
+
+                            <table class="trades-table">
+                                <thead>
+                                    <tr>
+                                        <th>Pair</th>
+                                        <th>Type</th>
+                                        <th>Entry</th>
+                                        <th>Exit</th>
+                                        <th>P&L</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="pair">EUR/USD</td>
+                                        <td class="type">Buy</td>
+                                        <td>1.08450</td>
+                                        <td>1.08920</td>
+                                        <td class="pnl-positive">+$70.50</td>
+                                        <td><span class="status-badge status-closed">Closed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pair">GBP/USD</td>
+                                        <td class="type">Sell</td>
+                                        <td>1.27340</td>
+                                        <td>1.27910</td>
+                                        <td class="pnl-negative">-$57.00</td>
+                                        <td><span class="status-badge status-closed">Closed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pair">BTC/USD</td>
+                                        <td class="type">Buy</td>
+                                        <td>42150</td>
+                                        <td>42820</td>
+                                        <td class="pnl-positive">+$134.00</td>
+                                        <td><span class="status-badge status-closed">Closed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pair">XAU/USD</td>
+                                        <td class="type">Sell</td>
+                                        <td>2034.50</td>
+                                        <td>2028.10</td>
+                                        <td class="pnl-positive">+$45.00</td>
+                                        <td><span class="status-badge status-closed">Closed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pair">USD/JPY</td>
+                                        <td class="type">Buy</td>
+                                        <td>146.220</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td><span class="status-badge status-open">Open</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- Analytics Section -->
+                    <div class="dashboard-grid-2">
+                        <!-- Left Panel: Equity Curve -->
+                        <div class="equity-panel dashboard-card">
+                            <h3 class="equity-title">Equity Curve</h3>
+                            <div class="equity-chart-placeholder">
+                                <svg class="equity-svg" viewBox="0 0 600 250" preserveAspectRatio="xMidYMid meet">
+                                    <!-- Curved line representing equity growth -->
+                                    <path class="equity-curve-line" d="M 30 200 Q 80 180 130 160 Q 180 140 230 120 Q 280 90 330 70 Q 380 60 430 75 Q 480 95 530 60 Q 560 40 570 30"></path>
+                                    
+                                    <!-- Trade entry/exit points -->
+                                    <circle class="equity-trade-point" cx="130" cy="160" r="5"></circle>
+                                    <circle class="equity-trade-point" cx="230" cy="120" r="5"></circle>
+                                    <circle class="equity-trade-point" cx="330" cy="70" r="5"></circle>
+                                    <circle class="equity-trade-point" cx="430" cy="75" r="5"></circle>
+                                    <circle class="equity-trade-point" cx="570" cy="30" r="5"></circle>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Right Panel: Trade Distribution -->
+                        <div class="distribution-panel dashboard-card">
+                            <h3 class="equity-title">Trade Distribution</h3>
+                            <div class="distribution-metrics-grid">
+                                <!-- Wins -->
+                                <div class="metric-card">
+                                    <div class="metric-indicator wins"></div>
+                                    <div class="metric-label">Wins</div>
+                                    <div class="metric-value">0</div>
+                                </div>
+
+                                <!-- Losses -->
+                                <div class="metric-card">
+                                    <div class="metric-indicator losses"></div>
+                                    <div class="metric-label">Losses</div>
+                                    <div class="metric-value">0</div>
+                                </div>
+
+                                <!-- Avg RR -->
+                                <div class="metric-card">
+                                    <div class="metric-indicator avg-rr"></div>
+                                    <div class="metric-label">Avg RR</div>
+                                    <div class="metric-value">0.0</div>
+                                </div>
+
+                                <!-- Max Drawdown -->
+                                <div class="metric-card">
+                                    <div class="metric-indicator drawdown"></div>
+                                    <div class="metric-label">Max Drawdown</div>
+                                    <div class="metric-value">0%</div>
+                                </div>
+
+                                <!-- Best Trade -->
+                                <div class="metric-card">
+                                    <div class="metric-indicator best-trade"></div>
+                                    <div class="metric-label">Best Trade</div>
+                                    <div class="metric-value">+$0.00</div>
+                                </div>
+
+                                <!-- Worst Trade -->
+                                <div class="metric-card">
+                                    <div class="metric-indicator worst-trade"></div>
+                                    <div class="metric-label">Worst Trade</div>
+                                    <div class="metric-value">-$0.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panels Grid -->
+                    <div class="dashboard-grid-2">
+                        <!-- Left Panel: Performance -->
+                        <div class="panel dashboard-card">
+                            <div class="panel-header">
+                                <h3 class="panel-title">Performance</h3>
+                                <span class="panel-date-range" id="weekDateRange">-- ---</span>
+                            </div>
+                            <div class="performance-chart">
+                                <div class="performance-bars">
+                                    <div class="performance-day">
+                                        <span class="day-label">Mon</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 0%"></div>
+                                        </div>
+                                        <span class="day-value">$0</span>
+                                    </div>
+                                    <div class="performance-day">
+                                        <span class="day-label">Tue</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 0%"></div>
+                                        </div>
+                                        <span class="day-value">$0</span>
+                                    </div>
+                                    <div class="performance-day">
+                                        <span class="day-label">Wed</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 0%"></div>
+                                        </div>
+                                        <span class="day-value">$0</span>
+                                    </div>
+                                    <div class="performance-day">
+                                        <span class="day-label">Thu</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 0%"></div>
+                                        </div>
+                                        <span class="day-value">$0</span>
+                                    </div>
+                                    <div class="performance-day">
+                                        <span class="day-label">Fri</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 0%"></div>
+                                        </div>
+                                        <span class="day-value">$0</span>
+                                    </div>
+                                    <div class="performance-day">
+                                        <span class="day-label">Sat</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 0%"></div>
+                                        </div>
+                                        <span class="day-value">$0</span>
+                                    </div>
+                                    <div class="performance-day">
+                                        <span class="day-label">Sun</span>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 0%"></div>
+                                        </div>
+                                        <span class="day-value">$0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Panel: Monthly P&L -->
+                        <div class="panel dashboard-card">
+                            <div class="panel-header">
+                                <h3 class="panel-title">Monthly P&L</h3>
+                                <div class="month-navigation">
+                                    <button id="prevMonth" class="month-nav-btn">←</button>
+                                    <span id="currentMonth" class="month-display">Feb 2026</span>
+                                    <button id="nextMonth" class="month-nav-btn">→</button>
+                                </div>
+                            </div>
+                            <div class="calendar-grid" id="calendarGrid">
+                                <div class="day-box header">D</div>
+                                <div class="day-box header">M</div>
+                                <div class="day-box header">T</div>
+                                <div class="day-box header">W</div>
+                                <div class="day-box header">T</div>
+                                <div class="day-box header">F</div>
+                                <div class="day-box header">S</div>
+                            </div>
+                            <div class="calendar-legend">
+                                <div class="legend-item">
+                                    <div class="legend-dot profit"></div>
+                                    <span>Profit</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-dot loss"></div>
+                                    <span>Loss</span>
+                                </div>
+                            </div>
+
+                            <!-- Day Details Popup -->
+                            <div id="dayDetailsPopup" class="day-details-popup" style="display: none;">
+                                <div class="popup-content">
+                                    <button class="popup-close">×</button>
+                                    <h4 id="dayDetailsTitle">Feb 1, 2026</h4>
+                                    <div id="dayTradesList" class="day-trades-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity Panel -->
+                    <div class="activity-panel dashboard-card">
+                        <h3 class="activity-title">Recent Activity</h3>
+                        <div class="activity-timeline" id="activityTimeline">
+                            <!-- Activity Spine (Glowing Timeline) -->
+                            <div class="activity-spine"></div>
+                            <!-- Activity cards will be generated here by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/dashboard.js"></script>
+    <script src="../../js/sidebar-toggle.js"></script>
+</body>
+
+</html>

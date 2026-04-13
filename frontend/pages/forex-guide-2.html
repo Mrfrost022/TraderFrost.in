@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Trader Frost - Advanced Forex Market Guide Page 2">
+	<title>Forex Market Guide - Page 2 | Trader Frost</title>
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/forex-guide-2.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+	<link rel="icon" type="image/png" href="../assets/images/logos/Logo.png">
+
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="nav-overlay" id="navOverlay"></div>
+
+    <nav>
+		<div class="nav-container">
+			<a href="../index.html" class="logo">
+				<img src="../assets/images/logos/Logo.png" alt="Trader Frost Logo">
+				<div style="display: flex; flex-direction: column; gap: 0;">
+					<span style="font-size: 1.8rem; font-weight: bold; color: #fff; line-height: 1.2;">
+						Trader<span style="color: #FF9933;">Frost</span>
+					</span>
+					<span
+						style="font-size: 0.65rem; color: #FF9933; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-top: -2px;">
+						Trade smart, Earn smartly
+					</span>
+				</div>
+			</a>
+			            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+				<li><a href="../index.html#home">Home</a></li>
+				<li><a href="about.html">About Me</a></li>
+				<li><a href="courses.html">Courses</a></li>
+				<li class="dropdown">
+					<a href="#" onclick="return false;">Learn</a>
+					<ul class="dropdown-menu">
+						<li><a href="forex-guide.html">Forex Market: Complete Beginner to Pro Guide</a></li>
+						<li><a href="smart-money-concept.html">Smart Money Concept</a></li>
+						<li><a href="psychology.html">Trading Psychology</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" onclick="return false;">Tools</a>
+					<ul class="dropdown-menu">
+						<li><a href="lot-size.html">Lot Size Calculator</a></li>
+						<li><a href="profit-loss.html">Profit &amp; Loss Calculator</a></li>
+						<li><a href="pips.html">Pips Calculator</a></li>
+						<li><a href="risk-management.html">Risk Management Advisor</a></li>
+					</ul>
+				</li>
+				                <li><a href="contact.html">Contact Us</a></li>
+                <li class="nav-login-item">
+                    <a href="login.html" class="login-btn"
+                        style="display: inline-block; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,153,51,0.25);">
+                        Login
+                    </a>
+                </li>
+                <li class="nav-signup-item">
+                    <a href="register.html" class="signup-btn"
+                        style="display: inline-block; background: linear-gradient(135deg, #ffffff 0%, #e6e6e6 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,255,255,0.12);">
+                        Sign Up
+                    </a>
+                </li>
+			</ul>
+			<div style="display: flex; align-items: center; gap: 2rem;">
+				<div class="search-nav-container" style="position: relative; display: flex; align-items: center;">
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF9933" stroke-width="2"
+						stroke-linecap="round" stroke-linejoin="round"
+						style="position: absolute; left: 14px; pointer-events: none;">
+						<circle cx="11" cy="11" r="8"></circle>
+						<path d="m21 21-4.35-4.35"></path>
+					</svg>
+					<input type="text" id="searchInput" placeholder="Search..."
+						style="padding: 0.65rem 2.6rem 0.65rem 2.6rem; border-radius: 22px; border: 1px solid transparent; background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)); color: #fff; font-size: 0.85rem; width: 240px; outline: none; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(255,153,51,0.08);"
+						onfocus="this.style.borderColor='#FF9933'; this.style.background='linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.08))'; this.style.boxShadow='0 4px 15px rgba(255,153,51,0.15)';"
+						onblur="this.style.borderColor='transparent'; this.style.background='linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04))'; this.style.boxShadow='0 2px 10px rgba(255,153,51,0.08)';">
+					<button id="searchBtn" title="Search"
+						style="position: absolute; right: 6px; top: 50%; transform: translateY(-50%); background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); border: none; color: #000; padding: 0.45rem 0.75rem; border-radius: 18px; cursor: pointer; transition: all 0.3s ease; font-weight: 600; display: flex; align-items: center; font-size: 0.75rem;"
+						onmouseover="this.style.boxShadow='0 4px 12px rgba(255,153,51,0.4)'; this.style.transform='translateY(-50%) scale(1.08)';"
+						onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(-50%) scale(1)';">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="11" cy="11" r="8"></circle>
+							<path d="m21 21-4.35-4.35"></path>
+						</svg>
+					</button>
+				</div>
+
+				<!-- Desktop Auth Button (only visible on desktop) -->
+				<div class="header-auth-buttons" style="display: none; gap: 0.75rem; align-items: center;">
+					<a href="login.html" class="header-login-btn"
+						style="display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,153,51,0.25); min-height: 40px;"
+						onmouseover="this.style.boxShadow='0 5px 20px rgba(255,153,51,0.4)'; this.style.transform='translateY(-2px)';"
+						onmouseout="this.style.boxShadow='0 3px 12px rgba(255,153,51,0.25)'; this.style.transform='translateY(0)';">
+						Login
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero Guide Header -->
+	<section class="guide-hero">
+		<div class="guide-hero-content">
+			<h1 class="guide-hero-title">Forex Market: Beginner to Pro Guide</h1>
+			<p class="guide-hero-subtitle">A complete professional guide to how the currency market works</p>
+			<div class="guide-hero-underline"></div>
+		</div>
+	</section>
+
+	<!-- Guide Layout Section -->
+	<div class="guide-wrapper">
+		<!-- Sticky Sidebar Navigation (Desktop) -->
+		<aside class="guide-sidebar">
+			<nav class="guide-sidebar-nav">
+				<div class="guide-sidebar-title">Chapter Names</div>
+				<ul class="guide-sidebar-list">
+					<li class="guide-sidebar-item">
+						<a href="./forex-guide.html#forex-definitive-guide" class="guide-sidebar-link chapter-link" data-section="forex-definitive-guide">
+							The Forex Market: A Definitive Guide
+						</a>
+					</li>
+					<ul>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#introduction" class="guide-sidebar-link topic-link" data-section="introduction">
+								Introduction
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#how-forex-works" class="guide-sidebar-link topic-link" data-section="how-forex-works">
+								How the Forex Market Works
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#major-participants" class="guide-sidebar-link topic-link" data-section="major-participants">
+								Major Participants in the Forex Market
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#basic-currency-pairs" class="guide-sidebar-link topic-link" data-section="basic-currency-pairs">
+								Basic Currency Pairs
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#type-of-currency-pairs" class="guide-sidebar-link topic-link" data-section="type-of-currency-pairs">
+								Type of Currency Pairs
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#pips" class="guide-sidebar-link topic-link" data-section="pips">
+								PIPS
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#spread" class="guide-sidebar-link topic-link" data-section="spread">
+								Spread
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#lot-size" class="guide-sidebar-link topic-link" data-section="lot-size">
+								Lot Size
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#leverage-and-margin" class="guide-sidebar-link topic-link" data-section="leverage-and-margin">
+								Leverage and Margin
+							</a>
+						</li>
+					</ul>
+					<li class="guide-sidebar-item">
+						<a href="./forex-guide.html#forex-trading-strategies" class="guide-sidebar-link chapter-link" data-section="forex-trading-strategies">
+							Forex Trading Strategies
+						</a>
+					</li>
+					<ul>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#scalping" class="guide-sidebar-link topic-link" data-section="scalping">
+								Scalping
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#day-trading" class="guide-sidebar-link topic-link" data-section="day-trading">
+								Day Trading
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#swing-trading" class="guide-sidebar-link topic-link" data-section="swing-trading">
+								Swing Trading
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#position-trading" class="guide-sidebar-link topic-link" data-section="position-trading">
+								Position Trading
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#carry-trading" class="guide-sidebar-link topic-link" data-section="carry-trading">
+								Carry Trading
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#breakout-trading" class="guide-sidebar-link topic-link" data-section="breakout-trading">
+								Breakout Trading
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#trend-following" class="guide-sidebar-link topic-link" data-section="trend-following">
+								Trend Following
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide.html#range-trading" class="guide-sidebar-link topic-link" data-section="range-trading">
+								Range Trading
+							</a>
+						</li>
+					</ul>
+					<li class="guide-sidebar-item">
+						<a href="#types-of-order" class="guide-sidebar-link chapter-link" data-section="types-of-order">
+							Types of Order in Market
+						</a>
+					</li>
+					<ul>
+						<li class="guide-sidebar-item">
+							<a href="#market-order" class="guide-sidebar-link topic-link" data-section="market-order">
+								Market Order
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#limit-order" class="guide-sidebar-link topic-link" data-section="limit-order">
+								Limit Order
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#stop-order" class="guide-sidebar-link topic-link" data-section="stop-order">
+								Stop Order
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#pending-orders" class="guide-sidebar-link topic-link" data-section="pending-orders">
+								Pending Orders
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#trailing-stop" class="guide-sidebar-link topic-link" data-section="trailing-stop">
+								Trailing Stop Order
+							</a>
+						</li>
+					</ul>
+					<li class="guide-sidebar-item">
+						<a href="#types-of-analysis" class="guide-sidebar-link chapter-link active" data-section="types-of-analysis">
+							Type of Analysis
+						</a>
+					</li>
+					<ul class="expanded">
+						<li class="guide-sidebar-item">
+							<a href="#technical-analysis" class="guide-sidebar-link topic-link" data-section="technical-analysis">
+								Technical Analysis
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#fundamental-analysis" class="guide-sidebar-link topic-link" data-section="fundamental-analysis">
+								Fundamental Analysis
+							</a>
+						</li>
+					</ul>
+				</ul>
+			</nav>
+		</aside>
+
+		<!-- Main Content Sections -->
+		<main class="guide-content">
+			<!-- Chapter 3: Types of Order in Market -->
+			<section id="types-of-order" class="chapter-section">
+				<h2 class="chapter-heading">
+					<strong>Types of Order in Market</strong>
+				</h2>
+				<div class="chapter-content">
+					<p>In forex trading, orders are instructions to buy or sell currency pairs. Understanding different order types is crucial for successful trading, as they allow traders to execute their trading strategies with precision and manage risk effectively. Below are the main types of orders used in the forex market.</p>
+
+					<section id="market-order" class="chapter-topic">
+						<h3>Market Order</h3>
+						<p>A market order is an instruction to buy or sell a currency pair immediately at the current market price. When you place a market order, it is executed instantly at the best available price in the market. This order type is useful when you want to enter or exit a position immediately, regardless of the exact price.</p>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Key Characteristics</h4>
+						<ul>
+							<li><strong>Instant Execution:</strong> The order is filled immediately at the current market price.</li>
+							<li><strong>Price Variability:</strong> You may not get the exact price you expected, especially in fast-moving markets due to slippage.</li>
+							<li><strong>High Liquidity Pairs:</strong> Market orders work best with highly liquid currency pairs like EUR/USD where execution is swift.</li>
+							<li><strong>Use Cases:</strong> Ideal for entering or exiting positions quickly when timing is more important than price precision.</li>
+						</ul>
+					</section>
+
+					<section id="limit-order" class="chapter-topic">
+						<h3>Limit Order</h3>
+						<p>A limit order is an instruction to buy or sell a currency pair at a specific price or better. This order type provides traders with precise control over their entry and exit points, ensuring they only trade at their desired price levels or more favorable ones.</p>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Buy Limit Order</h4>
+						<p>You set a price below the current market price. The order will only execute when the price falls to that level or lower. For example, if EUR/USD is trading at 1.1000, you might place a buy limit order at 1.0950, expecting the price to drop before continuing upward.</p>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Sell Limit Order</h4>
+						<p>You set a price above the current market price. The order will only execute when the price rises to that level or higher. For example, if GBP/USD is trading at 1.3000, you might place a sell limit order at 1.3050, anticipating the price will rise to that level before reversing.</p>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Advantages and Considerations</h4>
+						<ul>
+							<li><strong>Price Control:</strong> You specify the exact price you're willing to trade at.</li>
+							<li><strong>Patience Required:</strong> The order may never execute if the market doesn't reach your specified price.</li>
+							<li><strong>Strategic Planning:</strong> Useful for traders who have identified key support and resistance levels.</li>
+							<li><strong>No Slippage:</strong> You get your price or better, eliminating negative slippage concerns.</li>
+						</ul>
+					</section>
+
+					<section id="stop-order" class="chapter-topic">
+						<h3>Stop Order (Stop-Loss Order)</h3>
+						<p>A stop order is an instruction to sell a currency pair when the price falls to a specific level, or to buy when the price rises to a specific level. Stop orders are primarily used to protect against losses by automatically exiting a position when the price moves against you.</p>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Stop-Loss Example</h4>
+						<p>If you buy EUR/USD at 1.0800, you might place a stop-loss order at 1.0700 to limit your potential losses to 100 pips. Once the price reaches 1.0700, the stop order becomes a market order and is executed at the best available price.</p>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Key Features</h4>
+						<ul>
+							<li><strong>Risk Management:</strong> Automatically limits your losses on a trade without constant monitoring.</li>
+							<li><strong>Triggers at Specified Price:</strong> The order activates when the market reaches your stop level.</li>
+							<li><strong>Market Execution:</strong> Once triggered, it becomes a market order and fills at the next available price.</li>
+							<li><strong>Slippage Risk:</strong> In volatile markets, the execution price may differ from your stop level.</li>
+							<li><strong>Essential Tool:</strong> Professional traders always use stop-loss orders to manage risk effectively.</li>
+						</ul>
+					</section>
+
+					<section id="pending-orders" class="chapter-topic">
+						<h3>Pending Orders</h3>
+						<p>Pending orders are orders that are placed for execution at a future time when certain conditions are met. These orders are placed in advance and will automatically execute when the market reaches a specific price level, allowing traders to participate in the market even when they're not actively monitoring it.</p>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Types of Pending Orders</h4>
+						<ul>
+							<li><strong>Buy Limit:</strong> Order to buy at a price lower than the current market price, anticipating a decline before a rise.</li>
+							<li><strong>Sell Limit:</strong> Order to sell at a price higher than the current market price, expecting a rise before a fall.</li>
+							<li><strong>Buy Stop:</strong> Order to buy at a price higher than the current market price, used for breakout strategies.</li>
+							<li><strong>Sell Stop:</strong> Order to sell at a price lower than the current market price, also used for breakout scenarios.</li>
+						</ul>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Benefits</h4>
+						<ul>
+							<li><strong>24/7 Market Coverage:</strong> Participate in market opportunities even while sleeping or away from your computer.</li>
+							<li><strong>Emotion-Free Trading:</strong> Execute your strategy automatically without emotional interference.</li>
+							<li><strong>Strategic Positioning:</strong> Set up trades based on technical analysis in advance.</li>
+							<li><strong>Flexibility:</strong> Can be modified or cancelled before execution.</li>
+						</ul>
+					</section>
+
+					<section id="trailing-stop" class="chapter-topic">
+						<h3>Trailing Stop Order</h3>
+						<p>A trailing stop order is a dynamic stop order that automatically adjusts its level as the market price moves in a favorable direction. Instead of setting a fixed price level, you set a fixed distance (in pips or percentage) from the current market price.</p>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">How It Works</h4>
+						<p>As the price moves in your favor, the trailing stop level rises (for buy positions) or falls (for sell positions), maintaining the specified distance from the current market price. However, if the price moves against you, the stop level remains fixed at its last position.</p>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Example</h4>
+						<p>You buy EUR/USD at 1.1000 and set a trailing stop of 50 pips. If the price rises to 1.1100, your stop automatically moves up to 1.1050. If the price continues to 1.1200, your stop moves to 1.1150. If the price then reverses to 1.1150, your position closes automatically, locking in 150 pips of profit.</p>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Advantages</h4>
+						<ul>
+							<li><strong>Profit Protection:</strong> Automatically locks in profits as the trade moves in your favor.</li>
+							<li><strong>Trend Following:</strong> Particularly useful in trending markets where prices continue moving in one direction.</li>
+							<li><strong>Flexibility:</strong> Allows for potential additional gains while protecting accumulated profits.</li>
+							<li><strong>Reduces Monitoring:</strong> No need to constantly adjust your stop-loss manually.</li>
+							<li><strong>Psychological Advantage:</strong> Removes the temptation to exit profitable trades too early.</li>
+						</ul>
+					</section>
+				</div>
+			</section>
+
+			<!-- Chapter 4: Type of Analysis -->
+			<section id="types-of-analysis" class="chapter-section">
+				<h2 class="chapter-heading">
+					<strong>Type of Analysis</strong>
+				</h2>
+				<div class="chapter-content">
+					<p>Forex trading analysis can be categorized into three primary types: technical, fundamental, and sentiment analysis. These analytical approaches help traders make informed decisions and develop effective trading strategies.</p>
+
+					<section id="technical-analysis" class="chapter-topic">
+						<h3>Technical Analysis</h3>
+						<p>Technical analysis in forex trading is a method used to evaluate and predict future price movements by studying past market data, primarily price and volume. This approach is based on the belief that all information, including economic and political factors, is reflected in the price, and that historical price movements tend to repeat over time.</p>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Core Principles</h4>
+						<ul>
+							<li><strong>Market Discounts Everything:</strong> All fundamental, economic, and political information is already reflected in the price.</li>
+							<li><strong>Price Moves in Trends:</strong> Prices tend to move in sustained directions (uptrends, downtrends, or sideways) rather than randomly.</li>
+							<li><strong>History Repeats Itself:</strong> Market psychology and human behavior patterns tend to repeat, creating recognizable chart patterns.</li>
+						</ul>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Key Tools and Techniques</h4>
+						<ul>
+							<li><strong>Chart Patterns:</strong> Head and shoulders, double tops/bottoms, triangles, flags, and pennants that signal potential price movements.</li>
+							<li><strong>Technical Indicators:</strong> Moving averages, RSI (Relative Strength Index), MACD (Moving Average Convergence Divergence), Bollinger Bands, and Stochastic Oscillator.</li>
+							<li><strong>Support and Resistance:</strong> Price levels where buying or selling pressure historically changes direction.</li>
+							<li><strong>Trend Lines:</strong> Diagonal lines connecting price highs or lows to identify trend direction and potential reversal points.</li>
+							<li><strong>Candlestick Patterns:</strong> Doji, hammer, engulfing patterns, and shooting stars that provide insights into market sentiment.</li>
+							<li><strong>Fibonacci Retracement:</strong> Using Fibonacci ratios to identify potential support and resistance levels.</li>
+						</ul>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Applications</h4>
+						<p>Technical analysis is used to identify entry and exit points, determine stop-loss levels, assess market momentum, and confirm trend direction. It's particularly effective for short-term trading strategies like day trading and scalping, though it can be applied to any timeframe.</p>
+					</section>
+
+					<section id="fundamental-analysis" class="chapter-topic">
+						<h3>Fundamental Analysis</h3>
+						<p>Fundamental analysis is the study of the economic, social, and political factors that influence currency prices. It aims to uncover the underlying forces that drive the forex market, helping traders predict future price movements based on the economic health and prospects of countries.</p>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Key Economic Indicators</h4>
+						<ul>
+							<li><strong>Gross Domestic Product (GDP):</strong> Measures a country's economic output and growth rate. Strong GDP growth typically strengthens the currency.</li>
+							<li><strong>Interest Rates:</strong> Central bank rates significantly impact currency values. Higher rates attract foreign investment, increasing demand for the currency.</li>
+							<li><strong>Inflation Rate (CPI):</strong> Consumer Price Index measures price increases. Moderate inflation is healthy; high inflation can weaken a currency.</li>
+							<li><strong>Employment Data:</strong> Non-farm payrolls (NFP), unemployment rate, and job creation figures indicate economic health.</li>
+							<li><strong>Trade Balance:</strong> The difference between exports and imports. A positive trade balance (surplus) strengthens the currency.</li>
+							<li><strong>Manufacturing PMI:</strong> Purchasing Managers' Index indicates economic activity in the manufacturing sector.</li>
+						</ul>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Central Bank Policies</h4>
+						<ul>
+							<li><strong>Monetary Policy:</strong> Central banks control money supply through interest rate adjustments and quantitative easing.</li>
+							<li><strong>Forward Guidance:</strong> Central bank statements about future policy intentions can significantly move currency markets.</li>
+							<li><strong>Central Bank Intervention:</strong> Direct buying or selling of currencies to influence exchange rates.</li>
+							<li><strong>Reserve Requirements:</strong> Changes in bank reserve ratios affect liquidity and currency values.</li>
+						</ul>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Geopolitical Factors</h4>
+						<ul>
+							<li><strong>Political Stability:</strong> Elections, government changes, and political unrest can create volatility in currency markets.</li>
+							<li><strong>Trade Agreements:</strong> International trade deals and tariffs affect currency demand and economic prospects.</li>
+							<li><strong>Global Events:</strong> Wars, natural disasters, and pandemics can cause significant currency movements.</li>
+							<li><strong>Market Sentiment:</strong> Risk-on vs. risk-off sentiment drives capital flows between currencies.</li>
+						</ul>
+						
+						<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Practical Application</h4>
+						<p>Fundamental analysis is particularly valuable for long-term trading decisions and understanding major trend directions. Traders use economic calendars to track scheduled data releases, anticipate market reactions, and position themselves accordingly. Combining fundamental analysis with technical analysis often provides the most comprehensive trading approach.</p>
+					</section>
+				</div>
+			</section>
+
+			<!-- Pagination Controls -->
+			<div class="pagination-section">
+				<div class="pagination-nav">
+					<a href="./forex-guide.html" class="pagination-link">← Previous Page</a>
+					<div class="pagination-info">Page 2 of 2</div>
+					<div style="flex: 1;"></div>
+				</div>
+			</div>
+		</div>
+
+	<!-- Footer -->
+	<footer
+		style="background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 50%, #0a0a0a 100%); color: #fff; padding: 2.5rem 2rem 1.5rem; position: relative; overflow: hidden; border-top: 2px solid rgba(255,153,51,0.3);">
+		<!-- Decorative Background Elements -->
+		<div
+			style="position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,153,51,0.05) 0%, transparent 70%); border-radius: 50%; animation: float1 8s ease-in-out infinite;">
+		</div>
+		<div
+			style="position: absolute; bottom: -30%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,153,51,0.03) 0%, transparent 70%); border-radius: 50%; animation: float2 10s ease-in-out infinite;">
+		</div>
+
+		<!-- Footer Content -->
+		<div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+			<!-- Top Section with Logo and Tagline -->
+			<div
+				style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,153,51,0.2);">
+				<!-- Brand Section -->
+				<div>
+					<div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem;">
+						<img src="../assets/images/logos/Logo.png" alt="Trader Frost Logo"
+							style="width: 28px; height: 28px; object-fit: contain;">
+						<h2 style="color: #FF9933; font-size: 1.4rem; margin: 0; font-weight: 700;">
+							Trader<span style="color: #fff;">Frost</span>
+						</h2>
+					</div>
+					<p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+						Empowering traders with psychology-driven education and proven strategies. Transform your
+						trading mindset and achieve consistent profitability.
+					</p>
+					<div style="display: flex; gap: 0.8rem; margin-top: 1rem;">
+						<a href="https://www.instagram.com/tradexfrost?utm_source=qr&igsh=MW01aDk5MWd1MjdteQ%3D%3D"
+							target="_blank"
+							style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+							onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+							onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+										fill="#FF9933" />
+							</svg>
+						</a>
+						<a href="https://www.youtube.com/@traderfrost-p" target="_blank"
+							style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+							onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+							onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+										fill="#FF9933" />
+							</svg>
+						</a>
+						<a href="https://t.me/+pi-o2Ij9qQ5kY2M9" target="_blank"
+							style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+							onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+							onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+									fill="#FF9933" />
+							</svg>
+						</a>
+					</div>
+				</div>
+
+				<!-- Main Pages -->
+				<div>
+					<h3
+						style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+						Main Pages</h3>
+					<ul style="list-style: none; padding: 0; margin: 0;">
+						<li style="margin-bottom: 0.6rem;"><a href="../index.html"
+								style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+								onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Home</a>
+						</li>
+						<li style="margin-bottom: 0.6rem;"><a href="about.html"
+								style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+								onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">About Me</a></li>
+						<li style="margin-bottom: 0.6rem;"><a href="courses.html"
+								style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+								onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Courses</a></li>
+						<li style="margin-bottom: 0.6rem;"><a href="psychology.html"
+								style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+								onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Trading Psychology</a></li>
+					</ul>
+				</div>
+
+				<!-- Trading Tools -->
+				<div>
+					<h3
+						style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+						Trading Tools</h3>
+					<ul style="list-style: none; padding: 0; margin: 0;">
+						<li style="margin-bottom: 0.6rem;"><a href="lot-size.html"
+								style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+								onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Lot Size Calculator</a></li>
+						<li style="margin-bottom: 0.6rem;"><a href="profit-loss.html"
+								style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+								onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Profit &amp; Loss</a></li>
+						<li style="margin-bottom: 0.6rem;"><a href="pips.html"
+								style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+								onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Pips Calculator</a></li>
+						<li style="margin-bottom: 0.6rem;"><a href="risk-management.html"
+								style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+								onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Risk Management Advisor</a></li>
+					</ul>
+				</div>
+
+				<!-- Support & Legal -->
+				<div>
+					<h3
+						style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+						Support &amp; Legal</h3>
+					<ul style="list-style: none; padding: 0; margin: 0;">
+						<li style="margin-bottom: 0.6rem;"><a href="contact.html"
+								style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+								onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Contact Us</a></li>
+						<li style="margin-bottom: 0.6rem;"><a href="#"
+								style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+								onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Terms &amp; Conditions</a></li>
+						<li style="margin-bottom: 0.6rem;"><a href="#"
+								style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+								onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Privacy Policy</a></li>
+						<li style="margin-bottom: 0.6rem;"><a href="#"
+								style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+								onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Risk Disclosure</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Bottom Section -->
+			<div
+				style="background: rgba(255,153,51,0.05); padding: 1rem 1.2rem; border-radius: 12px; border-left: 3px solid #FF9933; margin-bottom: 1.5rem;">
+				<p style="color: #FF9933; font-size: 0.8rem; margin: 0 0 0.4rem 0; font-weight: 600;">Important
+					Disclaimer</p>
+				<p style="color: #aaa; font-size: 0.8rem; margin: 0; line-height: 1.5;">
+					Trading involves risk. Past performance does not guarantee future results. Only invest what you can
+					afford to lose. This platform is for educational purposes only. Always consult with a financial
+					advisor before making investment decisions.
+				</p>
+			</div>
+
+			<!-- Copyright -->
+			<div style="text-align: center; padding-top: 0.8rem; border-top: 1px solid rgba(255,153,51,0.1);">
+				<p style="color: #888; font-size: 0.8rem; margin: 0;">
+					&copy; 2026 Trader Frost. All rights reserved. | Dedicated to traders worldwide
+				</p>
+				<p style="color: #666; font-size: 0.8rem; margin: 0.5rem 0 0 0;">
+					Trader Frost | Trading Education &amp; Mentorship Services
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../js/main.js"></script>
+	<script>
+		// Accordion functionality
+		function toggleChapter(chapterLink) {
+			// Get all chapter links
+			const allChapterLinks = document.querySelectorAll('.guide-sidebar-link.chapter-link');
+			const allUlElements = document.querySelectorAll('.guide-sidebar-list > ul');
+
+			// Close all other chapters
+			allChapterLinks.forEach(link => {
+				link.classList.remove('expanded');
+			});
+
+			allUlElements.forEach(ul => {
+				ul.classList.remove('expanded');
+			});
+
+			// Open clicked chapter
+			chapterLink.classList.add('expanded');
+			const nextElement = chapterLink.parentElement.nextElementSibling;
+			if (nextElement && nextElement.tagName === 'UL') {
+				nextElement.classList.add('expanded');
+			}
+		}
+
+		// Smooth scroll function
+		function scrollToSection(sectionId) {
+			const section = document.getElementById(sectionId);
+			if (section) {
+				const offsetTop = section.offsetTop - 120;
+				window.scrollTo({
+					top: offsetTop,
+					behavior: 'smooth'
+				});
+			}
+		}
+
+		// Add click handlers to chapter links
+		document.addEventListener('DOMContentLoaded', function() {
+			// Get all chapter links
+			const chapterLinks = document.querySelectorAll('.guide-sidebar-link.chapter-link');
+			
+			// Add click handler to each chapter link
+			chapterLinks.forEach(link => {
+				link.addEventListener('click', function(e) {
+					// Only prevent default for local links (not links to page 1)
+					const href = this.getAttribute('href');
+					if (href && href.startsWith('#')) {
+						e.preventDefault();
+						toggleChapter(this);
+						const sectionId = href.substring(1);
+						scrollToSection(sectionId);
+					}
+				});
+			});
+
+			// Handle hash navigation from URL (when coming from page 1)
+			if (window.location.hash) {
+				const hash = window.location.hash.substring(1);
+				const targetSection = document.getElementById(hash);
+				
+				if (targetSection) {
+					// Find which chapter this section belongs to
+					const chapterSection = targetSection.closest('.chapter-section');
+					if (chapterSection) {
+						const chapterId = chapterSection.id;
+						const chapterLink = document.querySelector(`.guide-sidebar-link.chapter-link[href="#${chapterId}"]`);
+						
+						if (chapterLink) {
+							toggleChapter(chapterLink);
+						}
+					}
+					
+					// Scroll to the section after a brief delay to ensure page is fully loaded
+					setTimeout(() => {
+						scrollToSection(hash);
+					}, 100);
+				}
+			} else {
+				// Expand the last chapter by default (Type of Analysis) if no hash
+				const lastChapter = chapterLinks[chapterLinks.length - 1];
+				if (lastChapter) {
+					toggleChapter(lastChapter);
+				}
+			}
+
+			// Add click handlers to topic links
+			document.querySelectorAll('.guide-sidebar-link.topic-link').forEach(link => {
+				link.addEventListener('click', function(e) {
+					const href = this.getAttribute('href');
+					if (href && href.startsWith('#')) {
+						e.preventDefault();
+						const sectionId = href.substring(1);
+						scrollToSection(sectionId);
+					}
+				});
+			});
+		});
+	</script>
+</body>
+</html>

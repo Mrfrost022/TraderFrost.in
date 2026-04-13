@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo Trading Portfolio - Trader Frost">
+    <title>Demo Trading Portfolio | Trader Frost</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/pages/demo-trading.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="icon" type="image/png" href="../../assets/images/logos/Logo.png">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="demo-header">
+            <div class="demo-header__brand">
+                <img src="../../assets/images/logos/Logo.png" alt="Trader Frost Logo">
+                <span>Trader<span>Frost</span></span>
+            </div>
+            <div class="demo-header__page-name" aria-label="Current Page">Dashboard</div>
+        </header>
+        <section class="dashboard__content demo-content">
+            <section class="demo-section" id="overview" aria-labelledby="overviewTitle">
+                <div class="section-heading">
+                    <h2 id="overviewTitle">Portfolio Overview</h2>
+                </div>
+                <div class="overview-summary" id="overviewSummary"></div>
+                <div class="overview-grid" id="overviewGrid"></div>
+            </section>
+
+            <section class="demo-section" id="performance" aria-labelledby="performanceTitle">
+                <div class="section-heading section-heading-row">
+                    <h2 id="performanceTitle">Portfolio Performance</h2>
+                    <div class="filter-chip-group" id="chartFilters">
+                        <button class="filter-chip is-active" data-range="1D">1 Day</button>
+                        <button class="filter-chip" data-range="1W">1 Week</button>
+                        <button class="filter-chip" data-range="1M">1 Month</button>
+                        <button class="filter-chip" data-range="ALL">All Time</button>
+                    </div>
+                </div>
+                <div class="performance-card">
+                    <canvas id="portfolioChart" height="140"></canvas>
+                </div>
+            </section>
+
+            <section class="demo-section" id="positions" aria-labelledby="openPositionsTitle">
+                <div class="section-heading">
+                    <h2 id="openPositionsTitle">Open Positions</h2>
+                </div>
+                <div class="table-wrap">
+                    <table class="demo-table" id="openPositionsTable">
+                        <thead>
+                            <tr>
+                                <th data-sort="symbol">Symbol</th>
+                                <th data-sort="type">Type</th>
+                                <th data-sort="lot">Lot Size</th>
+                                <th data-sort="entry">Entry Price</th>
+                                <th data-sort="current">Current Price</th>
+                                <th data-sort="sl">Stop Loss</th>
+                                <th data-sort="tp">Take Profit</th>
+                                <th data-sort="pnl">Profit/Loss</th>
+                                <th data-sort="duration">Trade Duration</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="openPositionsBody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="demo-section" id="history" aria-labelledby="historyTitle">
+                <div class="section-heading">
+                    <h2 id="historyTitle">Trade History</h2>
+                </div>
+                <div class="table-wrap">
+                    <table class="demo-table" id="tradeHistoryTable">
+                        <thead>
+                            <tr>
+                                <th data-sort="symbol">Symbol</th>
+                                <th data-sort="type">Type</th>
+                                <th data-sort="entry">Entry Price</th>
+                                <th data-sort="exit">Exit Price</th>
+                                <th data-sort="lot">Lot Size</th>
+                                <th data-sort="pnl">Profit/Loss</th>
+                                <th data-sort="closedAt">Date &amp; Time</th>
+                                <th data-sort="result">Result</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tradeHistoryBody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="demo-section" id="stats" aria-labelledby="statsTitle">
+                <div class="section-heading">
+                    <h2 id="statsTitle">Portfolio Statistics</h2>
+                </div>
+                <div class="stats-grid" id="statsGrid"></div>
+            </section>
+
+            <section class="demo-section" id="risk" aria-labelledby="riskTitle">
+                <div class="section-heading">
+                    <h2 id="riskTitle">Risk Management</h2>
+                </div>
+                <div class="risk-grid" id="riskGrid"></div>
+            </section>
+
+            <section class="demo-section" aria-labelledby="actionsTitle">
+                <div class="section-heading">
+                    <h2 id="actionsTitle">Quick Actions</h2>
+                </div>
+                <div class="actions-grid">
+                    <button class="action-btn" id="resetDemoBtn">Reset Demo Account</button>
+                    <button class="action-btn" id="newTradeBtn">Start New Trade</button>
+                    <button class="action-btn" id="exportBtn">Export Trade History</button>
+                    <button class="action-btn" id="depositBtn">Deposit Virtual Funds</button>
+                </div>
+            </section>
+
+            <section class="demo-section" id="activity" aria-labelledby="activityTitle">
+                <div class="section-heading">
+                    <h2 id="activityTitle">Recent Activity</h2>
+                </div>
+                <ul class="activity-list" id="activityList"></ul>
+            </section>
+        </section>
+    </div>
+    <script src="../../js/pages/demo-trading.js"></script>
+</body>
+
+</html>

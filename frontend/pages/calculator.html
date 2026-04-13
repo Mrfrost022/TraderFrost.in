@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trader Frost - Forex Profit & Loss Calculator">
+    <title>Forex Calculator | Trader Frost</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/calculator.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/png" href="../assets/images/logos/Logo.png">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/Logo.png" alt="Trader Frost Logo">
+                <div style="display: flex; flex-direction: column; gap: 0;">
+                    <span style="font-size: 1.8rem; font-weight: bold; color: #fff; line-height: 1.2;">
+                        Trader<span style="color: #FF9933;">Frost</span>
+                    </span>
+                    <span
+                        style="font-size: 0.65rem; color: #FF9933; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-top: -2px;">
+                        Trade smart, Earn smartly
+                    </span>
+                </div>
+            </a>
+                        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li class="dropdown">
+                    <a href="#" onclick="return false;">Learn</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="forex-guide.html">Forex Market: Complete Beginner to Pro Guide</a></li>
+                        <li><a href="smart-money-concept.html">Smart Money Concept</a></li>
+                        <li><a href="psychology.html">Trading Psychology</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" onclick="return false;">Tools</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="lot-size.html">Lot Size Calculator</a></li>
+                        <li><a href="profit-loss.html">Profit &amp; Loss Calculator</a></li>
+                        <li><a href="pips.html">Pips Calculator</a></li>
+                        <li><a href="risk-management.html">Risk Management Advisor</a></li>
+                    </ul>
+                </li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                <li class="nav-login-item">
+                    <a href="login.html" class="login-btn"
+                        style="display: inline-block; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,153,51,0.25);">
+                        Login
+                    </a>
+                </li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <div class="search-nav-container" style="position: relative; display: flex; align-items: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF9933" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; left: 14px; pointer-events: none;">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Search..." 
+                        style="padding: 0.65rem 2.6rem 0.65rem 2.6rem; border-radius: 22px; border: 1px solid transparent; background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)); color: #fff; font-size: 0.85rem; width: 240px; outline: none; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(255,153,51,0.08);"
+                        onfocus="this.style.borderColor='#FF9933'; this.style.background='linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.08))'; this.style.boxShadow='0 4px 15px rgba(255,153,51,0.15)';" 
+                        onblur="this.style.borderColor='transparent'; this.style.background='linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04))'; this.style.boxShadow='0 2px 10px rgba(255,153,51,0.08)';">
+                    <button id="searchBtn" title="Search" 
+                        style="position: absolute; right: 6px; top: 50%; transform: translateY(-50%); background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); border: none; color: #000; padding: 0.45rem 0.75rem; border-radius: 18px; cursor: pointer; transition: all 0.3s ease; font-weight: 600; display: flex; align-items: center; font-size: 0.75rem;"
+                        onmouseover="this.style.boxShadow='0 4px 12px rgba(255,153,51,0.4)'; this.style.transform='translateY(-50%) scale(1.08)';" 
+                        onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(-50%) scale(1)';">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop Auth Button (only visible on desktop) -->
+                <div class="header-auth-buttons" style="display: none; gap: 0.75rem; align-items: center;">
+                    <a href="login.html" class="header-login-btn"
+                        style="display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,153,51,0.25); min-height: 40px;"
+                        onmouseover="this.style.boxShadow='0 5px 20px rgba(255,153,51,0.4)'; this.style.transform='translateY(-2px)';"
+                        onmouseout="this.style.boxShadow='0 3px 12px rgba(255,153,51,0.25)'; this.style.transform='translateY(0)';">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section">
+        <div class="calculator-container">
+            <div class="calculator-card">
+                <h1 class="calculator-title">Forex Profit & Loss Calculator</h1>
+
+                <form id="calculatorForm" style="display: flex; flex-direction: column; gap: 0;">
+                    <!-- Currency Pair -->
+                    <div class="calc-form-group">
+                        <label for="currencyPair" class="calc-form-label">Currency Pair</label>
+                        <select id="currencyPair" class="calc-select" required>
+                            <option value="">Select a currency pair</option>
+                            <option value="EUR/USD">EUR/USD</option>
+                            <option value="GBP/USD">GBP/USD</option>
+                            <option value="USD/JPY">USD/JPY</option>
+                            <option value="BTC/USD">BTC/USD</option>
+                        </select>
+                    </div>
+
+                    <!-- Trade Type -->
+                    <div class="calc-form-group">
+                        <label for="tradeType" class="calc-form-label">Trade Type</label>
+                        <select id="tradeType" class="calc-select" required>
+                            <option value="">Select trade type</option>
+                            <option value="buy">Buy</option>
+                            <option value="sell">Sell</option>
+                        </select>
+                    </div>
+
+                    <!-- Input Grid for Lot Size, Entry Price, Exit Price -->
+                    <div class="calc-input-grid">
+                        <div class="calc-form-group">
+                            <label for="lotSize" class="calc-form-label">Lot Size</label>
+                            <input type="number" id="lotSize" class="calc-input" placeholder="0.01" step="0.01" min="0" required>
+                        </div>
+
+                        <div class="calc-form-group">
+                            <label for="entryPrice" class="calc-form-label">Entry Price</label>
+                            <input type="number" id="entryPrice" class="calc-input" placeholder="1.0000" step="0.0001" min="0" required>
+                        </div>
+
+                        <div class="calc-form-group">
+                            <label for="exitPrice" class="calc-form-label">Exit Price</label>
+                            <input type="number" id="exitPrice" class="calc-input" placeholder="1.0100" step="0.0001" min="0" required>
+                        </div>
+                    </div>
+
+                    <!-- Calculate Button -->
+                    <button type="button" class="calc-button" onclick="calculateProfit()">Calculate</button>
+                </form>
+
+                <!-- Results Section -->
+                <div id="resultsSection" class="calc-results">
+                    <div class="calc-results-grid">
+                        <div class="calc-result-box">
+                            <div class="calc-result-label">Pips</div>
+                            <div id="pipsValue" class="calc-result-value neutral">0</div>
+                        </div>
+                        <div class="calc-result-box">
+                            <div class="calc-result-label">Profit / Loss (USD)</div>
+                            <div id="profitLossValue" class="calc-result-value neutral">$0.00</div>
+                        </div>
+                        <div class="calc-result-box">
+                            <div class="calc-result-label">Change (%)</div>
+                            <div id="percentageValue" class="calc-result-value neutral">0.00%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        style="background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 50%, #0a0a0a 100%); color: #fff; padding: 2.5rem 2rem 1.5rem; position: relative; overflow: hidden; border-top: 2px solid rgba(255,153,51,0.3);">
+        <!-- Decorative Background Elements -->
+        <div
+            style="position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,153,51,0.05) 0%, transparent 70%); border-radius: 50%; animation: float1 8s ease-in-out infinite;">
+        </div>
+        <div
+            style="position: absolute; bottom: -30%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,153,51,0.03) 0%, transparent 70%); border-radius: 50%; animation: float2 10s ease-in-out infinite;">
+        </div>
+
+        <!-- Footer Content -->
+        <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+            <!-- Top Section with Logo and Tagline -->
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,153,51,0.2);">
+                <!-- Brand Section -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem;">
+                        <img src="../assets/images/logos/Logo.png" alt="Trader Frost Logo"
+                            style="width: 28px; height: 28px; object-fit: contain;">
+                        <h2 style="color: #FF9933; font-size: 1.4rem; margin: 0; font-weight: 700;">
+                            Trader<span style="color: #fff;">Frost</span>
+                        </h2>
+                    </div>
+                    <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        Empowering traders with psychology-driven education and proven strategies. Transform your
+                        trading mindset and achieve consistent profitability.
+                    </p>
+                </div>
+
+                                <!-- Main Pages -->
+                <div>
+                    <h3
+                        style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+                        Main Pages</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.6rem;"><a href="../index.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Home</a>
+                        </li>
+                        <li style="margin-bottom: 0.6rem;"><a href="about.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">About Me</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="courses.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Courses</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="psychology.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Trading Psychology</a></li>
+                    </ul>
+                </div>
+
+                <!-- Trading Tools -->
+                <div>
+                    <h3
+                        style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+                        Trading Tools</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.6rem;"><a href="lot-size.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Lot Size Calculator</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="profit-loss.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Profit &amp; Loss</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="pips.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Pips Calculator</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="risk-management.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Risk Management Advisor</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support & Legal -->
+                <div>
+                    <h3
+                        style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+                        Support &amp; Legal</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.6rem;"><a href="contact.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Contact Us</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="#"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Terms &amp; Conditions</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="#"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Privacy Policy</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="#"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Risk Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div style="text-align: center; padding-top: 0.8rem; border-top: 1px solid rgba(255,153,51,0.1);">
+                <p style="color: #888; font-size: 0.8rem; margin: 0;">
+                    &copy; 2026 Trader Frost. All rights reserved. | Dedicated to traders worldwide
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Calculator Script -->
+    <script src="../js/main.js"></script>
+    <script src="../js/calculator.js"></script>
+</body>
+
+</html>

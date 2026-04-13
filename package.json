@@ -1,0 +1,21 @@
+{
+  "name": "website-frost",
+  "version": "1.0.0",
+  "description": "A scalable static website structure for the TraderFrost trading education platform.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mrfrost022/TraderFrost.in.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Mrfrost022/TraderFrost.in/issues"
+  },
+  "homepage": "https://github.com/Mrfrost022/TraderFrost.in#readme"
+}

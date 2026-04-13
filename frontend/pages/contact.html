@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Trader Frost - Get in touch for trading courses, mentorship, and support">
+    <title>Contact Us | Trader Frost</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/png" href="../assets/images/logos/Logo.png">
+
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div id="pageLoader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="../assets/images/logos/Logo.png" alt="Trader Frost Logo">
+            </div>
+            <div class="loader-text">
+                <span style="color: #fff; font-size: 1.5rem; font-weight: bold;">
+                    Trader<span style="color: #FF9933;">Frost</span>
+                </span>
+            </div>
+            <div class="loader-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/Logo.png" alt="Trader Frost Logo">
+                <div style="display: flex; flex-direction: column; gap: 0;">
+                    <span style="font-size: 1.8rem; font-weight: bold; color: #fff; line-height: 1.2;">
+                        Trader<span style="color: #FF9933;">Frost</span>
+                    </span>
+                    <span
+                        style="font-size: 0.65rem; color: #FF9933; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-top: -2px;">
+                        Trade smart, Earn smartly
+                    </span>
+                </div>
+            </a>
+                        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li class="dropdown">
+                    <a href="#" onclick="return false;">Learn</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="forex-guide.html">Forex Market: Complete Beginner to Pro Guide</a></li>
+                        <li><a href="smart-money-concept.html">Smart Money Concept</a></li>
+                        <li><a href="psychology.html">Trading Psychology</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" onclick="return false;">Tools</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="lot-size.html">Lot Size Calculator</a></li>
+                        <li><a href="profit-loss.html">Profit &amp; Loss Calculator</a></li>
+                        <li><a href="pips.html">Pips Calculator</a></li>
+                        <li><a href="risk-management.html">Risk Management Advisor</a></li>
+                    </ul>
+                </li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                <li class="nav-login-item">
+                    <a href="login.html" class="login-btn"
+                        style="display: inline-block; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,153,51,0.25);">
+                        Login
+                    </a>
+                </li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <div class="search-nav-container" style="position: relative; display: flex; align-items: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF9933" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; left: 14px; pointer-events: none;">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Search..." 
+                        style="padding: 0.65rem 2.6rem 0.65rem 2.6rem; border-radius: 22px; border: 1px solid transparent; background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)); color: #fff; font-size: 0.85rem; width: 240px; outline: none; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(255,153,51,0.08);"
+                        onfocus="this.style.borderColor='#FF9933'; this.style.background='linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.08))'; this.style.boxShadow='0 4px 15px rgba(255,153,51,0.15)';" 
+                        onblur="this.style.borderColor='transparent'; this.style.background='linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04))'; this.style.boxShadow='0 2px 10px rgba(255,153,51,0.08)';">
+                    <button id="searchBtn" title="Search" 
+                        style="position: absolute; right: 6px; top: 50%; transform: translateY(-50%); background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); border: none; color: #000; padding: 0.45rem 0.75rem; border-radius: 18px; cursor: pointer; transition: all 0.3s ease; font-weight: 600; display: flex; align-items: center; font-size: 0.75rem;"
+                        onmouseover="this.style.boxShadow='0 4px 12px rgba(255,153,51,0.4)'; this.style.transform='translateY(-50%) scale(1.08)';" 
+                        onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(-50%) scale(1)';">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop Auth Button (only visible on desktop) -->
+                <div class="header-auth-buttons" style="display: none; gap: 0.75rem; align-items: center;">
+                    <a href="login.html" class="header-login-btn"
+                        style="display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,153,51,0.25); min-height: 40px;"
+                        onmouseover="this.style.boxShadow='0 5px 20px rgba(255,153,51,0.4)'; this.style.transform='translateY(-2px)';"
+                        onmouseout="this.style.boxShadow='0 3px 12px rgba(255,153,51,0.25)'; this.style.transform='translateY(0)';">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section style="background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 100%); padding: 6rem 2rem 3rem; margin-top: 70px; position: relative; overflow: hidden;">
+        <!-- Decorative Background -->
+        <div style="position: absolute; top: -30%; right: -15%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,153,51,0.1) 0%, transparent 70%); border-radius: 50%;"></div>
+        <div style="position: absolute; bottom: -30%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(139,0,0,0.08) 0%, transparent 70%); border-radius: 50%;"></div>
+        
+        <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; text-align: center;">
+            <h1 style="color: #FF9933; font-size: 3rem; margin-bottom: 1rem; font-weight: 700;">Let's Connect</h1>
+            <p style="color: #ccc; font-size: 1.2rem; max-width: 700px; margin: 0 auto 3rem; line-height: 1.7;">
+                Whether you're ready to begin your trading journey or have questions about our programs, we're here to help you succeed.
+            </p>
+
+            <!-- Contact Info Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
+                <!-- Email Card -->
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); padding: 2rem; border-radius: 16px; border: 2px solid rgba(255,153,51,0.3); transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255,153,51,0.6)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(255,153,51,0.3)'; this.style.transform='translateY(0)';">
+                    <div style="width: 60px; height: 60px; background: rgba(255,153,51,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.8rem;">
+                        📧
+                    </div>
+                    <h3 style="color: #FF9933; font-size: 1.2rem; margin-bottom: 0.5rem;">Email Us</h3>
+                    <p style="color: #999; font-size: 0.9rem; margin-bottom: 0.8rem;">Quick response within 24 hours</p>
+                    <a href="mailto:info@traderfrost.com" style="color: #FF9933; text-decoration: none; font-weight: 600;">info@traderfrost.com</a>
+                </div>
+
+                <!-- WhatsApp Card -->
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); padding: 2rem; border-radius: 16px; border: 2px solid rgba(255,153,51,0.3); transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255,153,51,0.6)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(255,153,51,0.3)'; this.style.transform='translateY(0)';">
+                    <div style="width: 60px; height: 60px; background: rgba(255,153,51,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.8rem;">
+                        💬
+                    </div>
+                    <h3 style="color: #FF9933; font-size: 1.2rem; margin-bottom: 0.5rem;">WhatsApp</h3>
+                    <p style="color: #999; font-size: 0.9rem; margin-bottom: 0.8rem;">Direct message for instant support</p>
+                    <a href="https://wa.me/919670131672" target="_blank" style="color: #FF9933; text-decoration: none; font-weight: 600;">+91 9670131672</a>
+                </div>
+
+                <!-- Office Hours Card -->
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); padding: 2rem; border-radius: 16px; border: 2px solid rgba(255,153,51,0.3); transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255,153,51,0.6)'; this.style.transform='translateY(-5px)';" onmouseout="this.style.borderColor='rgba(255,153,51,0.3)'; this.style.transform='translateY(0)';">
+                    <div style="width: 60px; height: 60px; background: rgba(255,153,51,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.8rem;">
+                        🕐
+                    </div>
+                    <h3 style="color: #FF9933; font-size: 1.2rem; margin-bottom: 0.5rem;">Office Hours</h3>
+                    <p style="color: #999; font-size: 0.9rem; margin-bottom: 0.3rem;">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    <p style="color: #999; font-size: 0.9rem;">Sat: 10:00 AM - 4:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact"
+        style="background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 100%); padding: 4rem 2rem; position: relative; overflow: hidden;">
+        <!-- Decorative Background -->
+        <div
+            style="position: absolute; top: -20%; right: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,153,51,0.08) 0%, transparent 70%); border-radius: 50%; animation: float1 8s ease-in-out infinite;">
+        </div>
+
+        <div style="max-width: 1000px; margin: 0 auto; position: relative; z-index: 1;">
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="color: #FF9933; font-size: 2.5rem; margin-bottom: 1rem; font-weight: 700;">Send Us a Message</h2>
+                <p style="color: #bbb; font-size: 1.05rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Have questions about our trading batches, need personalized guidance, or want to explore our programs? Send us a message and our team will respond within 24 hours.
+                </p>
+            </div>
+
+            <!-- Form Container -->
+            <div
+                style="background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%); padding: 2rem; border-radius: 20px; border: 2px solid rgba(255,153,51,0.4); box-shadow: 0 10px 40px rgba(255,153,51,0.2);">
+
+                <form class="contact-form" style="display: grid; gap: 1rem; grid-template-columns: repeat(2, 1fr);">
+                    <!-- Name -->
+                    <div style="position: relative;">
+                        <label for="name"
+                            style="display: block; color: #FF9933; font-weight: 600; margin-bottom: 0.4rem; font-size: 0.9rem;">Your Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe"
+                            style="width: 100%; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 2px solid rgba(255,153,51,0.2); border-radius: 10px; color: #fff; font-size: 0.9rem; transition: all 0.3s ease; outline: none;" onmouseover="this.style.borderColor='rgba(255,153,51,0.5)'" onmouseout="this.style.borderColor='rgba(255,153,51,0.2)'">
+                    </div>
+
+                    <!-- Email -->
+                    <div style="position: relative;">
+                        <label for="email"
+                            style="display: block; color: #FF9933; font-weight: 600; margin-bottom: 0.4rem; font-size: 0.9rem;">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com"
+                            style="width: 100%; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 2px solid rgba(255,153,51,0.2); border-radius: 10px; color: #fff; font-size: 0.9rem; transition: all 0.3s ease; outline: none;" onmouseover="this.style.borderColor='rgba(255,153,51,0.5)'" onmouseout="this.style.borderColor='rgba(255,153,51,0.2)'">
+                    </div>
+
+                    <!-- WhatsApp Number -->
+                    <div style="grid-column: span 1;">
+                        <label
+                            style="display: block; color: #FF9933; font-weight: 600; margin-bottom: 0.4rem; font-size: 0.9rem;">WhatsApp Number *</label>
+                        <div style="display: flex; gap: 0.6rem;">
+                            <!-- Custom Country Code Dropdown -->
+                            <div class="country-selector">
+                                <input type="hidden" id="countryCode" name="countryCode" value="+91">
+                                <div class="country-selected" id="countrySelected" onclick="toggleDropdown()">
+                                    <img src="https://flagcdn.com/w20/in.png" alt="IN">
+                                    <span>+91</span>
+                                    <svg fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                
+                                <div id="countryDropdown" class="country-dropdown">
+                                    
+                                    <div class="country-search">
+                                        <input type="text" id="countrySearch" placeholder="Search country..." 
+                                            oninput="filterCountries(this.value)">
+                                    </div>
+                                    
+                                    <div class="country-options" id="countryOptions">
+                                        <div class="country-option" data-code="+93" data-iso="af" onclick="selectCountry('+93', 'af')"><img src="https://flagcdn.com/w20/af.png" alt="AF"><span>Afghanistan</span><span style="margin-left: auto; color: #999;">+93</span></div>
+                                        <div class="country-option" data-code="+355" data-iso="al" onclick="selectCountry('+355', 'al')"><img src="https://flagcdn.com/w20/al.png" alt="AL"><span>Albania</span><span style="margin-left: auto; color: #999;">+355</span></div>
+                                        <div class="country-option" data-code="+213" data-iso="dz" onclick="selectCountry('+213', 'dz')"><img src="https://flagcdn.com/w20/dz.png" alt="DZ"><span>Algeria</span><span style="margin-left: auto; color: #999;">+213</span></div>
+                                        <div class="country-option" data-code="+376" data-iso="ad" onclick="selectCountry('+376', 'ad')"><img src="https://flagcdn.com/w20/ad.png" alt="AD"><span>Andorra</span><span style="margin-left: auto; color: #999;">+376</span></div>
+                                        <div class="country-option" data-code="+244" data-iso="ao" onclick="selectCountry('+244', 'ao')"><img src="https://flagcdn.com/w20/ao.png" alt="AO"><span>Angola</span><span style="margin-left: auto; color: #999;">+244</span></div>
+                                        <div class="country-option" data-code="+54" data-iso="ar" onclick="selectCountry('+54', 'ar')"><img src="https://flagcdn.com/w20/ar.png" alt="AR"><span>Argentina</span><span style="margin-left: auto; color: #999;">+54</span></div>
+                                        <div class="country-option" data-code="+374" data-iso="am" onclick="selectCountry('+374', 'am')"><img src="https://flagcdn.com/w20/am.png" alt="AM"><span>Armenia</span><span style="margin-left: auto; color: #999;">+374</span></div>
+                                        <div class="country-option" data-code="+61" data-iso="au" onclick="selectCountry('+61', 'au')"><img src="https://flagcdn.com/w20/au.png" alt="AU"><span>Australia</span><span style="margin-left: auto; color: #999;">+61</span></div>
+                                        <div class="country-option" data-code="+43" data-iso="at" onclick="selectCountry('+43', 'at')"><img src="https://flagcdn.com/w20/at.png" alt="AT"><span>Austria</span><span style="margin-left: auto; color: #999;">+43</span></div>
+                                        <div class="country-option" data-code="+994" data-iso="az" onclick="selectCountry('+994', 'az')"><img src="https://flagcdn.com/w20/az.png" alt="AZ"><span>Azerbaijan</span><span style="margin-left: auto; color: #999;">+994</span></div>
+                                        <div class="country-option" data-code="+973" data-iso="bh" onclick="selectCountry('+973', 'bh')"><img src="https://flagcdn.com/w20/bh.png" alt="BH"><span>Bahrain</span><span style="margin-left: auto; color: #999;">+973</span></div>
+                                        <div class="country-option" data-code="+880" data-iso="bd" onclick="selectCountry('+880', 'bd')"><img src="https://flagcdn.com/w20/bd.png" alt="BD"><span>Bangladesh</span><span style="margin-left: auto; color: #999;">+880</span></div>
+                                        <div class="country-option" data-code="+375" data-iso="by" onclick="selectCountry('+375', 'by')"><img src="https://flagcdn.com/w20/by.png" alt="BY"><span>Belarus</span><span style="margin-left: auto; color: #999;">+375</span></div>
+                                        <div class="country-option" data-code="+32" data-iso="be" onclick="selectCountry('+32', 'be')"><img src="https://flagcdn.com/w20/be.png" alt="BE"><span>Belgium</span><span style="margin-left: auto; color: #999;">+32</span></div>
+                                        <div class="country-option" data-code="+501" data-iso="bz" onclick="selectCountry('+501', 'bz')"><img src="https://flagcdn.com/w20/bz.png" alt="BZ"><span>Belize</span><span style="margin-left: auto; color: #999;">+501</span></div>
+                                        <div class="country-option" data-code="+229" data-iso="bj" onclick="selectCountry('+229', 'bj')"><img src="https://flagcdn.com/w20/bj.png" alt="BJ"><span>Benin</span><span style="margin-left: auto; color: #999;">+229</span></div>
+                                        <div class="country-option" data-code="+975" data-iso="bt" onclick="selectCountry('+975', 'bt')"><img src="https://flagcdn.com/w20/bt.png" alt="BT"><span>Bhutan</span><span style="margin-left: auto; color: #999;">+975</span></div>
+                                        <div class="country-option" data-code="+591" data-iso="bo" onclick="selectCountry('+591', 'bo')"><img src="https://flagcdn.com/w20/bo.png" alt="BO"><span>Bolivia</span><span style="margin-left: auto; color: #999;">+591</span></div>
+                                        <div class="country-option" data-code="+387" data-iso="ba" onclick="selectCountry('+387', 'ba')"><img src="https://flagcdn.com/w20/ba.png" alt="BA"><span>Bosnia</span><span style="margin-left: auto; color: #999;">+387</span></div>
+                                        <div class="country-option" data-code="+267" data-iso="bw" onclick="selectCountry('+267', 'bw')"><img src="https://flagcdn.com/w20/bw.png" alt="BW"><span>Botswana</span><span style="margin-left: auto; color: #999;">+267</span></div>
+                                        <div class="country-option" data-code="+55" data-iso="br" onclick="selectCountry('+55', 'br')"><img src="https://flagcdn.com/w20/br.png" alt="BR"><span>Brazil</span><span style="margin-left: auto; color: #999;">+55</span></div>
+                                        <div class="country-option" data-code="+673" data-iso="bn" onclick="selectCountry('+673', 'bn')"><img src="https://flagcdn.com/w20/bn.png" alt="BN"><span>Brunei</span><span style="margin-left: auto; color: #999;">+673</span></div>
+                                        <div class="country-option" data-code="+359" data-iso="bg" onclick="selectCountry('+359', 'bg')"><img src="https://flagcdn.com/w20/bg.png" alt="BG"><span>Bulgaria</span><span style="margin-left: auto; color: #999;">+359</span></div>
+                                        <div class="country-option" data-code="+226" data-iso="bf" onclick="selectCountry('+226', 'bf')"><img src="https://flagcdn.com/w20/bf.png" alt="BF"><span>Burkina Faso</span><span style="margin-left: auto; color: #999;">+226</span></div>
+                                        <div class="country-option" data-code="+257" data-iso="bi" onclick="selectCountry('+257', 'bi')"><img src="https://flagcdn.com/w20/bi.png" alt="BI"><span>Burundi</span><span style="margin-left: auto; color: #999;">+257</span></div>
+                                        <div class="country-option" data-code="+855" data-iso="kh" onclick="selectCountry('+855', 'kh')"><img src="https://flagcdn.com/w20/kh.png" alt="KH"><span>Cambodia</span><span style="margin-left: auto; color: #999;">+855</span></div>
+                                        <div class="country-option" data-code="+237" data-iso="cm" onclick="selectCountry('+237', 'cm')"><img src="https://flagcdn.com/w20/cm.png" alt="CM"><span>Cameroon</span><span style="margin-left: auto; color: #999;">+237</span></div>
+                                        <div class="country-option" data-code="+1" data-iso="ca" onclick="selectCountry('+1', 'ca')"><img src="https://flagcdn.com/w20/ca.png" alt="CA"><span>Canada</span><span style="margin-left: auto; color: #999;">+1</span></div>
+                                        <div class="country-option" data-code="+238" data-iso="cv" onclick="selectCountry('+238', 'cv')"><img src="https://flagcdn.com/w20/cv.png" alt="CV"><span>Cape Verde</span><span style="margin-left: auto; color: #999;">+238</span></div>
+                                        <div class="country-option" data-code="+236" data-iso="cf" onclick="selectCountry('+236', 'cf')"><img src="https://flagcdn.com/w20/cf.png" alt="CF"><span>Central African Rep</span><span style="margin-left: auto; color: #999;">+236</span></div>
+                                        <div class="country-option" data-code="+235" data-iso="td" onclick="selectCountry('+235', 'td')"><img src="https://flagcdn.com/w20/td.png" alt="TD"><span>Chad</span><span style="margin-left: auto; color: #999;">+235</span></div>
+                                        <div class="country-option" data-code="+56" data-iso="cl" onclick="selectCountry('+56', 'cl')"><img src="https://flagcdn.com/w20/cl.png" alt="CL"><span>Chile</span><span style="margin-left: auto; color: #999;">+56</span></div>
+                                        <div class="country-option" data-code="+86" data-iso="cn" onclick="selectCountry('+86', 'cn')"><img src="https://flagcdn.com/w20/cn.png" alt="CN"><span>China</span><span style="margin-left: auto; color: #999;">+86</span></div>
+                                        <div class="country-option" data-code="+57" data-iso="co" onclick="selectCountry('+57', 'co')"><img src="https://flagcdn.com/w20/co.png" alt="CO"><span>Colombia</span><span style="margin-left: auto; color: #999;">+57</span></div>
+                                        <div class="country-option" data-code="+269" data-iso="km" onclick="selectCountry('+269', 'km')"><img src="https://flagcdn.com/w20/km.png" alt="KM"><span>Comoros</span><span style="margin-left: auto; color: #999;">+269</span></div>
+                                        <div class="country-option" data-code="+242" data-iso="cg" onclick="selectCountry('+242', 'cg')"><img src="https://flagcdn.com/w20/cg.png" alt="CG"><span>Congo</span><span style="margin-left: auto; color: #999;">+242</span></div>
+                                        <div class="country-option" data-code="+243" data-iso="cd" onclick="selectCountry('+243', 'cd')"><img src="https://flagcdn.com/w20/cd.png" alt="CD"><span>Congo (DRC)</span><span style="margin-left: auto; color: #999;">+243</span></div>
+                                        <div class="country-option" data-code="+506" data-iso="cr" onclick="selectCountry('+506', 'cr')"><img src="https://flagcdn.com/w20/cr.png" alt="CR"><span>Costa Rica</span><span style="margin-left: auto; color: #999;">+506</span></div>
+                                        <div class="country-option" data-code="+385" data-iso="hr" onclick="selectCountry('+385', 'hr')"><img src="https://flagcdn.com/w20/hr.png" alt="HR"><span>Croatia</span><span style="margin-left: auto; color: #999;">+385</span></div>
+                                        <div class="country-option" data-code="+53" data-iso="cu" onclick="selectCountry('+53', 'cu')"><img src="https://flagcdn.com/w20/cu.png" alt="CU"><span>Cuba</span><span style="margin-left: auto; color: #999;">+53</span></div>
+                                        <div class="country-option" data-code="+357" data-iso="cy" onclick="selectCountry('+357', 'cy')"><img src="https://flagcdn.com/w20/cy.png" alt="CY"><span>Cyprus</span><span style="margin-left: auto; color: #999;">+357</span></div>
+                                        <div class="country-option" data-code="+420" data-iso="cz" onclick="selectCountry('+420', 'cz')"><img src="https://flagcdn.com/w20/cz.png" alt="CZ"><span>Czech Republic</span><span style="margin-left: auto; color: #999;">+420</span></div>
+                                        <div class="country-option" data-code="+45" data-iso="dk" onclick="selectCountry('+45', 'dk')"><img src="https://flagcdn.com/w20/dk.png" alt="DK"><span>Denmark</span><span style="margin-left: auto; color: #999;">+45</span></div>
+                                        <div class="country-option" data-code="+253" data-iso="dj" onclick="selectCountry('+253', 'dj')"><img src="https://flagcdn.com/w20/dj.png" alt="DJ"><span>Djibouti</span><span style="margin-left: auto; color: #999;">+253</span></div>
+                                        <div class="country-option" data-code="+593" data-iso="ec" onclick="selectCountry('+593', 'ec')"><img src="https://flagcdn.com/w20/ec.png" alt="EC"><span>Ecuador</span><span style="margin-left: auto; color: #999;">+593</span></div>
+                                        <div class="country-option" data-code="+20" data-iso="eg" onclick="selectCountry('+20', 'eg')"><img src="https://flagcdn.com/w20/eg.png" alt="EG"><span>Egypt</span><span style="margin-left: auto; color: #999;">+20</span></div>
+                                        <div class="country-option" data-code="+503" data-iso="sv" onclick="selectCountry('+503', 'sv')"><img src="https://flagcdn.com/w20/sv.png" alt="SV"><span>El Salvador</span><span style="margin-left: auto; color: #999;">+503</span></div>
+                                        <div class="country-option" data-code="+240" data-iso="gq" onclick="selectCountry('+240', 'gq')"><img src="https://flagcdn.com/w20/gq.png" alt="GQ"><span>Equatorial Guinea</span><span style="margin-left: auto; color: #999;">+240</span></div>
+                                        <div class="country-option" data-code="+291" data-iso="er" onclick="selectCountry('+291', 'er')"><img src="https://flagcdn.com/w20/er.png" alt="ER"><span>Eritrea</span><span style="margin-left: auto; color: #999;">+291</span></div>
+                                        <div class="country-option" data-code="+372" data-iso="ee" onclick="selectCountry('+372', 'ee')"><img src="https://flagcdn.com/w20/ee.png" alt="EE"><span>Estonia</span><span style="margin-left: auto; color: #999;">+372</span></div>
+                                        <div class="country-option" data-code="+251" data-iso="et" onclick="selectCountry('+251', 'et')"><img src="https://flagcdn.com/w20/et.png" alt="ET"><span>Ethiopia</span><span style="margin-left: auto; color: #999;">+251</span></div>
+                                        <div class="country-option" data-code="+679" data-iso="fj" onclick="selectCountry('+679', 'fj')"><img src="https://flagcdn.com/w20/fj.png" alt="FJ"><span>Fiji</span><span style="margin-left: auto; color: #999;">+679</span></div>
+                                        <div class="country-option" data-code="+358" data-iso="fi" onclick="selectCountry('+358', 'fi')"><img src="https://flagcdn.com/w20/fi.png" alt="FI"><span>Finland</span><span style="margin-left: auto; color: #999;">+358</span></div>
+                                        <div class="country-option" data-code="+33" data-iso="fr" onclick="selectCountry('+33', 'fr')"><img src="https://flagcdn.com/w20/fr.png" alt="FR"><span>France</span><span style="margin-left: auto; color: #999;">+33</span></div>
+                                        <div class="country-option" data-code="+241" data-iso="ga" onclick="selectCountry('+241', 'ga')"><img src="https://flagcdn.com/w20/ga.png" alt="GA"><span>Gabon</span><span style="margin-left: auto; color: #999;">+241</span></div>
+                                        <div class="country-option" data-code="+220" data-iso="gm" onclick="selectCountry('+220', 'gm')"><img src="https://flagcdn.com/w20/gm.png" alt="GM"><span>Gambia</span><span style="margin-left: auto; color: #999;">+220</span></div>
+                                        <div class="country-option" data-code="+995" data-iso="ge" onclick="selectCountry('+995', 'ge')"><img src="https://flagcdn.com/w20/ge.png" alt="GE"><span>Georgia</span><span style="margin-left: auto; color: #999;">+995</span></div>
+                                        <div class="country-option" data-code="+49" data-iso="de" onclick="selectCountry('+49', 'de')"><img src="https://flagcdn.com/w20/de.png" alt="DE"><span>Germany</span><span style="margin-left: auto; color: #999;">+49</span></div>
+                                        <div class="country-option" data-code="+233" data-iso="gh" onclick="selectCountry('+233', 'gh')"><img src="https://flagcdn.com/w20/gh.png" alt="GH"><span>Ghana</span><span style="margin-left: auto; color: #999;">+233</span></div>
+                                        <div class="country-option" data-code="+30" data-iso="gr" onclick="selectCountry('+30', 'gr')"><img src="https://flagcdn.com/w20/gr.png" alt="GR"><span>Greece</span><span style="margin-left: auto; color: #999;">+30</span></div>
+                                        <div class="country-option" data-code="+502" data-iso="gt" onclick="selectCountry('+502', 'gt')"><img src="https://flagcdn.com/w20/gt.png" alt="GT"><span>Guatemala</span><span style="margin-left: auto; color: #999;">+502</span></div>
+                                        <div class="country-option" data-code="+224" data-iso="gn" onclick="selectCountry('+224', 'gn')"><img src="https://flagcdn.com/w20/gn.png" alt="GN"><span>Guinea</span><span style="margin-left: auto; color: #999;">+224</span></div>
+                                        <div class="country-option" data-code="+245" data-iso="gw" onclick="selectCountry('+245', 'gw')"><img src="https://flagcdn.com/w20/gw.png" alt="GW"><span>Guinea-Bissau</span><span style="margin-left: auto; color: #999;">+245</span></div>
+                                        <div class="country-option" data-code="+592" data-iso="gy" onclick="selectCountry('+592', 'gy')"><img src="https://flagcdn.com/w20/gy.png" alt="GY"><span>Guyana</span><span style="margin-left: auto; color: #999;">+592</span></div>
+                                        <div class="country-option" data-code="+509" data-iso="ht" onclick="selectCountry('+509', 'ht')"><img src="https://flagcdn.com/w20/ht.png" alt="HT"><span>Haiti</span><span style="margin-left: auto; color: #999;">+509</span></div>
+                                        <div class="country-option" data-code="+504" data-iso="hn" onclick="selectCountry('+504', 'hn')"><img src="https://flagcdn.com/w20/hn.png" alt="HN"><span>Honduras</span><span style="margin-left: auto; color: #999;">+504</span></div>
+                                        <div class="country-option" data-code="+852" data-iso="hk" onclick="selectCountry('+852', 'hk')"><img src="https://flagcdn.com/w20/hk.png" alt="HK"><span>Hong Kong</span><span style="margin-left: auto; color: #999;">+852</span></div>
+                                        <div class="country-option" data-code="+36" data-iso="hu" onclick="selectCountry('+36', 'hu')"><img src="https://flagcdn.com/w20/hu.png" alt="HU"><span>Hungary</span><span style="margin-left: auto; color: #999;">+36</span></div>
+                                        <div class="country-option" data-code="+354" data-iso="is" onclick="selectCountry('+354', 'is')"><img src="https://flagcdn.com/w20/is.png" alt="IS"><span>Iceland</span><span style="margin-left: auto; color: #999;">+354</span></div>
+                                        <div class="country-option" data-code="+91" data-iso="in" onclick="selectCountry('+91', 'in')"><img src="https://flagcdn.com/w20/in.png" alt="IN"><span>India</span><span style="margin-left: auto; color: #999;">+91</span></div>
+                                        <div class="country-option" data-code="+62" data-iso="id" onclick="selectCountry('+62', 'id')"><img src="https://flagcdn.com/w20/id.png" alt="ID"><span>Indonesia</span><span style="margin-left: auto; color: #999;">+62</span></div>
+                                        <div class="country-option" data-code="+98" data-iso="ir" onclick="selectCountry('+98', 'ir')"><img src="https://flagcdn.com/w20/ir.png" alt="IR"><span>Iran</span><span style="margin-left: auto; color: #999;">+98</span></div>
+                                        <div class="country-option" data-code="+964" data-iso="iq" onclick="selectCountry('+964', 'iq')"><img src="https://flagcdn.com/w20/iq.png" alt="IQ"><span>Iraq</span><span style="margin-left: auto; color: #999;">+964</span></div>
+                                        <div class="country-option" data-code="+353" data-iso="ie" onclick="selectCountry('+353', 'ie')"><img src="https://flagcdn.com/w20/ie.png" alt="IE"><span>Ireland</span><span style="margin-left: auto; color: #999;">+353</span></div>
+                                        <div class="country-option" data-code="+972" data-iso="il" onclick="selectCountry('+972', 'il')"><img src="https://flagcdn.com/w20/il.png" alt="IL"><span>Israel</span><span style="margin-left: auto; color: #999;">+972</span></div>
+                                        <div class="country-option" data-code="+39" data-iso="it" onclick="selectCountry('+39', 'it')"><img src="https://flagcdn.com/w20/it.png" alt="IT"><span>Italy</span><span style="margin-left: auto; color: #999;">+39</span></div>
+                                        <div class="country-option" data-code="+225" data-iso="ci" onclick="selectCountry('+225', 'ci')"><img src="https://flagcdn.com/w20/ci.png" alt="CI"><span>Ivory Coast</span><span style="margin-left: auto; color: #999;">+225</span></div>
+                                        <div class="country-option" data-code="+81" data-iso="jp" onclick="selectCountry('+81', 'jp')"><img src="https://flagcdn.com/w20/jp.png" alt="JP"><span>Japan</span><span style="margin-left: auto; color: #999;">+81</span></div>
+                                        <div class="country-option" data-code="+962" data-iso="jo" onclick="selectCountry('+962', 'jo')"><img src="https://flagcdn.com/w20/jo.png" alt="JO"><span>Jordan</span><span style="margin-left: auto; color: #999;">+962</span></div>
+                                        <div class="country-option" data-code="+7" data-iso="kz" onclick="selectCountry('+7', 'kz')"><img src="https://flagcdn.com/w20/kz.png" alt="KZ"><span>Kazakhstan</span><span style="margin-left: auto; color: #999;">+7</span></div>
+                                        <div class="country-option" data-code="+254" data-iso="ke" onclick="selectCountry('+254', 'ke')"><img src="https://flagcdn.com/w20/ke.png" alt="KE"><span>Kenya</span><span style="margin-left: auto; color: #999;">+254</span></div>
+                                        <div class="country-option" data-code="+965" data-iso="kw" onclick="selectCountry('+965', 'kw')"><img src="https://flagcdn.com/w20/kw.png" alt="KW"><span>Kuwait</span><span style="margin-left: auto; color: #999;">+965</span></div>
+                                        <div class="country-option" data-code="+996" data-iso="kg" onclick="selectCountry('+996', 'kg')"><img src="https://flagcdn.com/w20/kg.png" alt="KG"><span>Kyrgyzstan</span><span style="margin-left: auto; color: #999;">+996</span></div>
+                                        <div class="country-option" data-code="+856" data-iso="la" onclick="selectCountry('+856', 'la')"><img src="https://flagcdn.com/w20/la.png" alt="LA"><span>Laos</span><span style="margin-left: auto; color: #999;">+856</span></div>
+                                        <div class="country-option" data-code="+371" data-iso="lv" onclick="selectCountry('+371', 'lv')"><img src="https://flagcdn.com/w20/lv.png" alt="LV"><span>Latvia</span><span style="margin-left: auto; color: #999;">+371</span></div>
+                                        <div class="country-option" data-code="+961" data-iso="lb" onclick="selectCountry('+961', 'lb')"><img src="https://flagcdn.com/w20/lb.png" alt="LB"><span>Lebanon</span><span style="margin-left: auto; color: #999;">+961</span></div>
+                                        <div class="country-option" data-code="+266" data-iso="ls" onclick="selectCountry('+266', 'ls')"><img src="https://flagcdn.com/w20/ls.png" alt="LS"><span>Lesotho</span><span style="margin-left: auto; color: #999;">+266</span></div>
+                                        <div class="country-option" data-code="+231" data-iso="lr" onclick="selectCountry('+231', 'lr')"><img src="https://flagcdn.com/w20/lr.png" alt="LR"><span>Liberia</span><span style="margin-left: auto; color: #999;">+231</span></div>
+                                        <div class="country-option" data-code="+218" data-iso="ly" onclick="selectCountry('+218', 'ly')"><img src="https://flagcdn.com/w20/ly.png" alt="LY"><span>Libya</span><span style="margin-left: auto; color: #999;">+218</span></div>
+                                        <div class="country-option" data-code="+423" data-iso="li" onclick="selectCountry('+423', 'li')"><img src="https://flagcdn.com/w20/li.png" alt="LI"><span>Liechtenstein</span><span style="margin-left: auto; color: #999;">+423</span></div>
+                                        <div class="country-option" data-code="+370" data-iso="lt" onclick="selectCountry('+370', 'lt')"><img src="https://flagcdn.com/w20/lt.png" alt="LT"><span>Lithuania</span><span style="margin-left: auto; color: #999;">+370</span></div>
+                                        <div class="country-option" data-code="+352" data-iso="lu" onclick="selectCountry('+352', 'lu')"><img src="https://flagcdn.com/w20/lu.png" alt="LU"><span>Luxembourg</span><span style="margin-left: auto; color: #999;">+352</span></div>
+                                        <div class="country-option" data-code="+853" data-iso="mo" onclick="selectCountry('+853', 'mo')"><img src="https://flagcdn.com/w20/mo.png" alt="MO"><span>Macao</span><span style="margin-left: auto; color: #999;">+853</span></div>
+                                        <div class="country-option" data-code="+389" data-iso="mk" onclick="selectCountry('+389', 'mk')"><img src="https://flagcdn.com/w20/mk.png" alt="MK"><span>Macedonia</span><span style="margin-left: auto; color: #999;">+389</span></div>
+                                        <div class="country-option" data-code="+261" data-iso="mg" onclick="selectCountry('+261', 'mg')"><img src="https://flagcdn.com/w20/mg.png" alt="MG"><span>Madagascar</span><span style="margin-left: auto; color: #999;">+261</span></div>
+                                        <div class="country-option" data-code="+265" data-iso="mw" onclick="selectCountry('+265', 'mw')"><img src="https://flagcdn.com/w20/mw.png" alt="MW"><span>Malawi</span><span style="margin-left: auto; color: #999;">+265</span></div>
+                                        <div class="country-option" data-code="+60" data-iso="my" onclick="selectCountry('+60', 'my')"><img src="https://flagcdn.com/w20/my.png" alt="MY"><span>Malaysia</span><span style="margin-left: auto; color: #999;">+60</span></div>
+                                        <div class="country-option" data-code="+960" data-iso="mv" onclick="selectCountry('+960', 'mv')"><img src="https://flagcdn.com/w20/mv.png" alt="MV"><span>Maldives</span><span style="margin-left: auto; color: #999;">+960</span></div>
+                                        <div class="country-option" data-code="+223" data-iso="ml" onclick="selectCountry('+223', 'ml')"><img src="https://flagcdn.com/w20/ml.png" alt="ML"><span>Mali</span><span style="margin-left: auto; color: #999;">+223</span></div>
+                                        <div class="country-option" data-code="+356" data-iso="mt" onclick="selectCountry('+356', 'mt')"><img src="https://flagcdn.com/w20/mt.png" alt="MT"><span>Malta</span><span style="margin-left: auto; color: #999;">+356</span></div>
+                                        <div class="country-option" data-code="+222" data-iso="mr" onclick="selectCountry('+222', 'mr')"><img src="https://flagcdn.com/w20/mr.png" alt="MR"><span>Mauritania</span><span style="margin-left: auto; color: #999;">+222</span></div>
+                                        <div class="country-option" data-code="+230" data-iso="mu" onclick="selectCountry('+230', 'mu')"><img src="https://flagcdn.com/w20/mu.png" alt="MU"><span>Mauritius</span><span style="margin-left: auto; color: #999;">+230</span></div>
+                                        <div class="country-option" data-code="+52" data-iso="mx" onclick="selectCountry('+52', 'mx')"><img src="https://flagcdn.com/w20/mx.png" alt="MX"><span>Mexico</span><span style="margin-left: auto; color: #999;">+52</span></div>
+                                        <div class="country-option" data-code="+373" data-iso="md" onclick="selectCountry('+373', 'md')"><img src="https://flagcdn.com/w20/md.png" alt="MD"><span>Moldova</span><span style="margin-left: auto; color: #999;">+373</span></div>
+                                        <div class="country-option" data-code="+377" data-iso="mc" onclick="selectCountry('+377', 'mc')"><img src="https://flagcdn.com/w20/mc.png" alt="MC"><span>Monaco</span><span style="margin-left: auto; color: #999;">+377</span></div>
+                                        <div class="country-option" data-code="+976" data-iso="mn" onclick="selectCountry('+976', 'mn')"><img src="https://flagcdn.com/w20/mn.png" alt="MN"><span>Mongolia</span><span style="margin-left: auto; color: #999;">+976</span></div>
+                                        <div class="country-option" data-code="+382" data-iso="me" onclick="selectCountry('+382', 'me')"><img src="https://flagcdn.com/w20/me.png" alt="ME"><span>Montenegro</span><span style="margin-left: auto; color: #999;">+382</span></div>
+                                        <div class="country-option" data-code="+212" data-iso="ma" onclick="selectCountry('+212', 'ma')"><img src="https://flagcdn.com/w20/ma.png" alt="MA"><span>Morocco</span><span style="margin-left: auto; color: #999;">+212</span></div>
+                                        <div class="country-option" data-code="+258" data-iso="mz" onclick="selectCountry('+258', 'mz')"><img src="https://flagcdn.com/w20/mz.png" alt="MZ"><span>Mozambique</span><span style="margin-left: auto; color: #999;">+258</span></div>
+                                        <div class="country-option" data-code="+95" data-iso="mm" onclick="selectCountry('+95', 'mm')"><img src="https://flagcdn.com/w20/mm.png" alt="MM"><span>Myanmar</span><span style="margin-left: auto; color: #999;">+95</span></div>
+                                        <div class="country-option" data-code="+264" data-iso="na" onclick="selectCountry('+264', 'na')"><img src="https://flagcdn.com/w20/na.png" alt="NA"><span>Namibia</span><span style="margin-left: auto; color: #999;">+264</span></div>
+                                        <div class="country-option" data-code="+977" data-iso="np" onclick="selectCountry('+977', 'np')"><img src="https://flagcdn.com/w20/np.png" alt="NP"><span>Nepal</span><span style="margin-left: auto; color: #999;">+977</span></div>
+                                        <div class="country-option" data-code="+31" data-iso="nl" onclick="selectCountry('+31', 'nl')"><img src="https://flagcdn.com/w20/nl.png" alt="NL"><span>Netherlands</span><span style="margin-left: auto; color: #999;">+31</span></div>
+                                        <div class="country-option" data-code="+64" data-iso="nz" onclick="selectCountry('+64', 'nz')"><img src="https://flagcdn.com/w20/nz.png" alt="NZ"><span>New Zealand</span><span style="margin-left: auto; color: #999;">+64</span></div>
+                                        <div class="country-option" data-code="+505" data-iso="ni" onclick="selectCountry('+505', 'ni')"><img src="https://flagcdn.com/w20/ni.png" alt="NI"><span>Nicaragua</span><span style="margin-left: auto; color: #999;">+505</span></div>
+                                        <div class="country-option" data-code="+227" data-iso="ne" onclick="selectCountry('+227', 'ne')"><img src="https://flagcdn.com/w20/ne.png" alt="NE"><span>Niger</span><span style="margin-left: auto; color: #999;">+227</span></div>
+                                        <div class="country-option" data-code="+234" data-iso="ng" onclick="selectCountry('+234', 'ng')"><img src="https://flagcdn.com/w20/ng.png" alt="NG"><span>Nigeria</span><span style="margin-left: auto; color: #999;">+234</span></div>
+                                        <div class="country-option" data-code="+850" data-iso="kp" onclick="selectCountry('+850', 'kp')"><img src="https://flagcdn.com/w20/kp.png" alt="KP"><span>North Korea</span><span style="margin-left: auto; color: #999;">+850</span></div>
+                                        <div class="country-option" data-code="+47" data-iso="no" onclick="selectCountry('+47', 'no')"><img src="https://flagcdn.com/w20/no.png" alt="NO"><span>Norway</span><span style="margin-left: auto; color: #999;">+47</span></div>
+                                        <div class="country-option" data-code="+968" data-iso="om" onclick="selectCountry('+968', 'om')"><img src="https://flagcdn.com/w20/om.png" alt="OM"><span>Oman</span><span style="margin-left: auto; color: #999;">+968</span></div>
+                                        <div class="country-option" data-code="+92" data-iso="pk" onclick="selectCountry('+92', 'pk')"><img src="https://flagcdn.com/w20/pk.png" alt="PK"><span>Pakistan</span><span style="margin-left: auto; color: #999;">+92</span></div>
+                                        <div class="country-option" data-code="+970" data-iso="ps" onclick="selectCountry('+970', 'ps')"><img src="https://flagcdn.com/w20/ps.png" alt="PS"><span>Palestine</span><span style="margin-left: auto; color: #999;">+970</span></div>
+                                        <div class="country-option" data-code="+507" data-iso="pa" onclick="selectCountry('+507', 'pa')"><img src="https://flagcdn.com/w20/pa.png" alt="PA"><span>Panama</span><span style="margin-left: auto; color: #999;">+507</span></div>
+                                        <div class="country-option" data-code="+675" data-iso="pg" onclick="selectCountry('+675', 'pg')"><img src="https://flagcdn.com/w20/pg.png" alt="PG"><span>Papua New Guinea</span><span style="margin-left: auto; color: #999;">+675</span></div>
+                                        <div class="country-option" data-code="+595" data-iso="py" onclick="selectCountry('+595', 'py')"><img src="https://flagcdn.com/w20/py.png" alt="PY"><span>Paraguay</span><span style="margin-left: auto; color: #999;">+595</span></div>
+                                        <div class="country-option" data-code="+51" data-iso="pe" onclick="selectCountry('+51', 'pe')"><img src="https://flagcdn.com/w20/pe.png" alt="PE"><span>Peru</span><span style="margin-left: auto; color: #999;">+51</span></div>
+                                        <div class="country-option" data-code="+63" data-iso="ph" onclick="selectCountry('+63', 'ph')"><img src="https://flagcdn.com/w20/ph.png" alt="PH"><span>Philippines</span><span style="margin-left: auto; color: #999;">+63</span></div>
+                                        <div class="country-option" data-code="+48" data-iso="pl" onclick="selectCountry('+48', 'pl')"><img src="https://flagcdn.com/w20/pl.png" alt="PL"><span>Poland</span><span style="margin-left: auto; color: #999;">+48</span></div>
+                                        <div class="country-option" data-code="+351" data-iso="pt" onclick="selectCountry('+351', 'pt')"><img src="https://flagcdn.com/w20/pt.png" alt="PT"><span>Portugal</span><span style="margin-left: auto; color: #999;">+351</span></div>
+                                        <div class="country-option" data-code="+974" data-iso="qa" onclick="selectCountry('+974', 'qa')"><img src="https://flagcdn.com/w20/qa.png" alt="QA"><span>Qatar</span><span style="margin-left: auto; color: #999;">+974</span></div>
+                                        <div class="country-option" data-code="+40" data-iso="ro" onclick="selectCountry('+40', 'ro')"><img src="https://flagcdn.com/w20/ro.png" alt="RO"><span>Romania</span><span style="margin-left: auto; color: #999;">+40</span></div>
+                                        <div class="country-option" data-code="+7" data-iso="ru" onclick="selectCountry('+7', 'ru')"><img src="https://flagcdn.com/w20/ru.png" alt="RU"><span>Russia</span><span style="margin-left: auto; color: #999;">+7</span></div>
+                                        <div class="country-option" data-code="+250" data-iso="rw" onclick="selectCountry('+250', 'rw')"><img src="https://flagcdn.com/w20/rw.png" alt="RW"><span>Rwanda</span><span style="margin-left: auto; color: #999;">+250</span></div>
+                                        <div class="country-option" data-code="+966" data-iso="sa" onclick="selectCountry('+966', 'sa')"><img src="https://flagcdn.com/w20/sa.png" alt="SA"><span>Saudi Arabia</span><span style="margin-left: auto; color: #999;">+966</span></div>
+                                        <div class="country-option" data-code="+221" data-iso="sn" onclick="selectCountry('+221', 'sn')"><img src="https://flagcdn.com/w20/sn.png" alt="SN"><span>Senegal</span><span style="margin-left: auto; color: #999;">+221</span></div>
+                                        <div class="country-option" data-code="+381" data-iso="rs" onclick="selectCountry('+381', 'rs')"><img src="https://flagcdn.com/w20/rs.png" alt="RS"><span>Serbia</span><span style="margin-left: auto; color: #999;">+381</span></div>
+                                        <div class="country-option" data-code="+248" data-iso="sc" onclick="selectCountry('+248', 'sc')"><img src="https://flagcdn.com/w20/sc.png" alt="SC"><span>Seychelles</span><span style="margin-left: auto; color: #999;">+248</span></div>
+                                        <div class="country-option" data-code="+232" data-iso="sl" onclick="selectCountry('+232', 'sl')"><img src="https://flagcdn.com/w20/sl.png" alt="SL"><span>Sierra Leone</span><span style="margin-left: auto; color: #999;">+232</span></div>
+                                        <div class="country-option" data-code="+65" data-iso="sg" onclick="selectCountry('+65', 'sg')"><img src="https://flagcdn.com/w20/sg.png" alt="SG"><span>Singapore</span><span style="margin-left: auto; color: #999;">+65</span></div>
+                                        <div class="country-option" data-code="+421" data-iso="sk" onclick="selectCountry('+421', 'sk')"><img src="https://flagcdn.com/w20/sk.png" alt="SK"><span>Slovakia</span><span style="margin-left: auto; color: #999;">+421</span></div>
+                                        <div class="country-option" data-code="+386" data-iso="si" onclick="selectCountry('+386', 'si')"><img src="https://flagcdn.com/w20/si.png" alt="SI"><span>Slovenia</span><span style="margin-left: auto; color: #999;">+386</span></div>
+                                        <div class="country-option" data-code="+677" data-iso="sb" onclick="selectCountry('+677', 'sb')"><img src="https://flagcdn.com/w20/sb.png" alt="SB"><span>Solomon Islands</span><span style="margin-left: auto; color: #999;">+677</span></div>
+                                        <div class="country-option" data-code="+252" data-iso="so" onclick="selectCountry('+252', 'so')"><img src="https://flagcdn.com/w20/so.png" alt="SO"><span>Somalia</span><span style="margin-left: auto; color: #999;">+252</span></div>
+                                        <div class="country-option" data-code="+27" data-iso="za" onclick="selectCountry('+27', 'za')"><img src="https://flagcdn.com/w20/za.png" alt="ZA"><span>South Africa</span><span style="margin-left: auto; color: #999;">+27</span></div>
+                                        <div class="country-option" data-code="+82" data-iso="kr" onclick="selectCountry('+82', 'kr')"><img src="https://flagcdn.com/w20/kr.png" alt="KR"><span>South Korea</span><span style="margin-left: auto; color: #999;">+82</span></div>
+                                        <div class="country-option" data-code="+211" data-iso="ss" onclick="selectCountry('+211', 'ss')"><img src="https://flagcdn.com/w20/ss.png" alt="SS"><span>South Sudan</span><span style="margin-left: auto; color: #999;">+211</span></div>
+                                        <div class="country-option" data-code="+34" data-iso="es" onclick="selectCountry('+34', 'es')"><img src="https://flagcdn.com/w20/es.png" alt="ES"><span>Spain</span><span style="margin-left: auto; color: #999;">+34</span></div>
+                                        <div class="country-option" data-code="+94" data-iso="lk" onclick="selectCountry('+94', 'lk')"><img src="https://flagcdn.com/w20/lk.png" alt="LK"><span>Sri Lanka</span><span style="margin-left: auto; color: #999;">+94</span></div>
+                                        <div class="country-option" data-code="+249" data-iso="sd" onclick="selectCountry('+249', 'sd')"><img src="https://flagcdn.com/w20/sd.png" alt="SD"><span>Sudan</span><span style="margin-left: auto; color: #999;">+249</span></div>
+                                        <div class="country-option" data-code="+597" data-iso="sr" onclick="selectCountry('+597', 'sr')"><img src="https://flagcdn.com/w20/sr.png" alt="SR"><span>Suriname</span><span style="margin-left: auto; color: #999;">+597</span></div>
+                                        <div class="country-option" data-code="+268" data-iso="sz" onclick="selectCountry('+268', 'sz')"><img src="https://flagcdn.com/w20/sz.png" alt="SZ"><span>Eswatini</span><span style="margin-left: auto; color: #999;">+268</span></div>
+                                        <div class="country-option" data-code="+46" data-iso="se" onclick="selectCountry('+46', 'se')"><img src="https://flagcdn.com/w20/se.png" alt="SE"><span>Sweden</span><span style="margin-left: auto; color: #999;">+46</span></div>
+                                        <div class="country-option" data-code="+41" data-iso="ch" onclick="selectCountry('+41', 'ch')"><img src="https://flagcdn.com/w20/ch.png" alt="CH"><span>Switzerland</span><span style="margin-left: auto; color: #999;">+41</span></div>
+                                        <div class="country-option" data-code="+963" data-iso="sy" onclick="selectCountry('+963', 'sy')"><img src="https://flagcdn.com/w20/sy.png" alt="SY"><span>Syria</span><span style="margin-left: auto; color: #999;">+963</span></div>
+                                        <div class="country-option" data-code="+886" data-iso="tw" onclick="selectCountry('+886', 'tw')"><img src="https://flagcdn.com/w20/tw.png" alt="TW"><span>Taiwan</span><span style="margin-left: auto; color: #999;">+886</span></div>
+                                        <div class="country-option" data-code="+992" data-iso="tj" onclick="selectCountry('+992', 'tj')"><img src="https://flagcdn.com/w20/tj.png" alt="TJ"><span>Tajikistan</span><span style="margin-left: auto; color: #999;">+992</span></div>
+                                        <div class="country-option" data-code="+255" data-iso="tz" onclick="selectCountry('+255', 'tz')"><img src="https://flagcdn.com/w20/tz.png" alt="TZ"><span>Tanzania</span><span style="margin-left: auto; color: #999;">+255</span></div>
+                                        <div class="country-option" data-code="+66" data-iso="th" onclick="selectCountry('+66', 'th')"><img src="https://flagcdn.com/w20/th.png" alt="TH"><span>Thailand</span><span style="margin-left: auto; color: #999;">+66</span></div>
+                                        <div class="country-option" data-code="+228" data-iso="tg" onclick="selectCountry('+228', 'tg')"><img src="https://flagcdn.com/w20/tg.png" alt="TG"><span>Togo</span><span style="margin-left: auto; color: #999;">+228</span></div>
+                                        <div class="country-option" data-code="+676" data-iso="to" onclick="selectCountry('+676', 'to')"><img src="https://flagcdn.com/w20/to.png" alt="TO"><span>Tonga</span><span style="margin-left: auto; color: #999;">+676</span></div>
+                                        <div class="country-option" data-code="+216" data-iso="tn" onclick="selectCountry('+216', 'tn')"><img src="https://flagcdn.com/w20/tn.png" alt="TN"><span>Tunisia</span><span style="margin-left: auto; color: #999;">+216</span></div>
+                                        <div class="country-option" data-code="+90" data-iso="tr" onclick="selectCountry('+90', 'tr')"><img src="https://flagcdn.com/w20/tr.png" alt="TR"><span>Turkey</span><span style="margin-left: auto; color: #999;">+90</span></div>
+                                        <div class="country-option" data-code="+993" data-iso="tm" onclick="selectCountry('+993', 'tm')"><img src="https://flagcdn.com/w20/tm.png" alt="TM"><span>Turkmenistan</span><span style="margin-left: auto; color: #999;">+993</span></div>
+                                        <div class="country-option" data-code="+256" data-iso="ug" onclick="selectCountry('+256', 'ug')"><img src="https://flagcdn.com/w20/ug.png" alt="UG"><span>Uganda</span><span style="margin-left: auto; color: #999;">+256</span></div>
+                                        <div class="country-option" data-code="+380" data-iso="ua" onclick="selectCountry('+380', 'ua')"><img src="https://flagcdn.com/w20/ua.png" alt="UA"><span>Ukraine</span><span style="margin-left: auto; color: #999;">+380</span></div>
+                                        <div class="country-option" data-code="+971" data-iso="ae" onclick="selectCountry('+971', 'ae')"><img src="https://flagcdn.com/w20/ae.png" alt="AE"><span>United Arab Emirates</span><span style="margin-left: auto; color: #999;">+971</span></div>
+                                        <div class="country-option" data-code="+44" data-iso="gb" onclick="selectCountry('+44', 'gb')"><img src="https://flagcdn.com/w20/gb.png" alt="GB"><span>United Kingdom</span><span style="margin-left: auto; color: #999;">+44</span></div>
+                                        <div class="country-option" data-code="+1" data-iso="us" onclick="selectCountry('+1', 'us')"><img src="https://flagcdn.com/w20/us.png" alt="US"><span>United States</span><span style="margin-left: auto; color: #999;">+1</span></div>
+                                        <div class="country-option" data-code="+598" data-iso="uy" onclick="selectCountry('+598', 'uy')"><img src="https://flagcdn.com/w20/uy.png" alt="UY"><span>Uruguay</span><span style="margin-left: auto; color: #999;">+598</span></div>
+                                        <div class="country-option" data-code="+998" data-iso="uz" onclick="selectCountry('+998', 'uz')"><img src="https://flagcdn.com/w20/uz.png" alt="UZ"><span>Uzbekistan</span><span style="margin-left: auto; color: #999;">+998</span></div>
+                                        <div class="country-option" data-code="+678" data-iso="vu" onclick="selectCountry('+678', 'vu')"><img src="https://flagcdn.com/w20/vu.png" alt="VU"><span>Vanuatu</span><span style="margin-left: auto; color: #999;">+678</span></div>
+                                        <div class="country-option" data-code="+58" data-iso="ve" onclick="selectCountry('+58', 've')"><img src="https://flagcdn.com/w20/ve.png" alt="VE"><span>Venezuela</span><span style="margin-left: auto; color: #999;">+58</span></div>
+                                        <div class="country-option" data-code="+84" data-iso="vn" onclick="selectCountry('+84', 'vn')"><img src="https://flagcdn.com/w20/vn.png" alt="VN"><span>Vietnam</span><span style="margin-left: auto; color: #999;">+84</span></div>
+                                        <div class="country-option" data-code="+967" data-iso="ye" onclick="selectCountry('+967', 'ye')"><img src="https://flagcdn.com/w20/ye.png" alt="YE"><span>Yemen</span><span style="margin-left: auto; color: #999;">+967</span></div>
+                                        <div class="country-option" data-code="+260" data-iso="zm" onclick="selectCountry('+260', 'zm')"><img src="https://flagcdn.com/w20/zm.png" alt="ZM"><span>Zambia</span><span style="margin-left: auto; color: #999;">+260</span></div>
+                                        <div class="country-option" data-code="+263" data-iso="zw" onclick="selectCountry('+263', 'zw')"><img src="https://flagcdn.com/w20/zw.png" alt="ZW"><span>Zimbabwe</span><span style="margin-left: auto; color: #999;">+263</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="tel" id="mobile" name="mobile" required placeholder="1234567890" maxlength="15"
+                                style="flex: 1; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 2px solid rgba(255,153,51,0.2); border-radius: 10px; color: #fff; font-size: 0.9rem; transition: all 0.3s ease; outline: none;" onmouseover="this.style.borderColor='rgba(255,153,51,0.5)'" onmouseout="this.style.borderColor='rgba(255,153,51,0.2)'">
+                        </div>
+                    </div>
+
+                    <!-- Subject -->
+                    <div style="position: relative; grid-column: span 1;">
+                        <label for="subject"
+                            style="display: block; color: #FF9933; font-weight: 600; margin-bottom: 0.4rem; font-size: 0.9rem;">Subject *</label>
+                        <select id="subject" name="subject" required
+                            style="width: 100%; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 2px solid rgba(255,153,51,0.2); border-radius: 10px; color: #fff; font-size: 0.9rem; transition: all 0.3s ease; outline: none; cursor: pointer;" onmouseover="this.style.borderColor='rgba(255,153,51,0.5)'" onmouseout="this.style.borderColor='rgba(255,153,51,0.2)'">
+                            <option value="">Select a subject</option>
+                            <option value="batch-enquiry">Batch Enquiry</option>
+                            <option value="course-details">Course Details</option>
+                            <option value="pricing-offer">Pricing & Offers</option>
+                            <option value="psychology-help">Trading Psychology Help</option>
+                            <option value="technical-support">Technical Support</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Message -->
+                    <div style="position: relative; grid-column: span 2;">
+                        <label for="message"
+                            style="display: block; color: #FF9933; font-weight: 600; margin-bottom: 0.4rem; font-size: 0.9rem;">Your Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell us more about your inquiry or question..." rows="5"
+                            style="width: 100%; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 2px solid rgba(255,153,51,0.2); border-radius: 10px; color: #fff; font-size: 0.9rem; font-family: inherit; resize: vertical; transition: all 0.3s ease; outline: none;" onmouseover="this.style.borderColor='rgba(255,153,51,0.5)'" onmouseout="this.style.borderColor='rgba(255,153,51,0.2)'"></textarea>
+                    </div>
+
+                    <!-- Terms & Conditions -->
+                    <div
+                        style="position: relative; background: rgba(255,153,51,0.08); padding: 1rem; border-radius: 10px; border: 1px solid rgba(255,153,51,0.25); grid-column: span 2;">
+                        <label style="display: flex; align-items: start; cursor: pointer;">
+                            <input type="checkbox" id="terms" name="terms" required
+                                style="margin-right: 0.8rem; margin-top: 0.2rem; width: 18px; height: 18px; cursor: pointer; accent-color: #FF9933;">
+                            <span style="color: #ddd; font-size: 0.85rem; line-height: 1.5;">
+                                I agree to receive trading insights, batch updates, and exclusive offers via WhatsApp and email.
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div style="text-align: center; margin-top: 1rem; grid-column: span 2;">
+                        <button type="submit"
+                            style="background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 0.95rem 2.5rem; border: none; border-radius: 50px; font-size: 1rem; font-weight: 700; letter-spacing: 0.5px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(255,153,51,0.35);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 35px rgba(255,153,51,0.45)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(255,153,51,0.35)';">
+                            Send Message
+                        </button>
+                        <p style="color: #999; font-size: 0.8rem; margin-top: 0.8rem;">
+                            We'll respond to your inquiry within 24 business hours
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Quick Info -->
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem;">
+                <div
+                    style="text-align: center; background: rgba(255,153,51,0.08); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255,153,51,0.25); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,153,51,0.12)'; this.style.transform='translateY(-4px)';" onmouseout="this.style.background='rgba(255,153,51,0.08)'; this.style.transform='translateY(0)';">
+                    <p style="color: #bbb; font-size: 0.9rem; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 1px;">Response Time</p>
+                    <p style="color: #FF9933; font-size: 1.1rem; font-weight: 700;">Within 24 Hours</p>
+                </div>
+                <div
+                    style="text-align: center; background: rgba(255,153,51,0.08); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255,153,51,0.25); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,153,51,0.12)'; this.style.transform='translateY(-4px)';" onmouseout="this.style.background='rgba(255,153,51,0.08)'; this.style.transform='translateY(0)';">
+                    <p style="color: #bbb; font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px;">Want to Join?</p>
+                    <a href="courses.html"
+                            style="color: #FF9933; text-decoration: none; font-weight: 700; font-size: 0.95rem;">Browse Courses →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="background: #0a0a0a; padding: 4rem 2rem;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="color: #FF9933; font-size: 2.2rem; text-align: center; margin-bottom: 3rem; font-weight: 700;">Frequently Asked Questions</h2>
+            
+            <div style="display: grid; gap: 1.5rem;">
+                <!-- FAQ 1 -->
+                <div style="background: #1a1a1a; padding: 1.8rem; border-radius: 12px; border-left: 4px solid #FF9933;">
+                    <h3 style="color: #FF9933; font-size: 1.2rem; margin-bottom: 0.8rem;">How quickly will I receive a response?</h3>
+                    <p style="color: #ccc; line-height: 1.7;">We typically respond within 24 business hours. For urgent inquiries, please use our WhatsApp contact for faster response.</p>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div style="background: #1a1a1a; padding: 1.8rem; border-radius: 12px; border-left: 4px solid #FF9933;">
+                    <h3 style="color: #FF9933; font-size: 1.2rem; margin-bottom: 0.8rem;">Can I schedule a call with you?</h3>
+                    <p style="color: #ccc; line-height: 1.7;">Yes! After your initial inquiry, we can arrange a personalized call to discuss your trading goals and find the perfect batch for you.</p>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div style="background: #1a1a1a; padding: 1.8rem; border-radius: 12px; border-left: 4px solid #FF9933;">
+                    <h3 style="color: #FF9933; font-size: 1.2rem; margin-bottom: 0.8rem;">Do you offer free consultations?</h3>
+                    <p style="color: #ccc; line-height: 1.7;">Yes, we offer a free 15-minute consultation to help you understand which course best fits your experience level and trading goals.</p>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div style="background: #1a1a1a; padding: 1.8rem; border-radius: 12px; border-left: 4px solid #FF9933;">
+                    <h3 style="color: #FF9933; font-size: 1.2rem; margin-bottom: 0.8rem;">What information should I include in my message?</h3>
+                    <p style="color: #ccc; line-height: 1.7;">Share your current trading experience, specific goals, preferred batch timing, and any questions you have. This helps us provide the most relevant guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        style="background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 50%, #0a0a0a 100%); color: #fff; padding: 2.5rem 2rem 1.5rem; position: relative; overflow: hidden; border-top: 2px solid rgba(255,153,51,0.3);">
+        <!-- Decorative Background Elements -->
+        <div
+            style="position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,153,51,0.05) 0%, transparent 70%); border-radius: 50%; animation: float1 8s ease-in-out infinite;">
+        </div>
+        <div
+            style="position: absolute; bottom: -30%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,153,51,0.03) 0%, transparent 70%); border-radius: 50%; animation: float2 10s ease-in-out infinite;">
+        </div>
+
+        <!-- Footer Content -->
+        <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+            <!-- Top Section with Logo and Tagline -->
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,153,51,0.2);">
+                <!-- Brand Section -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem;">
+                        <img src="../assets/images/logos/Logo.png" alt="Trader Frost Logo"
+                            style="width: 28px; height: 28px; object-fit: contain;">
+                        <h2 style="color: #FF9933; font-size: 1.4rem; margin: 0; font-weight: 700;">
+                            Trader<span style="color: #fff;">Frost</span>
+                        </h2>
+                    </div>
+                    <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        Empowering traders with psychology-driven education and proven strategies. Transform your
+                        trading mindset and achieve consistent profitability.
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; margin-top: 1rem;">
+                        <a href="https://www.instagram.com/tradexfrost?utm_source=qr&igsh=MW01aDk5MWd1MjdteQ%3D%3D"
+                            target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                                    fill="#FF9933" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@traderfrost-p" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                                    fill="#FF9933" />
+                            </svg>
+                        </a>
+                        <a href="https://t.me/+pi-o2Ij9qQ5kY2M9" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                                    fill="#FF9933" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                                <!-- Main Pages -->
+                <div>
+                    <h3
+                        style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+                        Main Pages</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.6rem;"><a href="../index.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Home</a>
+                        </li>
+                        <li style="margin-bottom: 0.6rem;"><a href="about.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">About Me</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="courses.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Courses</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="psychology.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Trading Psychology</a></li>
+                    </ul>
+                </div>
+
+                <!-- Trading Tools -->
+                <div>
+                    <h3
+                        style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+                        Trading Tools</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.6rem;"><a href="lot-size.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Lot Size Calculator</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="profit-loss.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Profit &amp; Loss</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="pips.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Pips Calculator</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="risk-management.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Risk Management Advisor</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support & Legal -->
+                <div>
+                    <h3
+                        style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+                        Support &amp; Legal</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.6rem;"><a href="contact.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Contact Us</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="#"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Terms &amp; Conditions</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="#"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Privacy Policy</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="#"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Risk Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div
+                style="background: rgba(255,153,51,0.05); padding: 1rem 1.2rem; border-radius: 12px; border-left: 3px solid #FF9933; margin-bottom: 1.5rem;">
+                <p style="color: #FF9933; font-size: 0.8rem; margin: 0 0 0.4rem 0; font-weight: 600;">Important
+                    Disclaimer</p>
+                <p style="color: #aaa; font-size: 0.8rem; margin: 0; line-height: 1.5;">
+                    Trading involves risk. Past performance does not guarantee future results. Only invest what you can
+                    afford to lose. This platform is for educational purposes only. Always consult with a financial
+                    advisor before making investment decisions.
+                </p>
+            </div>
+
+            <!-- Copyright -->
+            <div style="text-align: center; padding-top: 0.8rem; border-top: 1px solid rgba(255,153,51,0.1);">
+                <p style="color: #888; font-size: 0.8rem; margin: 0;">
+                    &copy; 2026 Trader Frost. All rights reserved. | Dedicated to traders worldwide
+                </p>
+                <p style="color: #666; font-size: 0.8rem; margin: 0.5rem 0 0 0;">
+                    Trader Frost | Trading Education & Mentorship Services
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="../js/contact.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

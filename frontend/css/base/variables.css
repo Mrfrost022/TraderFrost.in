@@ -1,0 +1,11 @@
+/* Design Tokens */
+:root {
+    --color-primary: #FF9933;
+    --color-primary-dark: #ff6600;
+    --color-dark: #0a0a0a;
+    --color-dark-2: #1a1a1a;
+    --color-accent: #8B0000;
+    --color-text: #ffffff;
+    --color-muted: #aaaaaa;
+    --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

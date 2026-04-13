@@ -1,0 +1,678 @@
+/* Global responsive overrides loaded after page-specific CSS */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* ,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+video,
+iframe,
+svg,
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    display: block;
+}
+
+section,
+header,
+footer,
+nav,
+main {
+    max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+pre,
+code {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* Shared navbar responsiveness */
+.logo > div > span:first-child {
+    word-break: keep-all;
+}
+
+.nav-links {
+    align-items: center;
+}
+
+.search-nav-container {
+    min-width: 0;
+}
+
+.search-nav-container input {
+    max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .nav-container {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+    }
+
+    .nav-links {
+        gap: 1rem !important;
+    }
+
+    [style*="width: 240px"] {
+        width: min(240px, 100%) !important;
+        max-width: 100% !important;
+    }
+}
+
+@media (min-width: 901px) {
+    .nav-links {
+        gap: 1.1rem !important;
+    }
+
+    .nav-links .nav-login-item,
+    .nav-links .nav-signup-item {
+        display: none !important;
+    }
+
+    .header-auth-buttons {
+        display: flex !important;
+    }
+
+    .header-login-btn,
+    .header-signup-btn {
+        padding: 0.62rem 1.12rem !important;
+        min-height: 40px;
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        font-size: 0.84rem !important;
+        box-shadow: 0 2px 10px rgba(255, 153, 51, 0.18);
+    }
+
+    .header-signup-btn {
+        box-shadow: 0 2px 10px rgba(255, 255, 255, 0.12);
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+    }
+
+    .nav-hamburger {
+        display: flex !important;
+        order: 99;
+        margin-left: auto;
+        flex: 0 0 auto;
+    }
+
+    .nav-links {
+        position: fixed !important;
+        top: 82px !important;
+        left: -100% !important;
+        width: min(320px, 100vw) !important;
+        max-width: 100vw !important;
+        height: calc(100vh - 82px) !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0 !important;
+        padding: 1.5rem 0 !important;
+        overflow-y: auto !important;
+        background: #0a0a0d !important;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.55) !important;
+        z-index: 1000 !important;
+        transition: left 0.3s ease !important;
+    }
+
+    .nav-links.open {
+        left: 0 !important;
+    }
+
+    .nav-links > li > a {
+        display: block;
+        width: 100%;
+        padding: 0.9rem 1.25rem;
+    }
+
+    .nav-links .nav-login-item {
+        display: block !important;
+        width: 100%;
+        padding: 0.35rem 1.25rem 0.9rem;
+    }
+
+    .nav-links .nav-login-item .login-btn {
+        display: block !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links .nav-signup-item {
+        display: block !important;
+        width: 100%;
+        padding: 0 1.25rem 1rem;
+    }
+
+    .nav-links .nav-signup-item .signup-btn {
+        display: block !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links .dropdown-menu {
+        display: none;
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        background: rgba(255, 153, 51, 0.08);
+        box-shadow: none;
+        border: none;
+        padding: 0.35rem 0 0.35rem 1rem;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .nav-links .dropdown-menu.open {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-links .dropdown-menu a {
+        padding: 0.7rem 1.25rem;
+    }
+
+    .header-auth-buttons {
+        display: none !important;
+    }
+
+    .search-nav-container {
+        width: min(100%, 320px);
+        flex: 1 1 220px;
+        order: 3;
+    }
+
+    .search-nav-container input {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding-right: 2.45rem !important;
+    }
+
+    .search-nav-container #searchBtn {
+        width: 32px !important;
+        height: 32px !important;
+        padding: 0 !important;
+        right: 5px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-nav-container #searchBtn svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .login-btn {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+    .logo > div > span:first-child {
+        font-size: 1.15rem !important;
+    }
+
+    .logo > div > span:last-child {
+        font-size: 0.55rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .live-market-ticker {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .nav-container {
+        align-items: center;
+    }
+
+    section {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .search-nav-container input {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding-right: 2.35rem !important;
+    }
+
+    .search-nav-container #searchBtn,
+    .search-nav-container button {
+        padding: 0 !important;
+    }
+
+    [style*="width: 240px"] {
+        width: 100% !important;
+    }
+
+    [style*="min-width: 300px"],
+    [style*="max-width: 300px"] {
+        min-width: min(280px, calc(100vw - 2rem)) !important;
+        max-width: min(280px, calc(100vw - 2rem)) !important;
+    }
+
+    [style*="min-width: 800px"],
+    [style*="min-width: 880px"] {
+        min-width: 100% !important;
+    }
+
+    .trades-table-wrapper,
+    .table-wrapper,
+    .table-responsive,
+    .overview-summary,
+    .overview-grid,
+    .stats-grid,
+    .risk-grid,
+    .actions-grid {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .trades-table-wrapper,
+    .table-wrapper,
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .trades-history-table,
+    .demo-data-table,
+    .dashboard-table,
+    table {
+        min-width: 100% !important;
+    }
+
+    .demo-header {
+        height: auto;
+        min-height: 68px;
+        padding: 0.6rem 1rem;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+    }
+
+    .demo-header__brand {
+        gap: 0.5rem;
+    }
+
+    .demo-header__brand > span {
+        font-size: 1rem;
+    }
+
+    .demo-header__page-name {
+        padding: 0 0.65rem;
+        font-size: 0.72rem;
+    }
+
+    .dashboard__content,
+    .dashboard__main,
+    .dashboard-grid,
+    .dashboard-stack {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo > div > span:last-child {
+        display: none;
+    }
+
+    .search-nav-container {
+        flex-basis: 100%;
+        order: 4;
+        max-width: 100%;
+    }
+
+    .login-btn {
+        padding: 0.5rem 0.8rem !important;
+        font-size: 0.78rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .live-market-ticker {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    section {
+        padding-left: 0.85rem !important;
+        padding-right: 0.85rem !important;
+    }
+
+    .nav-container {
+        padding-left: 0.85rem !important;
+        padding-right: 0.85rem !important;
+    }
+
+    .logo > div > span:first-child {
+        font-size: 1rem !important;
+    }
+
+    .search-nav-container input {
+        padding-left: 2.15rem !important;
+        padding-right: 2.25rem !important;
+        font-size: 0.78rem !important;
+    }
+
+    .search-nav-container #searchBtn {
+        width: 30px !important;
+        height: 30px !important;
+        right: 4px !important;
+    }
+
+    .btn,
+    button,
+    .login-btn {
+        max-width: 100%;
+    }
+
+    .stats-grid,
+    .actions-grid,
+    .overview-grid,
+    .risk-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Contact Form Responsive */
+    .contact-form {
+        grid-template-columns: 1fr !important;
+        gap: 0.8rem !important;
+    }
+
+    .contact-form div[style*="grid-column"] {
+        grid-column: span 1 !important;
+    }
+
+    .country-selector {
+        width: 100px !important;
+        flex-shrink: 0;
+    }
+
+    .country-selected {
+        width: 100% !important;
+        padding: 0.65rem 0.5rem !important;
+        font-size: 0.75rem !important;
+    }
+
+    .country-selected img {
+        width: 18px !important;
+        height: 14px !important;
+    }
+
+    .country-selected svg {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+    .country-dropdown {
+        width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        max-width: 100vw !important;
+        min-width: 140px !important;
+    }
+
+    /* WhatsApp input flex */
+    input[type="tel"][id="phone"] {
+        flex: 1 !important;
+    }
+
+    /* Contact Info Cards */
+    [style*="grid-template-columns: repeat(auto-fit"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    [style*="gap: 2rem"] {
+        gap: 1.5rem !important;
+    }
+
+    /* Contact Section Padding */
+    section[id="contact"] {
+        padding: 2rem 1rem !important;
+    }
+
+    section[style*="background: linear-gradient(135deg, #0a0a0a"] {
+        padding: 3rem 1rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Contact Form Tablet */
+    .contact-form {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px !important;
+    }
+
+    .country-selector {
+        width: 100% !important;
+    }
+
+    .country-dropdown {
+        max-height: 300px !important;
+    }
+
+    /* Contact info cards stack */
+    [style*="display: grid; grid-template-columns: repeat(auto-fit"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Contact Form Mobile */
+    section[style*="background: linear-gradient(135deg, #0a0a0a"] {
+        padding: 2rem 0.75rem !important;
+    }
+
+    section[id="contact"] {
+        padding: 1.5rem 0.75rem !important;
+    }
+
+    .contact-form {
+        padding: 1.5rem !important;
+        gap: 0.6rem !important;
+    }
+
+    .contact-form label {
+        font-size: 0.8rem !important;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.65rem !important;
+        font-size: 16px !important;
+    }
+
+    /* WhatsApp section optimized for mobile */
+    .country-selector {
+        width: 85px !important;
+        flex-shrink: 0;
+    }
+
+    .country-selected {
+        padding: 0.6rem 0.4rem !important;
+        font-size: 0.65rem !important;
+        gap: 0.3rem !important;
+    }
+
+    .country-selected img {
+        width: 16px !important;
+        height: 12px !important;
+    }
+
+    .country-selected svg {
+        width: 9px !important;
+        height: 9px !important;
+        margin-left: 0.2rem !important;
+    }
+
+    .country-dropdown {
+        max-height: 250px !important;
+        width: calc(100vw - 1.5rem) !important;
+        left: -0.75rem !important;
+        right: -0.75rem !important;
+        border-radius: 0 !important;
+        min-width: auto !important;
+    }
+
+    input[type="tel"][id="phone"] {
+        flex: 1 !important;
+        padding: 0.6rem !important;
+        font-size: 16px !important;
+    }
+
+    /* Contact info cards */
+    [style*="display: grid; grid-template-columns: repeat(auto-fit"] {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    [style*="max-width: 900px; margin: 0 auto"] {
+        padding: 0 !important;
+    }
+
+    /* Heading responsive */
+    h1[style*="font-size: 3rem"] {
+        font-size: 2rem !important;
+    }
+
+    h2[style*="font-size: 2.5rem"] {
+        font-size: 1.75rem !important;
+    }
+
+    p[style*="font-size: 1.2rem"],
+    p[style*="font-size: 1.05rem"] {
+        font-size: 0.95rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Contact Form Very Small Mobile - Ultra Compact */
+    section[style*="background: linear-gradient(135deg, #0a0a0a"] {
+        padding: 1.5rem 0.5rem !important;
+    }
+
+    section[id="contact"] {
+        padding: 1rem 0.5rem !important;
+    }
+
+    .contact-form {
+        padding: 1rem !important;
+        gap: 0.5rem !important;
+    }
+
+    .contact-form label {
+        font-size: 0.75rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.55rem !important;
+        font-size: 14px !important;
+        width: 100% !important;
+    }
+
+    /* Ultra compact country selector for tiny screens */
+    .country-selector {
+        width: 75px !important;
+        flex-shrink: 0;
+        min-width: 75px !important;
+    }
+
+    .country-selected {
+        padding: 0.5rem 0.3rem !important;
+        font-size: 0.6rem !important;
+        gap: 0.2rem !important;
+        width: 100% !important;
+    }
+
+    .country-selected img {
+        width: 14px !important;
+        height: 10px !important;
+    }
+
+    .country-selected svg {
+        width: 8px !important;
+        height: 8px !important;
+        margin-left: 0.15rem !important;
+    }
+
+    .country-dropdown {
+        max-height: 200px !important;
+        width: calc(100vw - 1rem) !important;
+        left: -0.5rem !important;
+        min-width: auto !important;
+    }
+
+    input[type="tel"][id="phone"] {
+        flex: 1 !important;
+        padding: 0.55rem !important;
+        font-size: 14px !important;
+    }
+
+    /* Contact info cards */
+    [style*="display: grid; grid-template-columns: repeat(auto-fit"] {
+        grid-template-columns: 1fr !important;
+        gap: 0.8rem !important;
+    }
+
+    /* Buttons */
+    button[type="submit"],
+    .submit-btn {
+        width: 100% !important;
+        padding: 0.75rem !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* Heading responsive */
+    h1[style*="font-size: 3rem"] {
+        font-size: 1.5rem !important;
+    }
+
+    h2[style*="font-size: 2.5rem"] {
+        font-size: 1.4rem !important;
+    }
+}

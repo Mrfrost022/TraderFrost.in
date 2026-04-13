@@ -1,0 +1,248 @@
+        /* Market Page Styling */
+        .market-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Market Sections */
+        .market-section {
+            background: var(--card-bg, #151519);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .market-section:hover {
+            box-shadow: 0 8px 24px rgba(255, 153, 51, 0.1);
+            border-color: rgba(255, 153, 51, 0.2);
+        }
+
+        /* Premium Chart Section (Full Width) */
+        .premium-chart-section {
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(255, 153, 51, 0.05) 0%, rgba(255, 153, 51, 0.02) 100%);
+            border: 2px solid rgba(255, 153, 51, 0.15);
+        }
+
+        .advanced-chart-container {
+            height: 600px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #0a0a0d;
+        }
+
+        /* Section Headers */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 153, 51, 0.2);
+        }
+
+        .section-header > div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0;
+            background: linear-gradient(135deg, #ffffff 0%, #FF9933 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+            font-weight: 400;
+        }
+
+        /* Charts Grid */
+        .charts-grid {
+            display: grid;
+            gap: 1.5rem;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+
+        @media (max-width: 1200px) {
+            .grid-3 {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .premium-chart-section {
+                padding: 1rem;
+            }
+
+            .advanced-chart-container {
+                height: 400px;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Chart Cards */
+        .chart-card {
+            background: #0a0a0d;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 350px;
+        }
+
+        .chart-card:hover {
+            border-color: rgba(255, 153, 51, 0.3);
+            box-shadow: 0 8px 16px rgba(255, 153, 51, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            background: rgba(255, 153, 51, 0.03);
+            border-bottom: 1px solid rgba(255, 153, 51, 0.1);
+            gap: 0.75rem;
+        }
+
+        .symbol-badge {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #FF9933;
+            letter-spacing: 0.5px;
+        }
+
+        .exchange-label {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 153, 51, 0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-left: auto;
+        }
+
+        /* TradingView Chart Container */
+        .tradingview-chart {
+            flex: 1;
+            width: 100%;
+            min-height: 300px;
+            background: #0a0a0d;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chart-card .tradingview-chart {
+            min-height: 280px;
+            border-radius: 0;
+        }
+
+        .advanced-chart-container .tradingview-chart {
+            height: 100%;
+        }
+
+        /* Loading State */
+        .tradingview-chart.loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255, 153, 51, 0.2);
+            border-top-color: #FF9933;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 480px) {
+            .market-content {
+                gap: 1rem;
+            }
+
+            .market-section {
+                padding: 1rem;
+            }
+
+            .section-header {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+            }
+
+            .chart-card {
+                min-height: 300px;
+            }
+
+            .tradingview-chart {
+                min-height: 250px;
+            }
+        }
+
+        /* TradingView Widget Specific Styles */
+        .tradingview-chart iframe {
+            width: 100% !important;
+            height: 100% !important;
+            border-radius: 8px;
+        }
+
+        /* Smooth Transitions */
+        .market-section,
+        .chart-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Professional Trading Dashboard Feel */
+        .market-content {
+            background: linear-gradient(135deg, transparent 0%, rgba(255, 153, 51, 0.02) 100%);
+        }

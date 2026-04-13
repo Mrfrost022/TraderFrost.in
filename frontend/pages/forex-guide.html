@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Trader Frost - Advanced Forex Market Guide with Interactive Sections">
+	<title>Forex Market Guide | Trader Frost</title>
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/forex-guide.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+	<link rel="icon" type="image/png" href="../assets/images/logos/Logo.png">
+</head>
+
+<body>
+	<!-- Navigation -->
+	<div class="nav-overlay" id="navOverlay"></div>
+
+    <nav>
+		<div class="nav-container">
+			<a href="../index.html" class="logo">
+				<img src="../assets/images/logos/Logo.png" alt="Trader Frost Logo">
+				<div style="display: flex; flex-direction: column; gap: 0;">
+					<span style="font-size: 1.8rem; font-weight: bold; color: #fff; line-height: 1.2;">
+						Trader<span style="color: #FF9933;">Frost</span>
+					</span>
+					<span
+						style="font-size: 0.65rem; color: #FF9933; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-top: -2px;">
+						Trade smart, Earn smartly
+					</span>
+				</div>
+			</a>
+			            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+				<li><a href="../index.html#home">Home</a></li>
+				<li><a href="about.html">About Me</a></li>
+				<li><a href="courses.html">Courses</a></li>
+				<li class="dropdown">
+					<a href="#" onclick="return false;">Learn</a>
+					<ul class="dropdown-menu">
+						<li><a href="forex-guide.html">Forex Market: Complete Beginner to Pro Guide</a></li>
+						<li><a href="smart-money-concept.html">Smart Money Concept</a></li>
+						<li><a href="psychology.html">Trading Psychology</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" onclick="return false;">Tools</a>
+					<ul class="dropdown-menu">
+						<li><a href="lot-size.html">Lot Size Calculator</a></li>
+						<li><a href="profit-loss.html">Profit &amp; Loss Calculator</a></li>
+						<li><a href="pips.html">Pips Calculator</a></li>
+						<li><a href="risk-management.html">Risk Management Advisor</a></li>
+					</ul>
+				</li>
+				                <li><a href="contact.html">Contact Us</a></li>
+                <li class="nav-login-item">
+                    <a href="login.html" class="login-btn"
+                        style="display: inline-block; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,153,51,0.25);">
+                        Login
+                    </a>
+                </li>
+                <li class="nav-signup-item">
+                    <a href="register.html" class="signup-btn"
+                        style="display: inline-block; background: linear-gradient(135deg, #ffffff 0%, #e6e6e6 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,255,255,0.12);">
+                        Sign Up
+                    </a>
+                </li>
+			</ul>
+			<div style="display: flex; align-items: center; gap: 2rem;">
+				<div class="search-nav-container" style="position: relative; display: flex; align-items: center;">
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF9933" stroke-width="2"
+						stroke-linecap="round" stroke-linejoin="round"
+						style="position: absolute; left: 14px; pointer-events: none;">
+						<circle cx="11" cy="11" r="8"></circle>
+						<path d="m21 21-4.35-4.35"></path>
+					</svg>
+					<input type="text" id="searchInput" placeholder="Search..."
+						style="padding: 0.65rem 2.6rem 0.65rem 2.6rem; border-radius: 22px; border: 1px solid transparent; background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)); color: #fff; font-size: 0.85rem; width: 240px; outline: none; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(255,153,51,0.08);"
+						onfocus="this.style.borderColor='#FF9933'; this.style.background='linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.08))'; this.style.boxShadow='0 4px 15px rgba(255,153,51,0.15)';"
+						onblur="this.style.borderColor='transparent'; this.style.background='linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04))'; this.style.boxShadow='0 2px 10px rgba(255,153,51,0.08)';">
+					<button id="searchBtn" title="Search"
+						style="position: absolute; right: 6px; top: 50%; transform: translateY(-50%); background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); border: none; color: #000; padding: 0.45rem 0.75rem; border-radius: 18px; cursor: pointer; transition: all 0.3s ease; font-weight: 600; display: flex; align-items: center; font-size: 0.75rem;"
+						onmouseover="this.style.boxShadow='0 4px 12px rgba(255,153,51,0.4)'; this.style.transform='translateY(-50%) scale(1.08)';"
+						onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(-50%) scale(1)';">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="11" cy="11" r="8"></circle>
+							<path d="m21 21-4.35-4.35"></path>
+						</svg>
+					</button>
+				</div>
+
+				<!-- Desktop Auth Button (only visible on desktop) -->
+				<div class="header-auth-buttons" style="display: none; gap: 0.75rem; align-items: center;">
+					<a href="login.html" class="header-login-btn"
+						style="display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,153,51,0.25); min-height: 40px;"
+						onmouseover="this.style.boxShadow='0 5px 20px rgba(255,153,51,0.4)'; this.style.transform='translateY(-2px)';"
+						onmouseout="this.style.boxShadow='0 3px 12px rgba(255,153,51,0.25)'; this.style.transform='translateY(0)';">
+						Login
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero Guide Header -->
+	<section class="guide-hero">
+		<div class="guide-hero-content">
+			<h1 class="guide-hero-title">Forex Market: Beginner to Pro Guide</h1>
+			<p class="guide-hero-subtitle">A complete professional guide to how the currency market works</p>
+			<div class="guide-hero-underline"></div>
+		</div>
+	</section>
+
+	<!-- Guide Layout Section -->
+	<div class="guide-wrapper">
+		<!-- Sticky Sidebar Navigation (Desktop) -->
+		<aside class="guide-sidebar">
+			<nav class="guide-sidebar-nav">
+				<div class="guide-sidebar-title">Chapter Names</div>
+				<ul class="guide-sidebar-list">
+					<li class="guide-sidebar-item">
+						<a href="#forex-definitive-guide" class="guide-sidebar-link chapter-link active" data-section="forex-definitive-guide">
+							The Forex Market: A Definitive Guide
+						</a>
+					</li>
+					<ul class="expanded">
+						<li class="guide-sidebar-item">
+							<a href="#introduction" class="guide-sidebar-link topic-link" data-section="introduction">
+								Introduction
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#how-forex-works" class="guide-sidebar-link topic-link" data-section="how-forex-works">
+								How the Forex Market Works
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#major-participants" class="guide-sidebar-link topic-link" data-section="major-participants">
+								Major Participants in the Forex Market
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#basic-currency-pairs" class="guide-sidebar-link topic-link" data-section="basic-currency-pairs">
+								Basic Currency Pairs
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#type-of-currency-pairs" class="guide-sidebar-link topic-link" data-section="type-of-currency-pairs">
+								Type of Currency Pairs
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#pips" class="guide-sidebar-link topic-link" data-section="pips">
+								PIPS
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#spread" class="guide-sidebar-link topic-link" data-section="spread">
+								Spread
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#lot-size" class="guide-sidebar-link topic-link" data-section="lot-size">
+								Lot Size
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#leverage-and-margin" class="guide-sidebar-link topic-link" data-section="leverage-and-margin">
+								Leverage and Margin
+							</a>
+						</li>
+					</ul>
+					<li class="guide-sidebar-item">
+						<a href="#forex-trading-strategies" class="guide-sidebar-link chapter-link" data-section="forex-trading-strategies">
+							Forex Trading Strategies
+						</a>
+					</li>
+					<ul>
+						<li class="guide-sidebar-item">
+							<a href="#scalping" class="guide-sidebar-link topic-link" data-section="scalping">
+								Scalping
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#day-trading" class="guide-sidebar-link topic-link" data-section="day-trading">
+								Day Trading
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#swing-trading" class="guide-sidebar-link topic-link" data-section="swing-trading">
+								Swing Trading
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#position-trading" class="guide-sidebar-link topic-link" data-section="position-trading">
+								Position Trading
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#carry-trading" class="guide-sidebar-link topic-link" data-section="carry-trading">
+								Carry Trading
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#breakout-trading" class="guide-sidebar-link topic-link" data-section="breakout-trading">
+								Breakout Trading
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#trend-following" class="guide-sidebar-link topic-link" data-section="trend-following">
+								Trend Following
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="#range-trading" class="guide-sidebar-link topic-link" data-section="range-trading">
+								Range Trading
+							</a>
+						</li>
+					</ul>
+					<li class="guide-sidebar-item">
+						<a href="./forex-guide-2.html#types-of-order" class="guide-sidebar-link chapter-link" data-section="types-of-order">
+							Types of Order in Market
+						</a>
+					</li>
+					<ul>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide-2.html#market-order" class="guide-sidebar-link topic-link" data-section="market-order">
+								Market Order
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide-2.html#limit-order" class="guide-sidebar-link topic-link" data-section="limit-order">
+								Limit Order
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide-2.html#stop-order" class="guide-sidebar-link topic-link" data-section="stop-order">
+								Stop Order
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide-2.html#pending-orders" class="guide-sidebar-link topic-link" data-section="pending-orders">
+								Pending Orders
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide-2.html#trailing-stop" class="guide-sidebar-link topic-link" data-section="trailing-stop">
+								Trailing Stop Order
+							</a>
+						</li>
+					</ul>
+					<li class="guide-sidebar-item">
+						<a href="./forex-guide-2.html#types-of-analysis" class="guide-sidebar-link chapter-link" data-section="types-of-analysis">
+							Type of Analysis
+						</a>
+					</li>
+					<ul>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide-2.html#technical-analysis" class="guide-sidebar-link topic-link" data-section="technical-analysis">
+								Technical Analysis
+							</a>
+						</li>
+						<li class="guide-sidebar-item">
+							<a href="./forex-guide-2.html#fundamental-analysis" class="guide-sidebar-link topic-link" data-section="fundamental-analysis">
+								Fundamental Analysis
+							</a>
+						</li>
+					</ul>
+				</ul>
+			</nav>
+		</aside>
+
+			<!-- Main Content Sections -->
+			<main class="guide-content">
+				<!-- Chapter 1: The Forex Market -->
+				<section id="forex-definitive-guide" class="chapter-section">
+					<h2 class="chapter-heading">
+						<strong>The Forex Market: A Definitive Guide</strong>
+					</h2>
+					<div class="chapter-content">
+						<section id="introduction" class="chapter-topic">
+							<h3>Introduction</h3>
+							<p>The foreign exchange (forex or FX) market is the largest and most liquid financial market in the world, with a daily trading volume exceeding $7 trillion. It operates as a decentralized global marketplace where currencies are exchanged, facilitating international trade, investment, and economic stability.</p>
+						</section>
+						<section id="how-forex-works" class="chapter-topic">
+							<h3>How the Forex Market Works</h3>
+							<p>Unlike stock markets, forex operates over-the-counter (OTC), meaning there is no centralized exchange. Instead, trading occurs electronically through networks of banks, brokers, and financial institutions. The market is open 24 hours a day, five days a week, divided into four major trading sessions:</p>
+							<ul>
+								<li><strong>Sydney Session:</strong> 3:30 AM - 12:30 PM IST</li>
+								<li><strong>Tokyo Session:</strong> 5:30 AM - 2:30 PM IST</li>
+								<li><strong>London Session:</strong> 1:30 PM - 10:30 PM IST</li>
+								<li><strong>NY Session:</strong> 6:30 PM - 3:30 AM IST</li>
+							</ul>
+						</section>
+						<section id="major-participants" class="chapter-topic">
+							<h3>Major Participants in the Forex Market</h3>
+							<p>The major participants in the Forex market include:</p>
+							<ul class="plain-list">
+								<li><strong>Central Banks:</strong> They control national monetary policies and often intervene in the market to stabilize their currency or achieve economic objectives like inflation control or exchange rate management. Examples include the U.S. Federal Reserve (Fed), the European Central Bank (ECB), and the Bank of Japan (BoJ).</li>
+								<li><strong>Commercial Banks:</strong> These are large financial institutions that facilitate currency exchange for clients, including corporations, other banks, and governments. They make up a significant portion of Forex trading volume.</li>
+								<li><strong>Hedge Funds and Investment Funds:</strong> These are large private funds that trade currencies as part of their investment strategy. They often have significant resources and can influence market movements.</li>
+								<li><strong>Corporations:</strong> Companies involved in international trade and investment often use the Forex market for hedging purposes to protect against currency fluctuations that could affect their profitability.</li>
+								<li><strong>Retail Traders:</strong> Individual traders who participate in the Forex market through brokers, making speculative trades on currency pairs.</li>
+								<li><strong>Brokers and Market Makers:</strong> These entities act as intermediaries between retail traders and the larger Forex market, providing liquidity and facilitating trade execution.</li>
+								<li><strong>Speculators:</strong> Traders who aim to profit from short-term currency price movements, including both institutional and retail traders.</li>
+							</ul>
+						</section>
+						<section id="basic-currency-pairs" class="chapter-topic">
+							<h3>Basic of Currency Pairs</h3>
+							<p>Currency pairs in the Forex market refer to the quotation of one currency against another. Each pair consists of two currencies: a base currency and a quote currency. The exchange rate tells you how much of the quote currency you need to buy one unit of the base currency.</p>
+							
+							<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Base Currency</h4>
+							<p>The first currency in the pair, which is being traded. It's the reference point in the transaction.</p>
+							
+							<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Quote Currency</h4>
+							<p>The second currency in the pair, which is used to value the base currency.</p>
+							
+							<p style="margin-top: 1.5rem;">These currency pairs are related by the exchange rates. Now the question arises in your mind: "What is exchange rate?" So, the exchange rate is the price of one currency in terms of another currency. It tells you how much of one currency is needed to buy a unit of another currency. Exchange rates are essential for international trade, investments, and travel, as they determine the relative value between currencies.</p>
+						</section>
+						<section id="type-currency-pairs" class="chapter-topic">
+							<h3>Type of Currency Pairs</h3>
+							<p>Currency pairs in the Forex market are classified into three main types: Major pairs, Minor (Cross) pairs, and Exotic pairs. These categories depend on the currencies involved, their trade volume, and their liquidity in the market.</p>
+							
+							<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Major Pair</h4>
+							<p>This currency pairs involve the U.S. Dollar (USD) paired with another major currency. These pairs are the most traded and have the highest liquidity and tightest spreads, making them popular among traders. These pairs typically include the most widely traded currencies in the world.</p>
+							<ul style="margin-top: 1.2rem;">
+								<li><strong>EUR/USD (Euro/US Dollar):</strong> The Euro is paired with the U.S. Dollar, making it the most traded currency pair.</li>
+								<li><strong>GBP/USD (British Pound/US Dollar):</strong> The British Pound is paired with the U.S. Dollar.</li>
+								<li><strong>USD/JPY (US Dollar/Japanese Yen):</strong> The U.S. Dollar is paired with the Japanese Yen.</li>
+								<li><strong>USD/CHF (US Dollar/Swiss Franc):</strong> The U.S. Dollar is paired with the Swiss Franc.</li>
+								<li><strong>AUD/USD (Australian Dollar/US Dollar):</strong> The Australian Dollar is paired with the U.S. Dollar.</li>
+								<li><strong>USD/CAD (US Dollar/Canadian Dollar):</strong> The U.S. Dollar is paired with the Canadian Dollar.</li>
+								<li><strong>NZD/USD (New Zealand Dollar/US Dollar):</strong> The New Zealand Dollar is paired with the U.S. Dollar.</li>
+							</ul>
+							
+							<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Minor Pair</h4>
+							<p>This do not involve the U.S. Dollar but instead pair two other major currencies together. While not as liquid as major pairs, these pairs are still widely traded and popular among experienced traders.</p>
+							<ul style="margin-top: 1.2rem;">
+								<li><strong>EUR/GBP (Euro/British Pound):</strong> The Euro is paired with the British Pound.</li>
+								<li><strong>EUR/JPY (Euro/Japanese Yen):</strong> The Euro is paired with the Japanese Yen.</li>
+								<li><strong>GBP/JPY (British Pound/Japanese Yen):</strong> The British Pound is paired with the Japanese Yen.</li>
+								<li><strong>AUD/JPY (Australian Dollar/Japanese Yen):</strong> The Australian Dollar is paired with the Japanese Yen.</li>
+								<li><strong>EUR/AUD (Euro/Australian Dollar):</strong> The Euro is paired with the Australian Dollar.</li>
+							</ul>
+							
+							<h4 style="color: #FF9933; font-size: 1.3rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem;">Exotic Pair</h4>
+							<p>Exotic pairs involve one major currency and one currency from a smaller or emerging market economy. These pairs are less liquid, more volatile, and often have wider spreads. They can offer greater profit potential but also higher risk.</p>
+							<ul style="margin-top: 1.2rem;">
+								<li><strong>USD/TRY (US Dollar/Turkish Lira):</strong> The U.S. Dollar is paired with the Turkish Lira.</li>
+								<li><strong>EUR/TRY (Euro/Turkish Lira):</strong> The Euro is paired with the Turkish Lira.</li>
+								<li><strong>USD/ZAR (US Dollar/South African Rand):</strong> The U.S. Dollar is paired with the South African Rand.</li>
+								<li><strong>EUR/INR (Euro/Indian Rupee):</strong> The Euro is paired with the Indian Rupee.</li>
+								<li><strong>USD/MXN (US Dollar/Mexican Peso):</strong> The U.S. Dollar is paired with the Mexican Peso.</li>
+								<li><strong>GBP/SGD (British Pound/Singapore Dollar):</strong> The British Pound is paired with the Singapore Dollar.</li>
+							</ul>
+						</section>
+						<section id="pips" class="chapter-topic">
+							<h3>Percentage in Points (PIPS)</h3>
+							<p>In the forex market, a pip represents the smallest price movement of a currency pair. For most currency pairs, one pip is measured at the fourth decimal place, equating to 0.0001, while for Japanese yen (JPY) pairs, it is measured at the second decimal place, equating to 0.01. The value of a pip depends on the trade size; in a standard lot of 100,000 units, one pip is typically worth $10. For gold (XAU/USD), one pip is measured at the first decimal place, meaning 1 pip equals 0.10, with a standard lot representing 100 ounces of gold.</p>
+							
+							<p style="margin-top: 1rem;">Additionally, some brokers offer fractional pips, known as pipettes, to enhance price precision. A pipette represents one-tenth of a pip (0.1 pip) and is commonly used in platforms that display five decimal places instead of the conventional four. This increased precision allows traders to execute more accurate trades based on smaller price fluctuations.</p>
+							
+							<p style="margin-top: 1rem;">For calculation of pips go to <a href="./calculator.html" style="color: #FF9933; text-decoration: none; font-weight: 600; border-bottom: 2px solid #FF9933;">pips calculator</a>.</p>
+						</section>
+						<section id="spread" class="chapter-topic">
+							<h3>Spread</h3>
+							<p>The spread is the difference between the bid price and the ask price. The bid price is the rate at which you can sell a currency pair and the ask price is the rate at which you can buy a currency pair.</p>
+						</section>
+						<section id="lot-size" class="chapter-topic">
+							<h3>Lot Size</h3>
+							<p>In forex trading, lot size refers to the number of currency units you are trading. It determines the value of each pip movement and affects your profit/loss. There are three main types of lot sizes:</p>
+						</section>
+						<section id="leverage-and-margin" class="chapter-topic">
+							<h3>Leverage and Margin</h3>
+							<p>Forex trading offers some of the highest leverage in the financial markets, allowing traders to control large positions with a relatively small initial investment. Leverage refers to the ability to amplify trading capital by borrowing funds from a broker, enabling traders to gain greater market exposure.</p>
+							<p>Margin is the amount of capital that a trader must deposit with the broker as a "good faith" requirement to open and maintain a leveraged position. In the previous example, the $100 deposit required to control a $10,000 trade is known as margin. This ensures the trader has sufficient funds to cover potential losses while using leverage.</p>
+						</section>
+					</div>
+				</section>
+				<!-- Chapter 2: Forex Trading Strategies -->
+				<section id="forex-trading-strategies" class="chapter-section">
+					<h2 class="chapter-heading">
+						<strong>Forex Trading Strategies</strong>
+					</h2>
+					<div class="chapter-content">
+						<p>In the complex world of Forex trading, having a solid strategy is crucial for making informed decisions, managing risk, and maximizing potential profits. Below are some of the key strategies employed by traders:</p>
+						
+						<section id="scalping" class="chapter-topic">
+							<h3>Scalping</h3>
+							<p>Scalping is a short-term strategy that involves making small, rapid profits from minute price fluctuations. Scalpers execute a high volume of trades throughout the day, each targeting only a few pips. Success in this approach requires precision, quick execution, and a deep understanding of market trends.</p>
+						</section>
+						
+						<section id="day-trading" class="chapter-topic">
+							<h3>Day Trading</h3>
+							<p>Day trading entails opening and closing positions within the same trading day, with the aim of capitalizing on intraday price movements while avoiding overnight risk. Traders use technical analysis, relying heavily on charts and indicators to make swift trading decisions. This strategy is ideal for individuals who can dedicate time to monitor the markets continuously.</p>
+						</section>
+						
+						<section id="swing-trading" class="chapter-topic">
+							<h3>Swing Trading</h3>
+							<p>Swing trading capitalizes on the natural price "swings" in the market. Swing traders typically hold positions for several days or weeks, seeking to profit from larger price movements within an ongoing trend. Both technical and fundamental analysis are key to identifying trends and potential reversal points.</p>
+						</section>
+						
+						<section id="position-trading" class="chapter-topic">
+							<h3>Position Trading</h3>
+							<p>Position trading is a long-term strategy in which traders maintain positions for weeks, months, or even years. The objective is to capture substantial price movements based on overarching economic trends and fundamental factors. Position traders prioritize fundamental analysis, such as interest rate changes, economic reports, and geopolitical events, in guiding their decisions.</p>
+						</section>
+						
+						<section id="carry-trading" class="chapter-topic">
+							<h3>Carry Trading</h3>
+							<p>Carry trading involves borrowing funds in a currency with a low-interest rate and using those funds to invest in a currency offering a higher interest rate. The strategy profits from the interest rate differential as well as any potential appreciation of the currency. It is best suited for long-term traders capable of enduring market fluctuations and utilizing leverage.</p>
+						</section>
+						
+						<section id="breakout-trading" class="chapter-topic">
+							<h3>Breakout Trading</h3>
+							<p>Breakout trading focuses on identifying significant support or resistance levels and entering a trade when the price moves beyond these points. Traders commonly use technical indicators, including Bollinger Bands, moving averages, and trend lines, to spot breakout opportunities. This strategy proves effective in trending markets but requires patience and discipline to avoid false breakouts.</p>
+						</section>
+						
+						<section id="trend-following" class="chapter-topic">
+							<h3>Trend Following</h3>
+							<p>The trend-following strategy aims to profit by trading in the direction of the prevailing market trend. Traders utilize various technical indicators, such as moving averages, the Relative Strength Index (RSI), or the Average Directional Index (ADX), to detect trends and confirm entry points. This approach works best in markets with clear trends, though traders must be cautious during sideways or volatile conditions.</p>
+						</section>
+						
+						<section id="range-trading" class="chapter-topic">
+							<h3>Range Trading</h3>
+							<p>Range trading operates on the premise that prices often move within a defined range or channel. Traders identify key support and resistance levels, buying when prices near support and selling when they approach resistance. This strategy is most effective in consolidating markets where no clear trend is evident. However, traders must remain alert for breakout scenarios that may indicate a shift in market direction.</p>
+						</section>
+					</div>
+				</section>
+
+			<!-- Pagination Controls -->
+			<div style="background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 100%); padding: 2.5rem 1rem; display: flex; justify-content: space-between; align-items: center; text-align: center;">
+				<div style="flex: 1;"></div>
+				<div style="color: #FF9933; font-weight: 600; font-size: 1rem;">Page 1 of 2</div>
+				<div style="flex: 1; text-align: right;">
+					<a href="./forex-guide-2.html" style="display: inline-block; padding: 0.8rem 1.8rem; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);">
+						Next Page →
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Footer -->
+		<footer
+			style="background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 50%, #0a0a0a 100%); color: #fff; padding: 2.5rem 2rem 1.5rem; position: relative; overflow: hidden; border-top: 2px solid rgba(255,153,51,0.3);">
+			<!-- Decorative Background Elements -->
+			<div
+				style="position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,153,51,0.05) 0%, transparent 70%); border-radius: 50%; animation: float1 8s ease-in-out infinite;">
+			</div>
+			<div
+				style="position: absolute; bottom: -30%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,153,51,0.03) 0%, transparent 70%); border-radius: 50%; animation: float2 10s ease-in-out infinite;">
+			</div>
+
+			<!-- Footer Content -->
+			<div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+				<!-- Top Section with Logo and Tagline -->
+				<div
+					style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,153,51,0.2);">
+					<!-- Brand Section -->
+					<div>
+						<div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem;">
+							<img src="../assets/images/logos/Logo.png" alt="Trader Frost Logo"
+								style="width: 28px; height: 28px; object-fit: contain;">
+							<h2 style="color: #FF9933; font-size: 1.4rem; margin: 0; font-weight: 700;">
+								Trader<span style="color: #fff;">Frost</span>
+							</h2>
+						</div>
+						<p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+							Empowering traders with psychology-driven education and proven strategies. Transform your
+							trading mindset and achieve consistent profitability.
+						</p>
+						<div style="display: flex; gap: 0.8rem; margin-top: 1rem;">
+							<a href="https://www.instagram.com/tradexfrost?utm_source=qr&igsh=MW01aDk5MWd1MjdteQ%3D%3D"
+								target="_blank"
+								style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+								onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+								onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+										fill="#FF9933" />
+								</svg>
+							</a>
+							<a href="https://www.youtube.com/@traderfrost-p" target="_blank"
+								style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+								onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+								onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+										fill="#FF9933" />
+								</svg>
+							</a>
+							<a href="https://t.me/+pi-o2Ij9qQ5kY2M9" target="_blank"
+								style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+								onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+								onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+										fill="#FF9933" />
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					<!-- Main Pages -->
+					<div>
+						<h3
+							style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+							Main Pages</h3>
+						<ul style="list-style: none; padding: 0; margin: 0;">
+							<li style="margin-bottom: 0.6rem;"><a href="../index.html"
+									style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+									onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Home</a>
+							</li>
+							<li style="margin-bottom: 0.6rem;"><a href="about.html"
+									style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+									onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">About Me</a></li>
+							<li style="margin-bottom: 0.6rem;"><a href="courses.html"
+									style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+									onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Courses</a></li>
+							<li style="margin-bottom: 0.6rem;"><a href="psychology.html"
+									style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+									onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Trading Psychology</a></li>
+						</ul>
+					</div>
+
+					<!-- Trading Tools -->
+					<div>
+						<h3
+							style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+							Trading Tools</h3>
+						<ul style="list-style: none; padding: 0; margin: 0;">
+							<li style="margin-bottom: 0.6rem;"><a href="lot-size.html"
+									style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+									onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Lot Size Calculator</a></li>
+							<li style="margin-bottom: 0.6rem;"><a href="profit-loss.html"
+									style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+									onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Profit &amp; Loss</a></li>
+							<li style="margin-bottom: 0.6rem;"><a href="pips.html"
+									style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+									onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Pips Calculator</a></li>
+							<li style="margin-bottom: 0.6rem;"><a href="risk-management.html"
+									style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+									onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Risk Management Advisor</a></li>
+						</ul>
+					</div>
+
+					<!-- Support & Legal -->
+					<div>
+						<h3
+							style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+							Support &amp; Legal</h3>
+						<ul style="list-style: none; padding: 0; margin: 0;">
+							<li style="margin-bottom: 0.6rem;"><a href="contact.html"
+									style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+									onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Contact Us</a></li>
+							<li style="margin-bottom: 0.6rem;"><a href="#"
+									style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+									onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Terms &amp; Conditions</a></li>
+							<li style="margin-bottom: 0.6rem;"><a href="#"
+									style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+									onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Privacy Policy</a></li>
+							<li style="margin-bottom: 0.6rem;"><a href="#"
+									style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+									onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Risk Disclosure</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Bottom Section -->
+				<div
+					style="background: rgba(255,153,51,0.05); padding: 1rem 1.2rem; border-radius: 12px; border-left: 3px solid #FF9933; margin-bottom: 1.5rem;">
+					<p style="color: #FF9933; font-size: 0.8rem; margin: 0 0 0.4rem 0; font-weight: 600;">Important
+						Disclaimer</p>
+					<p style="color: #aaa; font-size: 0.8rem; margin: 0; line-height: 1.5;">
+						Trading involves risk. Past performance does not guarantee future results. Only invest what you can
+						afford to lose. This platform is for educational purposes only. Always consult with a financial
+						advisor before making investment decisions.
+					</p>
+				</div>
+
+				<!-- Copyright -->
+				<div style="text-align: center; padding-top: 0.8rem; border-top: 1px solid rgba(255,153,51,0.1);">
+					<p style="color: #888; font-size: 0.8rem; margin: 0;">
+						&copy; 2026 Trader Frost. All rights reserved. | Dedicated to traders worldwide
+					</p>
+					<p style="color: #666; font-size: 0.8rem; margin: 0.5rem 0 0 0;">
+						Trader Frost | Trading Education &amp; Mentorship Services
+					</p>
+				</div>
+			</div>
+		</footer>
+
+	<!-- JavaScript for Interactive Features -->
+	<script src="../js/main.js"></script>
+	<script>
+		// Smooth scroll to section
+		function scrollToSection(sectionId) {
+			if (!sectionId) return;
+			const element = document.getElementById(sectionId);
+			if (element) {
+				element.scrollIntoView({ behavior: 'smooth' });
+				updateActiveSection(sectionId);
+			}
+		}
+
+		// Update active section in sidebar
+		function updateActiveSection(sectionId) {
+			// Remove active from all sidebar and chapter topic links
+			document.querySelectorAll('.guide-sidebar-link, .chapter-topic-link').forEach(link => {
+				link.classList.remove('active');
+			});
+
+			// Add active to clicked link
+			document.querySelectorAll(`[data-section="${sectionId}"]`).forEach(link => {
+				link.classList.add('active');
+			});
+		}
+
+		// Chapter accordion functionality
+		function toggleChapter(chapterLink) {
+			// Find the next sibling ul element
+			let nextElement = chapterLink.parentElement.nextElementSibling;
+			
+			// Check if clicking on an already expanded chapter
+			const isExpanded = chapterLink.classList.contains('expanded');
+			
+			// Close all chapters
+			document.querySelectorAll('.guide-sidebar-link.chapter-link').forEach(link => {
+				link.classList.remove('expanded');
+			});
+			document.querySelectorAll('.guide-sidebar-list > ul').forEach(ul => {
+				ul.classList.remove('expanded');
+			});
+			
+			// If it wasn't expanded, expand it
+			if (!isExpanded && nextElement && nextElement.tagName === 'UL') {
+				chapterLink.classList.add('expanded');
+				nextElement.classList.add('expanded');
+			}
+		}
+
+		// Add click handlers to sidebar links
+		document.addEventListener('DOMContentLoaded', function() {
+			// Chapter link handlers
+			document.querySelectorAll('.guide-sidebar-link.chapter-link').forEach(link => {
+				link.addEventListener('click', function(e) {
+					// Only prevent default for local links (not links to page 2)
+					const href = this.getAttribute('href');
+					if (href && href.startsWith('#')) {
+						e.preventDefault();
+						toggleChapter(this);
+						const sectionId = this.getAttribute('data-section');
+						scrollToSection(sectionId);
+					}
+				});
+			});
+
+			// Topic link handlers
+			document.querySelectorAll('.guide-sidebar-link.topic-link').forEach(link => {
+				link.addEventListener('click', function(e) {
+					// Only prevent default for local links (not links to page 2)
+					const href = this.getAttribute('href');
+					if (href && href.startsWith('#')) {
+						e.preventDefault();
+						const sectionId = this.getAttribute('data-section');
+						scrollToSection(sectionId);
+					}
+				});
+			});
+
+			// Handle hash navigation from URL (when coming from page 2)
+			if (window.location.hash) {
+				const hash = window.location.hash.substring(1);
+				const targetSection = document.getElementById(hash);
+				
+				if (targetSection) {
+					// Find which chapter this section belongs to
+					const chapterSection = targetSection.closest('.chapter-section');
+					if (chapterSection) {
+						const chapterId = chapterSection.id;
+						const chapterLink = document.querySelector(`.guide-sidebar-link.chapter-link[href="#${chapterId}"]`);
+						
+						if (chapterLink) {
+							toggleChapter(chapterLink);
+						}
+					}
+					
+					// Scroll to the section after a brief delay to ensure page is fully loaded
+					setTimeout(() => {
+						scrollToSection(hash);
+					}, 100);
+				}
+			} else {
+				// Expand first chapter by default if no hash
+				const firstChapter = document.querySelector('.guide-sidebar-link.chapter-link');
+				if (firstChapter) {
+					toggleChapter(firstChapter);
+				}
+			}
+
+			// Update active section on scroll
+			window.addEventListener('scroll', function() {
+				let currentSection = '';
+				document.querySelectorAll('section[id]').forEach(section => {
+					const sectionTop = section.offsetTop;
+					const sectionHeight = section.clientHeight;
+					if (window.pageYOffset >= sectionTop - 200) {
+						currentSection = section.id;
+					}
+				});
+
+				if (currentSection) {
+					updateActiveSection(currentSection);
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Prashant Rajput - Forex Trader, Trading Psychology Coach & Mentor">
+    <title>About Me | Trader Frost - Prashant Rajput</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/png" href="../assets/images/logos/Logo.png">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="pageLoader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="../assets/images/logos/Logo.png" alt="Trader Frost Logo">
+            </div>
+            <div class="loader-text">
+                <span style="color: #fff; font-size: 1.5rem; font-weight: bold;">
+                    Trader<span style="color: #FF9933;">Frost</span>
+                </span>
+            </div>
+            <div class="loader-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logos/Logo.png" alt="Trader Frost Logo">
+                <div style="display: flex; flex-direction: column; gap: 0;">
+                    <span style="font-size: 1.8rem; font-weight: bold; color: #fff; line-height: 1.2;">
+                        Trader<span style="color: #FF9933;">Frost</span>
+                    </span>
+                    <span style="font-size: 0.65rem; color: #FF9933; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-top: -2px;">
+                        Trade smart, Earn smartly
+                    </span>
+                </div>
+            </a>
+                        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li class="dropdown">
+                    <a href="#" onclick="return false;">Learn</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="forex-guide.html">Forex Market: Complete Beginner to Pro Guide</a></li>
+                        <li><a href="smart-money-concept.html">Smart Money Concept</a></li>
+                        <li><a href="psychology.html">Trading Psychology</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" onclick="return false;">Tools</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="lot-size.html">Lot Size Calculator</a></li>
+                        <li><a href="profit-loss.html">Profit &amp; Loss Calculator</a></li>
+                        <li><a href="pips.html">Pips Calculator</a></li>
+                        <li><a href="risk-management.html">Risk Management Advisor</a></li>
+                    </ul>
+                </li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                <li class="nav-login-item">
+                    <a href="login.html" class="login-btn"
+                        style="display: inline-block; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,153,51,0.25);">
+                        Login
+                    </a>
+                </li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <div class="search-nav-container" style="position: relative; display: flex; align-items: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF9933" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; left: 14px; pointer-events: none;">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Search..." 
+                        style="padding: 0.65rem 2.6rem 0.65rem 2.6rem; border-radius: 22px; border: 1px solid transparent; background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)); color: #fff; font-size: 0.85rem; width: 240px; outline: none; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(255,153,51,0.08);"
+                        onfocus="this.style.borderColor='#FF9933'; this.style.background='linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.08))'; this.style.boxShadow='0 4px 15px rgba(255,153,51,0.15)';" 
+                        onblur="this.style.borderColor='transparent'; this.style.background='linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04))'; this.style.boxShadow='0 2px 10px rgba(255,153,51,0.08)';">
+                    <button id="searchBtn" title="Search" 
+                        style="position: absolute; right: 6px; top: 50%; transform: translateY(-50%); background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); border: none; color: #000; padding: 0.45rem 0.75rem; border-radius: 18px; cursor: pointer; transition: all 0.3s ease; font-weight: 600; display: flex; align-items: center; font-size: 0.75rem;"
+                        onmouseover="this.style.boxShadow='0 4px 12px rgba(255,153,51,0.4)'; this.style.transform='translateY(-50%) scale(1.08)';" 
+                        onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(-50%) scale(1)';">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop Auth Button (only visible on desktop) -->
+                <div class="header-auth-buttons" style="display: none; gap: 0.75rem; align-items: center;">
+                    <a href="login.html" class="header-login-btn"
+                        style="display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #FF9933 0%, #ff6600 100%); color: #000; padding: 0.65rem 1.6rem; border-radius: 22px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 3px 12px rgba(255,153,51,0.25); min-height: 40px;"
+                        onmouseover="this.style.boxShadow='0 5px 20px rgba(255,153,51,0.4)'; this.style.transform='translateY(-2px)';"
+                        onmouseout="this.style.boxShadow='0 3px 12px rgba(255,153,51,0.25)'; this.style.transform='translateY(0)';">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 80px 2rem;">
+        <div class="hero-content">
+            <h1>About Prashant Rajput</h1>
+            <p>Forex Trader | Trading Psychology Coach | Mentor</p>
+        </div>
+    </section>
+
+    <!-- Main About Section -->
+    <section class="features" style="background: #0a0a0a; padding: 5rem 2rem;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <!-- Profile Section -->
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: center; margin-bottom: 5rem;">
+                <div style="text-align: center;">
+                    <img src="../assets/images/about/Profile Picture.png" alt="Prashant Rajput" style="width: 100%; max-width: 350px; border-radius: 20px; border: 3px solid #FF9933; box-shadow: 0 10px 40px rgba(255,153,51,0.4);">
+                    <h2 style="color: #FF9933; margin-top: 2rem; font-size: 2rem;">Prashant Rajput</h2>
+                    <p style="color: #ccc; font-size: 1.1rem; margin-top: 0.5rem;">Founder, Trader Frost</p>
+                </div>
+                <div>
+                    <h2 style="color: #FF9933; font-size: 2.5rem; margin-bottom: 2rem;">My Journey</h2>
+                    <p style="color: #ccc; font-size: 1.2rem; line-height: 2; margin-bottom: 1.5rem;">
+                        My name is <strong style="color: #FF9933;">Prashant Rajput</strong> — a Forex trader, trading psychology coach, and mentor. With over <strong style="color: #FF9933;">three years of full-time experience</strong> in the Forex market and a strong foundation in <strong style="color: #FF9933;">Smart Money Concepts (SMC)</strong>, I have trained and guided more than <strong style="color: #FF9933;">100 students</strong> toward becoming informed, disciplined, and independent traders.
+                    </p>
+                    <p style="color: #ccc; font-size: 1.2rem; line-height: 2; margin-bottom: 1.5rem;">
+                        This book is not just a story of my personal journey — it's a comprehensive resource. Inside, you will find complete and structured knowledge of the Forex market: from basic concepts to institutional-level strategies, deep insights into Smart Money trading, and the often-overlooked but critical aspect of trading psychology.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mission Section -->
+            <div style="background: linear-gradient(135deg, #1a1a1a 0%, #8B0000 50%, #1a1a1a 100%); padding: 4rem; border-radius: 20px; margin-bottom: 4rem; border: 2px solid #FF9933;">
+                <h2 style="color: #FF9933; font-size: 2.5rem; text-align: center; margin-bottom: 2rem;">My Mission</h2>
+                <p style="color: #fff; font-size: 1.3rem; line-height: 2; text-align: center; max-width: 900px; margin: 0 auto;">
+                    <em>"My mission is simple — to educate, guide, and build confident traders who approach the market with logic, discipline, and purpose."</em>
+                </p>
+            </div>
+
+            <!-- Core Philosophy -->
+            <div style="margin-bottom: 5rem;">
+                <h2 class="section-title" style="margin-bottom: 3rem;">My Philosophy & Approach</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <div class="feature-card" style="background: #1a1a1a; padding: 2.5rem; border: 2px solid #FF9933;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+                        <h3 style="color: #FF9933; font-size: 1.8rem; margin-bottom: 1rem;">The Real Problem</h3>
+                        <p style="color: #ccc; font-size: 1.1rem; line-height: 1.8;">
+                            Through my practical experience and mentorship, I realized that many traders struggle not because they lack tools or indicators — but because they lack the right understanding, mindset, and structure. That's why I created my training programs: to deliver real knowledge that empowers traders at every level.
+                        </p>
+                    </div>
+                    <div class="feature-card" style="background: #1a1a1a; padding: 2.5rem; border: 2px solid #8B0000;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">📚</div>
+                        <h3 style="color: #8B0000; font-size: 1.8rem; margin-bottom: 1rem;">Comprehensive Knowledge</h3>
+                        <p style="color: #ccc; font-size: 1.1rem; line-height: 1.8;">
+                            Whether you're a beginner seeking clarity or an intermediate trader looking to refine your approach, my programs are designed to help you think like smart money, manage your emotions, and take control of your trading outcomes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What I Offer -->
+            <div>
+                <h2 class="section-title" style="margin-bottom: 3rem;">What I Bring to the Table</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💹</div>
+                        <h3>Smart Money Concepts</h3>
+                        <p>Deep understanding and practical application of institutional-level trading strategies. Learn how the smart money operates and follow their footsteps.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Trading Psychology</h3>
+                        <p>Master the mental game that separates winners from losers. Learn to control emotions, build discipline, and develop the trader's mindset.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Structured Learning</h3>
+                        <p>From basic concepts to advanced strategies — everything is organized in a clear, step-by-step structure that eliminates confusion.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍🏫</div>
+                        <h3>Personalized Mentorship</h3>
+                        <p>Having trained 100+ students, I understand that each trader is unique. My approach adapts to your learning style and goals.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎓</div>
+                        <h3>Real Experience</h3>
+                        <p>Three years of full-time Forex trading experience. I teach what I practice, sharing both successes and lessons from failures.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Results-Focused</h3>
+                        <p>My goal isn't just to teach — it's to create independent, confident traders who can consistently make informed decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="market-stats" style="background: #1a1a1a; padding: 4rem 2rem;">
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>3+</h3>
+                <p>Years Full-Time Trading</p>
+            </div>
+            <div class="stat-card">
+                <h3>100+</h3>
+                <p>Students Trained</p>
+            </div>
+            <div class="stat-card">
+                <h3>SMC</h3>
+                <p>Expert in Smart Money</p>
+            </div>
+            <div class="stat-card">
+                <h3>24/7</h3>
+                <p>Dedicated Mentor</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Learn From Me -->
+    <section class="platforms" style="padding: 5rem 2rem;">
+        <div class="platforms-container">
+            <h2 class="section-title">Why Learn From Me?</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="background: rgba(255,153,51,0.1); padding: 3rem; border-radius: 20px; border: 2px solid #FF9933; margin-bottom: 2rem;">
+                    <h3 style="color: #FF9933; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center;">🎯 Clarity Over Confusion</h3>
+                    <p style="color: #fff; font-size: 1.15rem; line-height: 2;">
+                        In a market flooded with misleading information and "get rich quick" schemes, I provide structured, honest, and practical education. No fluff, no false promises — just real knowledge that works.
+                    </p>
+                </div>
+                
+                <div style="background: rgba(139,0,0,0.1); padding: 3rem; border-radius: 20px; border: 2px solid #8B0000; margin-bottom: 2rem;">
+                    <h3 style="color: #8B0000; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center;">💡 Understanding, Not Just Tools</h3>
+                    <p style="color: #fff; font-size: 1.15rem; line-height: 2;">
+                        Most traders fail because they focus on indicators and signals without understanding the market. I teach you to think independently, understand market structure, and make logical decisions.
+                    </p>
+                </div>
+                
+                <div style="background: rgba(255,153,51,0.1); padding: 3rem; border-radius: 20px; border: 2px solid #FF9933;">
+                    <h3 style="color: #FF9933; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center;">🔥 Proven Track Record</h3>
+                    <p style="color: #fff; font-size: 1.15rem; line-height: 2;">
+                        With 100+ students successfully trained and a strong foundation in Smart Money Concepts, I've helped traders transform from confused beginners to disciplined, profitable professionals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Message -->
+    <section class="features" style="background: #0a0a0a; padding: 5rem 2rem;">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <h2 class="section-title" style="margin-bottom: 2rem;">A Personal Message</h2>
+            <div style="background: linear-gradient(135deg, #1a1a1a 0%, #8B0000 100%); padding: 4rem; border-radius: 20px; border: 3px solid #FF9933;">
+                <p style="color: #fff; font-size: 1.3rem; line-height: 2; margin-bottom: 2rem;">
+                    Trading is not easy — but it's absolutely achievable with the right guidance, mindset, and dedication. I've been where you are right now: confused, overwhelmed, searching for clarity.
+                </p>
+                <p style="color: #fff; font-size: 1.3rem; line-height: 2; margin-bottom: 2rem;">
+                    What sets me apart is my commitment to your success. I don't just teach strategies; I build traders who understand the market deeply, trade with discipline, and think independently.
+                </p>
+                <p style="color: #FF9933; font-size: 1.5rem; line-height: 2; font-weight: bold;">
+                    Let me guide you on this journey. Together, we'll transform you into the trader you aspire to be.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="contact" style="padding: 5rem 2rem;">
+        <div class="contact-container">
+            <h2 class="section-title">Ready to Start Your Journey With Me?</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">
+                Join my training programs and experience the transformation that comes from structured learning, psychological mastery, and smart money strategies.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="batches.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 18px 40px;">View Course Batches</a>
+                <a href="contact.html" class="btn btn-secondary" style="font-size: 1.2rem; padding: 18px 40px;">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        style="background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 50%, #0a0a0a 100%); color: #fff; padding: 2.5rem 2rem 1.5rem; position: relative; overflow: hidden; border-top: 2px solid rgba(255,153,51,0.3);">
+        <!-- Decorative Background Elements -->
+        <div
+            style="position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,153,51,0.05) 0%, transparent 70%); border-radius: 50%; animation: float1 8s ease-in-out infinite;">
+        </div>
+        <div
+            style="position: absolute; bottom: -30%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,153,51,0.03) 0%, transparent 70%); border-radius: 50%; animation: float2 10s ease-in-out infinite;">
+        </div>
+
+        <!-- Footer Content -->
+        <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">
+            <!-- Top Section with Logo and Tagline -->
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,153,51,0.2);">
+                <!-- Brand Section -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem;">
+                        <img src="../assets/images/logos/Logo.png" alt="Trader Frost Logo"
+                            style="width: 28px; height: 28px; object-fit: contain;">
+                        <h2 style="color: #FF9933; font-size: 1.4rem; margin: 0; font-weight: 700;">
+                            Trader<span style="color: #fff;">Frost</span>
+                        </h2>
+                    </div>
+                    <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        Empowering traders with psychology-driven education and proven strategies. Transform your
+                        trading mindset and achieve consistent profitability.
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; margin-top: 1rem;">
+                        <a href="https://www.instagram.com/tradexfrost?utm_source=qr&igsh=MW01aDk5MWd1MjdteQ%3D%3D"
+                            target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                                    fill="#FF9933" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@traderfrost-p" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                                    fill="#FF9933" />
+                            </svg>
+                        </a>
+                        <a href="https://t.me/+pi-o2Ij9qQ5kY2M9" target="_blank"
+                            style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,153,51,0.15); border: 1px solid rgba(255,153,51,0.3); border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,153,51,0.3)'; this.style.transform='scale(1.1)';"
+                            onmouseout="this.style.background='rgba(255,153,51,0.15)'; this.style.transform='scale(1)';">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                                    fill="#FF9933" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Main Pages -->
+                <div>
+                    <h3
+                        style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+                        Main Pages</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.6rem;"><a href="../index.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Home</a>
+                        </li>
+                        <li style="margin-bottom: 0.6rem;"><a href="about.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">About Me</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="courses.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Courses</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="psychology.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Trading Psychology</a></li>
+                    </ul>
+                </div>
+
+                <!-- Trading Tools -->
+                <div>
+                    <h3
+                        style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+                        Trading Tools</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.6rem;"><a href="lot-size.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Lot Size Calculator</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="profit-loss.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Profit &amp; Loss</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="pips.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Pips Calculator</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="risk-management.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Risk Management Advisor</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support & Legal -->
+                <div>
+                    <h3
+                        style="color: #FF9933; font-size: 0.95rem; margin: 0 0 1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;">
+                        Support &amp; Legal</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 0.6rem;"><a href="contact.html"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Contact Us</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="#"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Terms &amp; Conditions</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="#"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Privacy Policy</a></li>
+                        <li style="margin-bottom: 0.6rem;"><a href="#"
+                                style="color: #ccc; text-decoration: none; transition: color 0.3s ease; font-size: 0.9rem;"
+                                onmouseover="this.style.color='#FF9933';" onmouseout="this.style.color='#ccc';">Risk Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div
+                style="background: rgba(255,153,51,0.05); padding: 1rem 1.2rem; border-radius: 12px; border-left: 3px solid #FF9933; margin-bottom: 1.5rem;">
+                <p style="color: #FF9933; font-size: 0.8rem; margin: 0 0 0.4rem 0; font-weight: 600;">Important
+                    Disclaimer</p>
+                <p style="color: #aaa; font-size: 0.8rem; margin: 0; line-height: 1.5;">
+                    Trading involves risk. Past performance does not guarantee future results. Only invest what you can
+                    afford to lose. This platform is for educational purposes only. Always consult with a financial
+                    advisor before making investment decisions.
+                </p>
+            </div>
+
+            <!-- Copyright -->
+            <div style="text-align: center; padding-top: 0.8rem; border-top: 1px solid rgba(255,153,51,0.1);">
+                <p style="color: #888; font-size: 0.8rem; margin: 0;">
+                    &copy; 2026 Trader Frost. All rights reserved. | Dedicated to traders worldwide
+                </p>
+                <p style="color: #666; font-size: 0.8rem; margin: 0.5rem 0 0 0;">
+                    Trader Frost | Trading Education & Mentorship Services
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
